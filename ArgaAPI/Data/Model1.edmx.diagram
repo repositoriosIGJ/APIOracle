@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2528b6580a284b44a37c6cd5c9f2ac3f" Name="Diagrama1" ZoomLevel="132">
+        <EntityTypeShape EntityType="Model.TABGEN" Width="1.5" PointX="3.125" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ADECUACION" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="Model.ADITAMENTOS" Width="1.5" PointX="6" PointY="2.5" />
+        <EntityTypeShape EntityType="Model.ADMIN_APLICADO" Width="1.5" PointX="9" PointY="4" />
+        <EntityTypeShape EntityType="Model.ADMIN_SOC_BIS" Width="1.5" PointX="12" PointY="5.5" />
+        <EntityTypeShape EntityType="Model.ADVERTENCIAS" Width="1.5" PointX="15" PointY="7" />
+        <EntityTypeShape EntityType="Model.AFIP_1995" Width="1.5" PointX="18" PointY="8.5" />
+        <EntityTypeShape EntityType="Model.AFIP_PADRON" Width="1.5" PointX="0.5" PointY="10" />
+        <EntityTypeShape EntityType="Model.AGRUPA" Width="1.5" PointX="3" PointY="11.5" />
+        <EntityTypeShape EntityType="Model.AINCLUIRREI" Width="1.5" PointX="6" PointY="13" />
+        <EntityTypeShape EntityType="Model.ANEXO" Width="1.5" PointX="9" PointY="14.5" />
+        <EntityTypeShape EntityType="Model.ANEXO_ATRIBUTO" Width="1.5" PointX="12" PointY="16" />
+        <EntityTypeShape EntityType="Model.AREGISTRAR" Width="1.5" PointX="15" PointY="17.5" />
+        <EntityTypeShape EntityType="Model.ARTICULO118" Width="1.5" PointX="18" PointY="19" />
+        <EntityTypeShape EntityType="Model.ARTICULO118123" Width="1.5" PointX="0.5" PointY="20.5" />
+        <EntityTypeShape EntityType="Model.ARTICULO123" Width="1.5" PointX="3" PointY="22" />
+        <EntityTypeShape EntityType="Model.AUD_DATOSINSCRIPCION" Width="1.5" PointX="6" PointY="23.5" />
+        <EntityTypeShape EntityType="Model.AUD_TRAMITES_INSCRIPCION" Width="1.5" PointX="9" PointY="25" />
+        <EntityTypeShape EntityType="Model.AUDIT_EXPTES" Width="1.5" PointX="12" PointY="26.5" />
+        <EntityTypeShape EntityType="Model.AUDITA2" Width="1.5" PointX="15" PointY="28" />
+        <EntityTypeShape EntityType="Model.AUDITACONS" Width="1.5" PointX="18" PointY="29.5" />
+        <EntityTypeShape EntityType="Model.AUDITARGA" Width="1.5" PointX="0.5" PointY="31" />
+        <EntityTypeShape EntityType="Model.AUDITOR" Width="1.5" PointX="3" PointY="32.5" />
+        <EntityTypeShape EntityType="Model.AUDITREG" Width="1.5" PointX="6" PointY="34" />
+        <EntityTypeShape EntityType="Model.AUDITVISTA" Width="1.5" PointX="9" PointY="35.5" />
+        <EntityTypeShape EntityType="Model.AUSENCIA" Width="1.5" PointX="12" PointY="37" />
+        <EntityTypeShape EntityType="Model.AUX_CONEX" Width="1.5" PointX="15" PointY="38.5" />
+        <EntityTypeShape EntityType="Model.B_D" Width="1.5" PointX="18" PointY="40" />
+        <EntityTypeShape EntityType="Model.BACK_COBRO_MULTAS" Width="1.5" PointX="0.5" PointY="41.5" />
+        <EntityTypeShape EntityType="Model.BAL_DEUDA" Width="1.5" PointX="3" PointY="43" />
+        <EntityTypeShape EntityType="Model.BAL_DEUDA_2010" Width="1.5" PointX="6" PointY="44.5" />
+        <EntityTypeShape EntityType="Model.BALNOCARG" Width="1.5" PointX="9" PointY="46" />
+        <EntityTypeShape EntityType="Model.BORROREI" Width="1.5" PointX="12" PointY="47.5" />
+        <EntityTypeShape EntityType="Model.CAB_TRAMSINMOV" Width="1.5" PointX="15" PointY="49" />
+        <EntityTypeShape EntityType="Model.CAMBIO" Width="1.5" PointX="18" PointY="50.5" />
+        <EntityTypeShape EntityType="Model.CAUTELAR" Width="1.5" PointX="0.5" PointY="52" />
+        <EntityTypeShape EntityType="Model.CIA_SEGUROS" Width="1.5" PointX="3" PointY="53.5" />
+        <EntityTypeShape EntityType="Model.CIV_ACTIVAS" Width="1.5" PointX="6" PointY="55" />
+        <EntityTypeShape EntityType="Model.CIVALIMITAR" Width="1.5" PointX="9" PointY="56.5" />
+        <EntityTypeShape EntityType="Model.CIVILESACT" Width="1.5" PointX="12" PointY="58" />
+        <EntityTypeShape EntityType="Model.CLASIFICACIONSOCIEDADTIPO" Width="1.5" PointX="15" PointY="59.5" />
+        <EntityTypeShape EntityType="Model.COBRO_MULTAS" Width="1.5" PointX="18" PointY="61" />
+        <EntityTypeShape EntityType="Model.COBRO_MULTAS_BACKUP" Width="1.5" PointX="0.5" PointY="62.5" />
+        <EntityTypeShape EntityType="Model.CODIGOS_AUDITORIA" Width="1.5" PointX="3" PointY="64" />
+        <EntityTypeShape EntityType="Model.COMENTARIOS" Width="1.5" PointX="6" PointY="65.5" />
+        <EntityTypeShape EntityType="Model.COMPROBANTES_TAD" Width="1.5" PointX="9" PointY="67" />
+        <EntityTypeShape EntityType="Model.CONCURSO_HDR" Width="1.5" PointX="12" PointY="68.5" />
+        <EntityTypeShape EntityType="Model.CONCURSO_ITS" Width="1.5" PointX="15" PointY="70" />
+        <EntityTypeShape EntityType="Model.CONTROL_299" Width="1.5" PointX="18" PointY="71.5" />
+        <EntityTypeShape EntityType="Model.CORREGIR" Width="1.5" PointX="0.5" PointY="73" />
+        <EntityTypeShape EntityType="Model.CORRELATIVOS" Width="1.5" PointX="3" PointY="74.5" />
+        <EntityTypeShape EntityType="Model.CORREO_CARTADDJJ" Width="1.5" PointX="6" PointY="76" />
+        <EntityTypeShape EntityType="Model.CORREO_CARTAPROC" Width="1.5" PointX="9" PointY="77.5" />
+        <EntityTypeShape EntityType="Model.CRISTINA" Width="1.5" PointX="12" PointY="79" />
+        <EntityTypeShape EntityType="Model.CRUCE_AFIP_CUIT" Width="1.5" PointX="15" PointY="80.5" />
+        <EntityTypeShape EntityType="Model.CUENTASCONTA" Width="1.5" PointX="18" PointY="82" />
+        <EntityTypeShape EntityType="Model.CUENTASTIM" Width="1.5" PointX="0.5" PointY="83.5" />
+        <EntityTypeShape EntityType="Model.CUITS" Width="1.5" PointX="3" PointY="85" />
+        <EntityTypeShape EntityType="Model.CUITS092017" Width="1.5" PointX="6" PointY="86.5" />
+        <EntityTypeShape EntityType="Model.CUITSAFIP" Width="1.5" PointX="9" PointY="88" />
+        <EntityTypeShape EntityType="Model.DAT_GESTOR" Width="1.5" PointX="12" PointY="89.5" />
+        <EntityTypeShape EntityType="Model.DATOS_GDE" Width="1.5" PointX="15" PointY="91" />
+        <EntityTypeShape EntityType="Model.DATOSINSCRIPCION" Width="1.5" PointX="18" PointY="92.5" />
+        <EntityTypeShape EntityType="Model.DECLARACION_JURADA" Width="1.5" PointX="0.5" PointY="94" />
+        <EntityTypeShape EntityType="Model.DENOMINACION" Width="1.5" PointX="3" PointY="95.5" />
+        <EntityTypeShape EntityType="Model.DESTRA" Width="1.5" PointX="6" PointY="97" />
+        <EntityTypeShape EntityType="Model.DESTRA_LLEVO" Width="1.5" PointX="9" PointY="98.5" />
+        <EntityTypeShape EntityType="Model.DESTRA_VIEJO" Width="1.5" PointX="12" PointY="100" />
+        <EntityTypeShape EntityType="Model.DESTRA0501" Width="1.5" PointX="15" PointY="101.5" />
+        <EntityTypeShape EntityType="Model.DESTRA0701" Width="1.5" PointX="18" PointY="103" />
+        <EntityTypeShape EntityType="Model.DESTTRA" Width="1.5" PointX="0.5" PointY="104.5" />
+        <EntityTypeShape EntityType="Model.DETA_PRES" Width="1.5" PointX="3" PointY="106" />
+        <EntityTypeShape EntityType="Model.DETOFI" Width="1.5" PointX="6" PointY="107.5" />
+        <EntityTypeShape EntityType="Model.DEUDA_TAS" Width="1.5" PointX="9" PointY="109" />
+        <EntityTypeShape EntityType="Model.DOC_CONTROLADAS" Width="1.5" PointX="12" PointY="110.5" />
+        <EntityTypeShape EntityType="Model.DOCFALTANTEXVISTA" Width="1.5" PointX="15" PointY="112" />
+        <EntityTypeShape EntityType="Model.DOCLEGALES" Width="1.5" PointX="18" PointY="113.5" />
+        <EntityTypeShape EntityType="Model.DOCREQUERIDAXCODTRAMITE" Width="1.5" PointX="0.5" PointY="115" />
+        <EntityTypeShape EntityType="Model.DOMICILIODUP" Width="1.5" PointX="3" PointY="116.5" />
+        <EntityTypeShape EntityType="Model.DTRCONTROLVIC" Width="1.5" PointX="6" PointY="118" />
+        <EntityTypeShape EntityType="Model.DTRSEMANAL" Width="1.5" PointX="9" PointY="119.5" />
+        <EntityTypeShape EntityType="Model.DTRSEMANAL1" Width="1.5" PointX="12" PointY="121" />
+        <EntityTypeShape EntityType="Model.ERR_DES_BPM" Width="1.5" PointX="15" PointY="122.5" />
+        <EntityTypeShape EntityType="Model.ERROR_MAYOR" Width="1.5" PointX="18" PointY="124" />
+        <EntityTypeShape EntityType="Model.ERROR_MENOR" Width="1.5" PointX="0.5" PointY="125.5" />
+        <EntityTypeShape EntityType="Model.ESTADO_DATOS_LIBROS" Width="1.5" PointX="3" PointY="127" />
+        <EntityTypeShape EntityType="Model.ESTADO_TRAMITE" Width="1.5" PointX="6" PointY="128.5" />
+        <EntityTypeShape EntityType="Model.ESTADO_VISTA" Width="1.5" PointX="9" PointY="130" />
+        <EntityTypeShape EntityType="Model.EVENTO" Width="1.5" PointX="12" PointY="131.5" />
+        <EntityTypeShape EntityType="Model.EVENTOS" Width="1.5" PointX="15" PointY="133" />
+        <EntityTypeShape EntityType="Model.EXPBAJA" Width="1.5" PointX="18" PointY="134.5" />
+        <EntityTypeShape EntityType="Model.EXPBALANCES" Width="1.5" PointX="0.5" PointY="136" />
+        <EntityTypeShape EntityType="Model.EXPTES" Width="1.5" PointX="3" PointY="137.5" />
+        <EntityTypeShape EntityType="Model.EXPTES_2008" Width="1.5" PointX="6" PointY="139" />
+        <EntityTypeShape EntityType="Model.EXPTES_CATEGORIAS" Width="1.5" PointX="9" PointY="140.5" />
+        <EntityTypeShape EntityType="Model.EXPTES_CUIT" Width="1.5" PointX="12" PointY="142" />
+        <EntityTypeShape EntityType="Model.EXPTES_RNS" Width="1.5" PointX="15" PointY="143.5" />
+        <EntityTypeShape EntityType="Model.EXT_BIEN" Width="1.5" PointX="18" PointY="145" />
+        <EntityTypeShape EntityType="Model.EXT_DOMICILIOS" Width="1.5" PointX="0.5" PointY="146.5" />
+        <EntityTypeShape EntityType="Model.EXT_INSTRUMENTOS" Width="1.5" PointX="3" PointY="148" />
+        <EntityTypeShape EntityType="Model.EXT_REPRESENTANTES" Width="1.5" PointX="6" PointY="149.5" />
+        <EntityTypeShape EntityType="Model.EXT_SOCIEDADES" Width="1.5" PointX="9" PointY="151" />
+        <EntityTypeShape EntityType="Model.EXT_VENDEDORES" Width="1.5" PointX="12" PointY="152.5" />
+        <EntityTypeShape EntityType="Model.EXTRA" Width="1.5" PointX="15" PointY="154" />
+        <EntityTypeShape EntityType="Model.EXTRAN" Width="1.5" PointX="18" PointY="155.5" />
+        <EntityTypeShape EntityType="Model.FEB22" Width="1.5" PointX="0.5" PointY="157" />
+        <EntityTypeShape EntityType="Model.GESTIPOTRAM" Width="1.5" PointX="3" PointY="158.5" />
+        <EntityTypeShape EntityType="Model.HDR_INHABI" Width="1.5" PointX="6" PointY="160" />
+        <EntityTypeShape EntityType="Model.HIS_DAT_GESTOR" Width="1.5" PointX="9" PointY="161.5" />
+        <EntityTypeShape EntityType="Model.HIS_ITEM_GESTOR" Width="1.5" PointX="12" PointY="163" />
+        <EntityTypeShape EntityType="Model.HIS_REMI_DETA" Width="1.5" PointX="15" PointY="164.5" />
+        <EntityTypeShape EntityType="Model.HIS_REMITOS" Width="1.5" PointX="18" PointY="166" />
+        <EntityTypeShape EntityType="Model.HIS_SUP_GESTOR" Width="1.5" PointX="0.5" PointY="167.5" />
+        <EntityTypeShape EntityType="Model.HIST_AFIP" Width="1.5" PointX="3" PointY="169" />
+        <EntityTypeShape EntityType="Model.HIST_ASEGURA" Width="1.5" PointX="6" PointY="170.5" />
+        <EntityTypeShape EntityType="Model.HIST_BOLSACOM" Width="1.5" PointX="9" PointY="172" />
+        <EntityTypeShape EntityType="Model.HIST_DESTRA" Width="1.5" PointX="12" PointY="173.5" />
+        <EntityTypeShape EntityType="Model.HIST_DESTTRA" Width="1.5" PointX="15" PointY="175" />
+        <EntityTypeShape EntityType="Model.HIST_EXPTES_CUIT" Width="1.5" PointX="18" PointY="176.5" />
+        <EntityTypeShape EntityType="Model.HIST_INHABI" Width="1.5" PointX="0.5" PointY="178" />
+        <EntityTypeShape EntityType="Model.HIST_SUBDESTIN" Width="1.5" PointX="3" PointY="179.5" />
+        <EntityTypeShape EntityType="Model.HIST_TIMBRADOS" Width="1.5" PointX="6" PointY="181" />
+        <EntityTypeShape EntityType="Model.HIST_VAL_TIM" Width="1.5" PointX="9" PointY="182.5" />
+        <EntityTypeShape EntityType="Model.HISTVALORDIA" Width="1.5" PointX="12" PointY="184" />
+        <EntityTypeShape EntityType="Model.HOJASINSCRIPCION" Width="1.5" PointX="15" PointY="185.5" />
+        <EntityTypeShape EntityType="Model.IGJAPLI" Width="1.5" PointX="18" PointY="187" />
+        <EntityTypeShape EntityType="Model.IMAGENESPROTOCOLIZADASBPM" Width="1.5" PointX="0.5" PointY="188.5" />
+        <EntityTypeShape EntityType="Model.IMPREDIG" Width="1.5" PointX="3" PointY="190" />
+        <EntityTypeShape EntityType="Model.INCUMPLIMIENTO" Width="1.5" PointX="6" PointY="191.5" />
+        <EntityTypeShape EntityType="Model.INDICADOR" Width="1.5" PointX="9" PointY="193" />
+        <EntityTypeShape EntityType="Model.INFORME_BALANCES" Width="1.5" PointX="12" PointY="194.5" />
+        <EntityTypeShape EntityType="Model.INFORME_TASAS" Width="1.5" PointX="15" PointY="196" />
+        <EntityTypeShape EntityType="Model.INSCRIPCION_ESTADO" Width="1.5" PointX="18" PointY="197.5" />
+        <EntityTypeShape EntityType="Model.INSCRIPTASTOTAL" Width="1.5" PointX="0.5" PointY="199" />
+        <EntityTypeShape EntityType="Model.INSFALTANTEXVISTA" Width="1.5" PointX="3" PointY="200.5" />
+        <EntityTypeShape EntityType="Model.INSLEGALES" Width="1.5" PointX="6" PointY="202" />
+        <EntityTypeShape EntityType="Model.INSPE" Width="1.5" PointX="9" PointY="203.5" />
+        <EntityTypeShape EntityType="Model.INSPE1" Width="1.5" PointX="12" PointY="205" />
+        <EntityTypeShape EntityType="Model.INSPE2" Width="1.5" PointX="15" PointY="206.5" />
+        <EntityTypeShape EntityType="Model.INSPECTOR_AUSENCIA" Width="1.5" PointX="18" PointY="208" />
+        <EntityTypeShape EntityType="Model.INSPECTORES" Width="1.5" PointX="0.5" PointY="209.5" />
+        <EntityTypeShape EntityType="Model.INSPECTORES_ASIGNADOS" Width="1.5" PointX="3" PointY="211" />
+        <EntityTypeShape EntityType="Model.INSPECTORES_PRESENTES" Width="1.5" PointX="6" PointY="212.5" />
+        <EntityTypeShape EntityType="Model.INSREQUERIDAXCODTRAMIT" Width="1.5" PointX="9" PointY="214" />
+        <EntityTypeShape EntityType="Model.INSTRUMENTOS" Width="1.5" PointX="12" PointY="215.5" />
+        <EntityTypeShape EntityType="Model.INTI_EXTRA" Width="1.5" PointX="15" PointY="217" />
+        <EntityTypeShape EntityType="Model.INTIMA2004" Width="1.5" PointX="18" PointY="218.5" />
+        <EntityTypeShape EntityType="Model.ITEM_GESTOR" Width="1.5" PointX="0.5" PointY="220" />
+        <EntityTypeShape EntityType="Model.ITEMREGISTRAL" Width="1.5" PointX="3" PointY="221.5" />
+        <EntityTypeShape EntityType="Model.ITS_INHABI" Width="1.5" PointX="6" PointY="223" />
+        <EntityTypeShape EntityType="Model.LAU_CIVILES" Width="1.5" PointX="9" PointY="224.5" />
+        <EntityTypeShape EntityType="Model.LAVADO_DDJJ" Width="1.5" PointX="12" PointY="226" />
+        <EntityTypeShape EntityType="Model.LIB_A_RUB" Width="1.5" PointX="15" PointY="227.5" />
+        <EntityTypeShape EntityType="Model.LIBRO_POR_TIPO_SOCIETARIOS" Width="1.5" PointX="18" PointY="229" />
+        <EntityTypeShape EntityType="Model.LIBROS_INSCRIPCION" Width="1.5" PointX="0.5" PointY="230.5" />
+        <EntityTypeShape EntityType="Model.LOG_DESTRA" Width="1.5" PointX="3" PointY="232" />
+        <EntityTypeShape EntityType="Model.LOGPUB" Width="1.5" PointX="6" PointY="233.5" />
+        <EntityTypeShape EntityType="Model.MAIL_ENVIA" Width="1.5" PointX="9" PointY="235" />
+        <EntityTypeShape EntityType="Model.MAIL_ENVIA_ANT" Width="1.5" PointX="12" PointY="236.5" />
+        <EntityTypeShape EntityType="Model.MAILS" Width="1.5" PointX="15" PointY="238" />
+        <EntityTypeShape EntityType="Model.MARGINAL" Width="1.5" PointX="18" PointY="239.5" />
+        <EntityTypeShape EntityType="Model.MARIELATOM" Width="1.5" PointX="0.5" PointY="241" />
+        <EntityTypeShape EntityType="Model.MAT_CERTVIGENCIA" Width="1.5" PointX="3" PointY="242.5" />
+        <EntityTypeShape EntityType="Model.MAT_CODSAN" Width="1.5" PointX="6" PointY="244" />
+        <EntityTypeShape EntityType="Model.MAT_DOMBACK" Width="1.5" PointX="9" PointY="245.5" />
+        <EntityTypeShape EntityType="Model.MAT_DOMICILIOS" Width="1.5" PointX="12" PointY="247" />
+        <EntityTypeShape EntityType="Model.MAT_INSCRIPCION" Width="1.5" PointX="15" PointY="248.5" />
+        <EntityTypeShape EntityType="Model.MAT_SANCIONES" Width="1.5" PointX="18" PointY="250" />
+        <EntityTypeShape EntityType="Model.MAT_SEGUROCAU" Width="1.5" PointX="0.5" PointY="251.5" />
+        <EntityTypeShape EntityType="Model.MATRICULADOS" Width="1.5" PointX="3" PointY="253" />
+        <EntityTypeShape EntityType="Model.MIC_MICROFILM" Width="1.5" PointX="6" PointY="254.5" />
+        <EntityTypeShape EntityType="Model.MULTAS_ADMIN" Width="1.5" PointX="9" PointY="256" />
+        <EntityTypeShape EntityType="Model.NO_EXTRA" Width="1.5" PointX="12" PointY="257.5" />
+        <EntityTypeShape EntityType="Model.NO_PRES_EXTRA" Width="1.5" PointX="15" PointY="259" />
+        <EntityTypeShape EntityType="Model.NOMBRES" Width="1.5" PointX="18" PointY="260.5" />
+        <EntityTypeShape EntityType="Model.OBJETO" Width="1.5" PointX="0.5" PointY="262" />
+        <EntityTypeShape EntityType="Model.OBSERVA" Width="1.5" PointX="3" PointY="263.5" />
+        <EntityTypeShape EntityType="Model.OBSERVA_CAUTELAR" Width="1.5" PointX="6" PointY="265" />
+        <EntityTypeShape EntityType="Model.OFI_JUZGADOS" Width="1.5" PointX="9" PointY="266.5" />
+        <EntityTypeShape EntityType="Model.OFIMAYO" Width="1.5" PointX="12" PointY="268" />
+        <EntityTypeShape EntityType="Model.ORDEN_INSCRIPCION" Width="1.5" PointX="15" PointY="269.5" />
+        <EntityTypeShape EntityType="Model.ORDEN_INSCRIPCION_ESTADO" Width="1.5" PointX="18" PointY="271" />
+        <EntityTypeShape EntityType="Model.ORDEN_INSCRIPCION_RECHAZOS" Width="1.5" PointX="0.5" PointY="272.5" />
+        <EntityTypeShape EntityType="Model.OTROS_ORGANISMOS" Width="1.5" PointX="3" PointY="274" />
+        <EntityTypeShape EntityType="Model.P_CIFRADO" Width="1.5" PointX="6" PointY="275.5" />
+        <EntityTypeShape EntityType="Model.PADRON_CIV" Width="1.5" PointX="9" PointY="277" />
+        <EntityTypeShape EntityType="Model.PARA_AFIP" Width="1.5" PointX="12" PointY="278.5" />
+        <EntityTypeShape EntityType="Model.PARTRA" Width="1.5" PointX="15" PointY="280" />
+        <EntityTypeShape EntityType="Model.PEDIDOFI" Width="1.5" PointX="18" PointY="281.5" />
+        <EntityTypeShape EntityType="Model.PERFIL_USUARIO" Width="1.5" PointX="0.5" PointY="283" />
+        <EntityTypeShape EntityType="Model.PERSO_INHABI" Width="1.5" PointX="3" PointY="284.5" />
+        <EntityTypeShape EntityType="Model.PONERADV" Width="1.5" PointX="6" PointY="286" />
+        <EntityTypeShape EntityType="Model.PRESENT_TRAM" Width="1.5" PointX="9" PointY="287.5" />
+        <EntityTypeShape EntityType="Model.PRESENTACION_TRAMITE" Width="1.5" PointX="12" PointY="289" />
+        <EntityTypeShape EntityType="Model.PRESENTANTES" Width="1.5" PointX="15" PointY="290.5" />
+        <EntityTypeShape EntityType="Model.PROHIBIDOS" Width="1.5" PointX="18" PointY="292" />
+        <EntityTypeShape EntityType="Model.PROVIDENCIAS" Width="1.5" PointX="0.5" PointY="293.5" />
+        <EntityTypeShape EntityType="Model.PROVINCIAS" Width="1.5" PointX="3" PointY="295" />
+        <EntityTypeShape EntityType="Model.PRU_TIMBRADOS_ROWID" Width="1.5" PointX="6" PointY="296.5" />
+        <EntityTypeShape EntityType="Model.PRUEBA" Width="1.5" PointX="9" PointY="298" />
+        <EntityTypeShape EntityType="Model.PUNTO4" Width="1.5" PointX="12" PointY="299.5" />
+        <EntityTypeShape EntityType="Model.RECHAZOS_VISTA" Width="1.5" PointX="15" PointY="301" />
+        <EntityTypeShape EntityType="Model.REG_F_TERMINO" Width="1.5" PointX="18" PointY="302.5" />
+        <EntityTypeShape EntityType="Model.REGCOPIAS" Width="1.5" PointX="0.5" PointY="304" />
+        <EntityTypeShape EntityType="Model.REGISTRA_1" Width="1.5" PointX="3" PointY="305.5" />
+        <EntityTypeShape EntityType="Model.REGISTRA_2" Width="1.5" PointX="6" PointY="307" />
+        <EntityTypeShape EntityType="Model.REGISTRA_3" Width="1.5" PointX="9" PointY="308.5" />
+        <EntityTypeShape EntityType="Model.REGISTRA_4" Width="1.5" PointX="12" PointY="310" />
+        <EntityTypeShape EntityType="Model.REGISTRA_5" Width="1.5" PointX="15" PointY="311.5" />
+        <EntityTypeShape EntityType="Model.REGISTRACIONRECHAZO" Width="1.5" PointX="18" PointY="313" />
+        <EntityTypeShape EntityType="Model.REGISTRACIONRECHAZORESPUESTA" Width="1.5" PointX="0.5" PointY="314.5" />
+        <EntityTypeShape EntityType="Model.REL_DDJJ_OF" Width="1.5" PointX="3" PointY="316" />
+        <EntityTypeShape EntityType="Model.RELNOVDEST" Width="1.5" PointX="6" PointY="317.5" />
+        <EntityTypeShape EntityType="Model.RELOFI" Width="1.5" PointX="9" PointY="319" />
+        <EntityTypeShape EntityType="Model.REM_PRES" Width="1.5" PointX="12" PointY="320.5" />
+        <EntityTypeShape EntityType="Model.REMDES" Width="1.5" PointX="15" PointY="322" />
+        <EntityTypeShape EntityType="Model.REMI_DETA" Width="1.5" PointX="18" PointY="323.5" />
+        <EntityTypeShape EntityType="Model.REMITOS" Width="1.5" PointX="0.5" PointY="325" />
+        <EntityTypeShape EntityType="Model.REPORTE_SOC_ACTIVAS" Width="1.5" PointX="3" PointY="326.5" />
+        <EntityTypeShape EntityType="Model.RES_TRAMIT" Width="1.5" PointX="6" PointY="328" />
+        <EntityTypeShape EntityType="Model.RES7_03_BIS" Width="1.5" PointX="9" PointY="329.5" />
+        <EntityTypeShape EntityType="Model.RESERVAS_CONSUMIDAS" Width="1.5" PointX="12" PointY="331" />
+        <EntityTypeShape EntityType="Model.RESERVAS_MOD" Width="1.5" PointX="15" PointY="332.5" />
+        <EntityTypeShape EntityType="Model.RESOLUCION" Width="1.5" PointX="18" PointY="334" />
+        <EntityTypeShape EntityType="Model.RUBRICASRL24" Width="1.5" PointX="0.5" PointY="335.5" />
+        <EntityTypeShape EntityType="Model.S_A_D" Width="1.5" PointX="3" PointY="337" />
+        <EntityTypeShape EntityType="Model.SANBCO" Width="1.5" PointX="6" PointY="338.5" />
+        <EntityTypeShape EntityType="Model.SANLEG" Width="1.5" PointX="9" PointY="340" />
+        <EntityTypeShape EntityType="Model.SASGDE" Width="1.5" PointX="12" PointY="341.5" />
+        <EntityTypeShape EntityType="Model.SEG" Width="1.5" PointX="15" PointY="343" />
+        <EntityTypeShape EntityType="Model.SOC_123" Width="1.5" PointX="18" PointY="344.5" />
+        <EntityTypeShape EntityType="Model.SOC_299" Width="1.5" PointX="0.5" PointY="346" />
+        <EntityTypeShape EntityType="Model.SOC_4546921" Width="1.5" PointX="3" PointY="347.5" />
+        <EntityTypeShape EntityType="Model.SOC_ACT_118" Width="1.5" PointX="6" PointY="349" />
+        <EntityTypeShape EntityType="Model.SOC_ACT_118_2010" Width="1.5" PointX="9" PointY="350.5" />
+        <EntityTypeShape EntityType="Model.SOC_ACT_705" Width="1.5" PointX="12" PointY="352" />
+        <EntityTypeShape EntityType="Model.SOC_ACT_DEUDA" Width="1.5" PointX="15" PointY="353.5" />
+        <EntityTypeShape EntityType="Model.SOC_ACT_DEUDA_2010" Width="1.5" PointX="18" PointY="355" />
+        <EntityTypeShape EntityType="Model.SOC_EXCLUIDAS" Width="1.5" PointX="0.5" PointY="356.5" />
+        <EntityTypeShape EntityType="Model.SOC_NO_RUBRICA" Width="1.5" PointX="3" PointY="358" />
+        <EntityTypeShape EntityType="Model.SOC_NOCONTROLADAS" Width="1.5" PointX="6" PointY="359.5" />
+        <EntityTypeShape EntityType="Model.SOC_PRESEN_BAL" Width="1.5" PointX="9" PointY="361" />
+        <EntityTypeShape EntityType="Model.SOC_PRESEN_TAS" Width="1.5" PointX="12" PointY="362.5" />
+        <EntityTypeShape EntityType="Model.SOC118_ACT" Width="1.5" PointX="15" PointY="364" />
+        <EntityTypeShape EntityType="Model.SOCACTIVAS" Width="1.5" PointX="18" PointY="365.5" />
+        <EntityTypeShape EntityType="Model.SOCCIVREI" Width="1.5" PointX="0.5" PointY="367" />
+        <EntityTypeShape EntityType="Model.SOCCIVREISC" Width="1.5" PointX="3" PointY="368.5" />
+        <EntityTypeShape EntityType="Model.SOCIEDAD_118" Width="1.5" PointX="6" PointY="370" />
+        <EntityTypeShape EntityType="Model.SOCIEDAD_ABC" Width="1.5" PointX="9" PointY="371.5" />
+        <EntityTypeShape EntityType="Model.SOCIEDADES_118" Width="1.5" PointX="12" PointY="373" />
+        <EntityTypeShape EntityType="Model.SOCIEDADRNS" Width="1.5" PointX="15" PointY="374.5" />
+        <EntityTypeShape EntityType="Model.SOCIEDADTIPO" Width="1.5" PointX="18" PointY="376" />
+        <EntityTypeShape EntityType="Model.SOCINSCRIPTAS" Width="1.5" PointX="0.5" PointY="377.5" />
+        <EntityTypeShape EntityType="Model.SOCNC_1999" Width="1.5" PointX="3" PointY="379" />
+        <EntityTypeShape EntityType="Model.SOCNC_2004" Width="1.5" PointX="6" PointY="380.5" />
+        <EntityTypeShape EntityType="Model.SOCNOCON_OLD" Width="1.5" PointX="9" PointY="382" />
+        <EntityTypeShape EntityType="Model.SOCREISINR" Width="1.5" PointX="12" PointY="383.5" />
+        <EntityTypeShape EntityType="Model.SOCREITRAMREG" Width="1.5" PointX="15" PointY="385" />
+        <EntityTypeShape EntityType="Model.SUBDEST2001" Width="1.5" PointX="18" PointY="386.5" />
+        <EntityTypeShape EntityType="Model.SUBDESTIN" Width="1.5" PointX="0.5" PointY="388" />
+        <EntityTypeShape EntityType="Model.SUBDSETIN_BACKUP" Width="1.5" PointX="3" PointY="389.5" />
+        <EntityTypeShape EntityType="Model.SUBSALE" Width="1.5" PointX="6" PointY="391" />
+        <EntityTypeShape EntityType="Model.SUP_GESTOR" Width="1.5" PointX="9" PointY="392.5" />
+        <EntityTypeShape EntityType="Model.T_D" Width="1.5" PointX="12" PointY="394" />
+        <EntityTypeShape EntityType="Model.TABFINCOD" Width="1.5" PointX="15" PointY="395.5" />
+        <EntityTypeShape EntityType="Model.TAS_DEUDA" Width="1.5" PointX="18" PointY="397" />
+        <EntityTypeShape EntityType="Model.TAS_DEUDA_2010" Width="1.5" PointX="0.5" PointY="398.5" />
+        <EntityTypeShape EntityType="Model.TEBORRO" Width="1.5" PointX="3" PointY="400" />
+        <EntityTypeShape EntityType="Model.TEMP_ADV" Width="1.5" PointX="6" PointY="401.5" />
+        <EntityTypeShape EntityType="Model.TEMP_CAPITAL" Width="1.5" PointX="9" PointY="403" />
+        <EntityTypeShape EntityType="Model.TEMP_CIV" Width="1.5" PointX="12" PointY="404.5" />
+        <EntityTypeShape EntityType="Model.TEMP_DESTRA" Width="1.5" PointX="15" PointY="406" />
+        <EntityTypeShape EntityType="Model.TEMP_LIB_A_RUB" Width="1.5" PointX="18" PointY="407.5" />
+        <EntityTypeShape EntityType="Model.TEMP_PARTRA" Width="1.5" PointX="0.5" PointY="409" />
+        <EntityTypeShape EntityType="Model.TEMP_TRAMIT" Width="1.5" PointX="3" PointY="410.5" />
+        <EntityTypeShape EntityType="Model.TEMPO" Width="1.5" PointX="6" PointY="412" />
+        <EntityTypeShape EntityType="Model.TIMBRADOS" Width="1.5" PointX="9" PointY="413.5" />
+        <EntityTypeShape EntityType="Model.TIMBRADOS_ALFA" Width="1.5" PointX="12" PointY="415" />
+        <EntityTypeShape EntityType="Model.TIMBRADOS_ERR" Width="1.5" PointX="15" PointY="416.5" />
+        <EntityTypeShape EntityType="Model.TIMBRADOS_EXCEPCION" Width="1.5" PointX="18" PointY="418" />
+        <EntityTypeShape EntityType="Model.TIMBRADOS_PRUEBA" Width="1.5" PointX="0.5" PointY="419.5" />
+        <EntityTypeShape EntityType="Model.TIMBRADOS_VIEJO" Width="1.5" PointX="3" PointY="421" />
+        <EntityTypeShape EntityType="Model.TIPO_PERFIL" Width="1.5" PointX="6" PointY="422.5" />
+        <EntityTypeShape EntityType="Model.TIPO_RECHAZO" Width="1.5" PointX="9" PointY="424" />
+        <EntityTypeShape EntityType="Model.TIPO_VISTA" Width="1.5" PointX="12" PointY="425.5" />
+        <EntityTypeShape EntityType="Model.TIPOS_SOCIETARIOS" Width="1.5" PointX="15" PointY="427" />
+        <EntityTypeShape EntityType="Model.TIPOS_VIS_RTDO" Width="1.5" PointX="18" PointY="428.5" />
+        <EntityTypeShape EntityType="Model.TIPOS_VISITA" Width="1.5" PointX="0.5" PointY="430" />
+        <EntityTypeShape EntityType="Model.TODAS_EXTRA" Width="1.5" PointX="3" PointY="431.5" />
+        <EntityTypeShape EntityType="Model.TRACK_CARTADDJJ" Width="1.5" PointX="6" PointY="433" />
+        <EntityTypeShape EntityType="Model.TRAF_CATALOG" Width="1.5" PointX="9" PointY="434.5" />
+        <EntityTypeShape EntityType="Model.TRAF_VIN" Width="1.5" PointX="12" PointY="436" />
+        <EntityTypeShape EntityType="Model.TRAM_SIN_TIM" Width="1.5" PointX="15" PointY="437.5" />
+        <EntityTypeShape EntityType="Model.TRAMICONS" Width="1.5" PointX="18" PointY="439" />
+        <EntityTypeShape EntityType="Model.TRAMIT" Width="1.5" PointX="0.5" PointY="440.5" />
+        <EntityTypeShape EntityType="Model.TRAMIT_EXTRA" Width="1.5" PointX="3" PointY="442" />
+        <EntityTypeShape EntityType="Model.TRAMIT_OFI" Width="1.5" PointX="6" PointY="443.5" />
+        <EntityTypeShape EntityType="Model.TRAMIT_VIEJO" Width="1.5" PointX="9" PointY="445" />
+        <EntityTypeShape EntityType="Model.TRAMITE_ANEXO" Width="1.5" PointX="12" PointY="446.5" />
+        <EntityTypeShape EntityType="Model.TRAMITE_ASIGNACION" Width="1.5" PointX="15" PointY="448" />
+        <EntityTypeShape EntityType="Model.TRAMITE_DESISTIDO" Width="1.5" PointX="18" PointY="449.5" />
+        <EntityTypeShape EntityType="Model.TRAMITE_DIGITAL" Width="1.5" PointX="0.5" PointY="451" />
+        <EntityTypeShape EntityType="Model.TRAMITE_MOTIVORECHAZO" Width="1.5" PointX="3" PointY="452.5" />
+        <EntityTypeShape EntityType="Model.TRAMITE_RECHAZO" Width="1.5" PointX="6" PointY="454" />
+        <EntityTypeShape EntityType="Model.TRAMITE_RECHAZO_MOTIVO" Width="1.5" PointX="9" PointY="455.5" />
+        <EntityTypeShape EntityType="Model.TRAMITEASIGNACION" Width="1.5" PointX="12" PointY="457" />
+        <EntityTypeShape EntityType="Model.TRAMITEASIGNACIONSTATUS" Width="1.5" PointX="15" PointY="458.5" />
+        <EntityTypeShape EntityType="Model.TRAMITES_GRATUITOS" Width="1.5" PointX="18" PointY="460" />
+        <EntityTypeShape EntityType="Model.TRAMITES_INSCRIPCION" Width="1.5" PointX="0.5" PointY="461.5" />
+        <EntityTypeShape EntityType="Model.TRAMITES_INSPECTOR" Width="1.5" PointX="3" PointY="463" />
+        <EntityTypeShape EntityType="Model.TRAMITES_LLEVO" Width="1.5" PointX="6" PointY="464.5" />
+        <EntityTypeShape EntityType="Model.TRAMITES_LLEVO2" Width="1.5" PointX="9" PointY="466" />
+        <EntityTypeShape EntityType="Model.TRAMITES_OTROS_ORG" Width="1.5" PointX="12" PointY="467.5" />
+        <EntityTypeShape EntityType="Model.TRAMITES_SINMOV" Width="1.5" PointX="15" PointY="469" />
+        <EntityTypeShape EntityType="Model.TRAMITETIPO" Width="1.5" PointX="18" PointY="470.5" />
+        <EntityTypeShape EntityType="Model.TRAMITETIPOCLASIFICACION" Width="1.5" PointX="0.5" PointY="472" />
+        <EntityTypeShape EntityType="Model.TRAMITETIPOITEMREGISTRAL" Width="1.5" PointX="3" PointY="473.5" />
+        <EntityTypeShape EntityType="Model.TRAMXAREA" Width="1.5" PointX="6" PointY="475" />
+        <EntityTypeShape EntityType="Model.TRANSFORMA" Width="1.5" PointX="9" PointY="476.5" />
+        <EntityTypeShape EntityType="Model.TRANSFORMACION" Width="1.5" PointX="12" PointY="478" />
+        <EntityTypeShape EntityType="Model.TRS_REL_TRAM" Width="1.5" PointX="15" PointY="479.5" />
+        <EntityTypeShape EntityType="Model.TRS_RELACIONES" Width="1.5" PointX="18" PointY="481" />
+        <EntityTypeShape EntityType="Model.VAL_TIM" Width="1.5" PointX="0.5" PointY="482.5" />
+        <EntityTypeShape EntityType="Model.VALIDACION_FORM_WEB" Width="1.5" PointX="3" PointY="484" />
+        <EntityTypeShape EntityType="Model.VALIDACION_SISTEMA" Width="1.5" PointX="6" PointY="485.5" />
+        <EntityTypeShape EntityType="Model.VALIDACION_TIPO_DATO" Width="1.5" PointX="9" PointY="487" />
+        <EntityTypeShape EntityType="Model.VALOR_MODULOS" Width="1.5" PointX="12" PointY="488.5" />
+        <EntityTypeShape EntityType="Model.VALORDIA" Width="1.5" PointX="15" PointY="490" />
+        <EntityTypeShape EntityType="Model.VENCIMIENTOS_OFJU" Width="1.5" PointX="18" PointY="491.5" />
+        <EntityTypeShape EntityType="Model.VISITAS_INSPECCION" Width="1.5" PointX="0.5" PointY="493" />
+        <EntityTypeShape EntityType="Model.VISTA" Width="1.5" PointX="3" PointY="494.5" />
+        <EntityTypeShape EntityType="Model.VISTAADMINISTRATIVA" Width="1.5" PointX="6" PointY="496" />
+        <EntityTypeShape EntityType="Model.VISTAREC" Width="1.5" PointX="9" PointY="497.5" />
+        <EntityTypeShape EntityType="Model.VISTAREC_DUP" Width="1.5" PointX="12" PointY="499" />
+        <EntityTypeShape EntityType="Model.VISTAS" Width="1.5" PointX="15" PointY="500.5" />
+        <AssociationConnector Association="Model.FK_ANEXO" />
+        <AssociationConnector Association="Model.FK_AUDNROCORR" />
+        <AssociationConnector Association="Model.FK_AURNROCORR" />
+        <AssociationConnector Association="Model.FK_CAUNROCORR" />
+        <AssociationConnector Association="Model.FK_CLASIFICACIONIDRELACION" />
+        <AssociationConnector Association="Model.FK_SOCIEDADTIPOIDRELACION" />
+        <AssociationConnector Association="Model.FK_DAT_GESTOR" />
+        <AssociationConnector Association="Model.FK_SUP_GESTOR" />
+        <AssociationConnector Association="Model.DAR_ES_FK" />
+        <AssociationConnector Association="Model.DAR_FK" />
+        <AssociationConnector Association="Model.FK_DENOMINACION" />
+        <AssociationConnector Association="Model.FK_DETPOF" />
+        <AssociationConnector Association="Model.FK_RELOFI" />
+        <AssociationConnector Association="Model.FK_DOCID" />
+        <AssociationConnector Association="Model.FK_ESTADOID" />
+        <AssociationConnector Association="Model.FK_I1NROCORR" />
+        <AssociationConnector Association="Model.FK_I2NROCORR" />
+        <AssociationConnector Association="Model.FK_INROCORR" />
+        <AssociationConnector Association="Model.FK_LOGNROCORR" />
+        <AssociationConnector Association="Model.FK_RDENROCORR" />
+        <AssociationConnector Association="Model.FK_RFT_EXP" />
+        <AssociationConnector Association="Model.FK_TRF1_EXP" />
+        <AssociationConnector Association="Model.FK_TRF2_EXP" />
+        <AssociationConnector Association="Model.FK_TRSNROCORR" />
+        <AssociationConnector Association="Model.FK_ITEM_TIPOTRAM" />
+        <AssociationConnector Association="Model.FK_IFVVISTAID" />
+        <AssociationConnector Association="Model.FK_INSID" />
+        <AssociationConnector Association="Model.FK_INSPECTORID" />
+        <AssociationConnector Association="Model.FK_INSPECTORES_PRESENTES" />
+        <AssociationConnector Association="Model.FK_ITEMREGISTRALTRAMITETIPOID" />
+        <AssociationConnector Association="Model.FK_LTSCODIGOLIBRO" />
+        <AssociationConnector Association="Model.TRAMITES_INSCRIPCION_R01" />
+        <AssociationConnector Association="Model.FK_ORDENINSCRIPCIONID" />
+        <AssociationConnector Association="Model.FK_TRO_ORG" />
+        <AssociationConnector Association="Model.FK_RVITIPORECHAZOID" />
+        <AssociationConnector Association="Model.FK_RECHAZOREGISTRACION" />
+        <AssociationConnector Association="Model.FK_REGISTRACIONRECHAZO" />
+        <AssociationConnector Association="Model.FK_REGISTRACIONRECHAZORESP" />
+        <AssociationConnector Association="Model.FK_REDNROREM" />
+        <AssociationConnector Association="Model.FK_SOCIEDADTIPO" />
+        <AssociationConnector Association="Model.FK_TIPOVISTA" />
+        <AssociationConnector Association="Model.FK_RECHAZOID" />
+        <AssociationConnector Association="Model.FK_CLASIFICACIONTRAMITETIPOID" />
+        <AssociationConnector Association="Model.FK_TIPOITEMREGISTRALID" />
+        <AssociationConnector Association="Model.VALIDACION_FORM_WEB_R01" />
+        <AssociationConnector Association="Model.ORDENINSCRIPCIONITEM" />
+        <AssociationConnector Association="Model.VISTA_INSTRUMENTOS" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

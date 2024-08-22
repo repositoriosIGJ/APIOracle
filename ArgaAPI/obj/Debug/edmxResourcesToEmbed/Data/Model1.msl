@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ContextARGA">
+    <EntitySetMapping Name="TABGEN">
+      <EntityTypeMapping TypeName="Model.TABGEN">
+        <MappingFragment StoreEntitySet="TABGEN">
+          <ScalarProperty Name="TABTIPOTAB" ColumnName="TABTIPOTAB" />
+          <ScalarProperty Name="TABCLAVE" ColumnName="TABCLAVE" />
+          <ScalarProperty Name="TABCONTEN1" ColumnName="TABCONTEN1" />
+          <ScalarProperty Name="TABCONTEN2" ColumnName="TABCONTEN2" />
+          <ScalarProperty Name="TABCONTEN3" ColumnName="TABCONTEN3" />
+          <ScalarProperty Name="TABCONTEN4" ColumnName="TABCONTEN4" />
+          <ScalarProperty Name="TABCONTEN5" ColumnName="TABCONTEN5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

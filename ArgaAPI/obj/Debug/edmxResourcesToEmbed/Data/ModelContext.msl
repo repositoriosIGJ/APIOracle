@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="DESTRA_PROD">
+      <EntityTypeMapping TypeName="Modelo.DESTRA_PROD">
+        <MappingFragment StoreEntitySet="DESTRA_PROD">
+          <ScalarProperty Name="DTRNROCORR" ColumnName="DTRNROCORR" />
+          <ScalarProperty Name="DTRCODTRAM" ColumnName="DTRCODTRAM" />
+          <ScalarProperty Name="DTRFECHACT" ColumnName="DTRFECHACT" />
+          <ScalarProperty Name="DTRNROTRAM" ColumnName="DTRNROTRAM" />
+          <ScalarProperty Name="DTRCODDEST" ColumnName="DTRCODDEST" />
+          <ScalarProperty Name="DTRUSUDEST" ColumnName="DTRUSUDEST" />
+          <ScalarProperty Name="DTRFECHART" ColumnName="DTRFECHART" />
+          <ScalarProperty Name="DTRDESTANT" ColumnName="DTRDESTANT" />
+          <ScalarProperty Name="DTRFECHAST" ColumnName="DTRFECHAST" />
+          <ScalarProperty Name="DTRNROSUBD" ColumnName="DTRNROSUBD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPTES_PROD">
+      <EntityTypeMapping TypeName="Modelo.EXPTES_PROD">
+        <MappingFragment StoreEntitySet="EXPTES_PROD">
+          <ScalarProperty Name="EXPNROCORR" ColumnName="EXPNROCORR" />
+          <ScalarProperty Name="EXPCODHABI" ColumnName="EXPCODHABI" />
+          <ScalarProperty Name="EXPEXPREFE" ColumnName="EXPEXPREFE" />
+          <ScalarProperty Name="EXPFECHACC" ColumnName="EXPFECHACC" />
+          <ScalarProperty Name="EXPTIPOSOC" ColumnName="EXPTIPOSOC" />
+          <ScalarProperty Name="EXPRAZONSO" ColumnName="EXPRAZONSO" />
+          <ScalarProperty Name="EXPADITAME" ColumnName="EXPADITAME" />
+          <ScalarProperty Name="EXPSALIO" ColumnName="EXPSALIO" />
+          <ScalarProperty Name="EXPFOJAS" ColumnName="EXPFOJAS" />
+          <ScalarProperty Name="EXPNROCUIT" ColumnName="EXPNROCUIT" />
+          <ScalarProperty Name="EXPFECVTO" ColumnName="EXPFECVTO" />
+          <ScalarProperty Name="EXPREGULAR" ColumnName="EXPREGULAR" />
+          <ScalarProperty Name="EXPAHORRO" ColumnName="EXPAHORRO" />
+          <ScalarProperty Name="EXPCODBAJA" ColumnName="EXPCODBAJA" />
+          <ScalarProperty Name="EXPFECBAJA" ColumnName="EXPFECBAJA" />
+          <ScalarProperty Name="EXPART118" ColumnName="EXPART118" />
+          <ScalarProperty Name="EXPART123" ColumnName="EXPART123" />
+          <ScalarProperty Name="EXPTIPOCON" ColumnName="EXPTIPOCON" />
+          <ScalarProperty Name="EXPDIGITAL" ColumnName="EXPDIGITAL" />
+          <ScalarProperty Name="EXPBALANCES" ColumnName="EXPBALANCES" />
+          <ScalarProperty Name="EXPDDJJ" ColumnName="EXPDDJJ" />
+          <ScalarProperty Name="EXPRAZONSOINS" ColumnName="EXPRAZONSOINS" />
+          <ScalarProperty Name="EXPNRORESERVA" ColumnName="EXPNRORESERVA" />
+          <ScalarProperty Name="EXPHOMONIMIAID" ColumnName="EXPHOMONIMIAID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIB_A_RUB_PROD">
+      <EntityTypeMapping TypeName="Modelo.LIB_A_RUB_PROD">
+        <MappingFragment StoreEntitySet="LIB_A_RUB_PROD">
+          <ScalarProperty Name="LIBCODLIB1" ColumnName="LIBCODLIB1" />
+          <ScalarProperty Name="LIBCODLIB2" ColumnName="LIBCODLIB2" />
+          <ScalarProperty Name="LIBCODLIB3" ColumnName="LIBCODLIB3" />
+          <ScalarProperty Name="LIBDESCGRAL" ColumnName="LIBDESCGRAL" />
+          <ScalarProperty Name="LIBDESCSEC" ColumnName="LIBDESCSEC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBDESTIN_PROD">
+      <EntityTypeMapping TypeName="Modelo.SUBDESTIN_PROD">
+        <MappingFragment StoreEntitySet="SUBDESTIN_PROD">
+          <ScalarProperty Name="SUBDESTINO" ColumnName="SUBDESTINO" />
+          <ScalarProperty Name="SUBNROSUBD" ColumnName="SUBNROSUBD" />
+          <ScalarProperty Name="SUBNOMBRE" ColumnName="SUBNOMBRE" />
+          <ScalarProperty Name="SUBPASSW" ColumnName="SUBPASSW" />
+          <ScalarProperty Name="SUBVISTA" ColumnName="SUBVISTA" />
+          <ScalarProperty Name="SUBFECBAJ" ColumnName="SUBFECBAJ" />
+          <ScalarProperty Name="SUBUSUARIO" ColumnName="SUBUSUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TABGEN_PROD">
+      <EntityTypeMapping TypeName="Modelo.TABGEN_PROD">
+        <MappingFragment StoreEntitySet="TABGEN_PROD">
+          <ScalarProperty Name="TABTIPOTAB" ColumnName="TABTIPOTAB" />
+          <ScalarProperty Name="TABCLAVE" ColumnName="TABCLAVE" />
+          <ScalarProperty Name="TABCONTEN1" ColumnName="TABCONTEN1" />
+          <ScalarProperty Name="TABCONTEN2" ColumnName="TABCONTEN2" />
+          <ScalarProperty Name="TABCONTEN3" ColumnName="TABCONTEN3" />
+          <ScalarProperty Name="TABCONTEN4" ColumnName="TABCONTEN4" />
+          <ScalarProperty Name="TABCONTEN5" ColumnName="TABCONTEN5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAMIT_PROD">
+      <EntityTypeMapping TypeName="Modelo.TRAMIT_PROD">
+        <MappingFragment StoreEntitySet="TRAMIT_PROD">
+          <ScalarProperty Name="TRANROCORR" ColumnName="TRANROCORR" />
+          <ScalarProperty Name="TRACODHABI" ColumnName="TRACODHABI" />
+          <ScalarProperty Name="TRACODTRAM" ColumnName="TRACODTRAM" />
+          <ScalarProperty Name="TRAFECHACT" ColumnName="TRAFECHACT" />
+          <ScalarProperty Name="TRAFECHAFT" ColumnName="TRAFECHAFT" />
+          <ScalarProperty Name="TRAREGTRAM" ColumnName="TRAREGTRAM" />
+          <ScalarProperty Name="TRAREFTRAM" ColumnName="TRAREFTRAM" />
+          <ScalarProperty Name="TRANROTRAM" ColumnName="TRANROTRAM" />
+          <ScalarProperty Name="TRAGRPTRAM" ColumnName="TRAGRPTRAM" />
+          <ScalarProperty Name="TRAFOJAS" ColumnName="TRAFOJAS" />
+          <ScalarProperty Name="TRACONEXPE" ColumnName="TRACONEXPE" />
+          <ScalarProperty Name="TRAFECREG" ColumnName="TRAFECREG" />
+          <ScalarProperty Name="TRAFECREGNA" ColumnName="TRAFECREGNA" />
+          <ScalarProperty Name="TRADESISTE" ColumnName="TRADESISTE" />
+          <ScalarProperty Name="TRAREQCONTABLE" ColumnName="TRAREQCONTABLE" />
+          <ScalarProperty Name="TRADIGITAL" ColumnName="TRADIGITAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSFORMACION">
+      <EntityTypeMapping TypeName="Modelo.TRANSFORMACION">
+        <MappingFragment StoreEntitySet="TRANSFORMACION">
+          <ScalarProperty Name="TRFNROCORR_ANT" ColumnName="TRFNROCORR_ANT" />
+          <ScalarProperty Name="TRFNROCORR_ACT" ColumnName="TRFNROCORR_ACT" />
+          <ScalarProperty Name="TRFCODTRAM" ColumnName="TRFCODTRAM" />
+          <ScalarProperty Name="TRFNROTRAM" ColumnName="TRFNROTRAM" />
+          <ScalarProperty Name="TRFFECHACT" ColumnName="TRFFECHACT" />
+          <ScalarProperty Name="TRFUSUACTU" ColumnName="TRFUSUACTU" />
+          <ScalarProperty Name="TRFFECACTU" ColumnName="TRFFECACTU" />
+          <ScalarProperty Name="TRFTIPOSOC_ANT" ColumnName="TRFTIPOSOC_ANT" />
+          <ScalarProperty Name="TRFTIPOSOC_ACT" ColumnName="TRFTIPOSOC_ACT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISTAREC">
+      <EntityTypeMapping TypeName="Modelo.VISTAREC">
+        <MappingFragment StoreEntitySet="VISTAREC">
+          <ScalarProperty Name="VISNROCORR" ColumnName="VISNROCORR" />
+          <ScalarProperty Name="VISCODTRAM" ColumnName="VISCODTRAM" />
+          <ScalarProperty Name="VISFECHACT" ColumnName="VISFECHACT" />
+          <ScalarProperty Name="VISNROTRAM" ColumnName="VISNROTRAM" />
+          <ScalarProperty Name="VISCODDEST" ColumnName="VISCODDEST" />
+          <ScalarProperty Name="VISFECHART" ColumnName="VISFECHART" />
+          <ScalarProperty Name="VISNROSUBD" ColumnName="VISNROSUBD" />
+          <ScalarProperty Name="VISTIPO" ColumnName="VISTIPO" />
+          <ScalarProperty Name="VISDETALLE" ColumnName="VISDETALLE" />
+          <ScalarProperty Name="VISFECACTU" ColumnName="VISFECACTU" />
+          <ScalarProperty Name="VISUSUACTU" ColumnName="VISUSUACTU" />
+          <ScalarProperty Name="VISFECBAJA" ColumnName="VISFECBAJA" />
+          <ScalarProperty Name="VISCODBAJA" ColumnName="VISCODBAJA" />
+          <ScalarProperty Name="VISREVISOR" ColumnName="VISREVISOR" />
+          <ScalarProperty Name="VISREVOK" ColumnName="VISREVOK" />
+          <ScalarProperty Name="VISNHOJA" ColumnName="VISNHOJA" />
+          <ScalarProperty Name="VISFIN" ColumnName="VISFIN" />
+          <ScalarProperty Name="VISPZONOTIF" ColumnName="VISPZONOTIF" />
+          <ScalarProperty Name="VISDIGITAL" ColumnName="VISDIGITAL" />
+          <ScalarProperty Name="VISDATREG" ColumnName="VISDATREG" />
+          <ScalarProperty Name="VISIDBPM" ColumnName="VISIDBPM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
