@@ -22,12 +22,18 @@ namespace ArgaAPI.Services
             // Registrar dependencias aquí
             container.RegisterType<ITipoSocietarioBusiness, TipoSocietarioBusiness>(new HierarchicalLifetimeManager());
             container.RegisterType<ITipoTramiteBusiness, TipoTramiteBusiness>(new HierarchicalLifetimeManager());
+            container.RegisterType<IExpedienteBusiness, ExpedienteBusiness>(new HierarchicalLifetimeManager());
+            container.RegisterType<ITramiteBusiness, TramiteBusiness>(new HierarchicalLifetimeManager());
             container.RegisterType<ITipoSocietarioReposity, TipoSocietarioRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<ITipoTramiteRepository, TipoTramiteRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IExpedienteRepository, ExpedienteRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ITramiteRepository, TramiteRepository>(new HierarchicalLifetimeManager());
              
             // Registrar controladores
              container.RegisterType<TipoSocietarioController>();
              container.RegisterType<TipoTramiteController>();
+             container.RegisterType<ExpedienteController>();
+             container.RegisterType<TramiteController>();
 
             // Configurar DependencyResolver manualmente
             GlobalConfiguration.Configuration.DependencyResolver = new UnityResolver(container);

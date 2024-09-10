@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using ArgaAPI.Business.Contrato;
 using ArgaAPI.Data;
+using ArgaAPI.DTOs;
 using ArgaAPI.Models;
 
 namespace ArgaAPI.Controllers
@@ -18,38 +19,20 @@ namespace ArgaAPI.Controllers
         {
             _tipoTramiteBusiness = tipoTramiteBusiness;
         }
-        // GET api/tipotramite
-        /*public IEnumerable<TABGEN_PROD> Get()
-        {
-            var tipotramites = _tipoTramiteBusiness.GetTipoTramites();
-            return tipotramites;
-        }*/
 
-        public IEnumerable<TipoTramite> Get()
+        [HttpGet]
+        public IEnumerable<TipoTramite> GetAllTipoTramites()
         {
             var tipostramites = _tipoTramiteBusiness.GetTiposTramites();
             return tipostramites;
         }
 
-        // GET api/tipotramite/5
-        public string Get(int id)
+        [HttpGet]
+        public ResponseDTO<TipoTramite> GetTipoTramitebyCodigo(string codigo)
         {
-            return "value";
+            var tipotramite = _tipoTramiteBusiness.GetTramitesbyCodigoTramite(codigo);
+            return tipotramite;
         }
-
-        // POST api/tipotramite
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/tipotramite/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/tipotramite/5
-        public void Delete(int id)
-        {
-        }
+    
     }
 }

@@ -17,7 +17,7 @@ namespace ArgaAPI.Data
         public int TRANROCORR { get; set; }
         public string TRACODHABI { get; set; }
         public string TRACODTRAM { get; set; }
-        public System.DateTime TRAFECHACT { get; set; }
+        public DateTime? TRAFECHACT { get; set; }
         public Nullable<System.DateTime> TRAFECHAFT { get; set; }
         public string TRAREGTRAM { get; set; }
         public Nullable<int> TRAREFTRAM { get; set; }

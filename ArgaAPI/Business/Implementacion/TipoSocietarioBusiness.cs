@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using ArgaAPI.Business.Contrato;
+using ArgaAPI.DTOs;
 using ArgaAPI.Models;
 using ArgaAPI.Repositorio.Contrato;
 
@@ -20,13 +21,7 @@ namespace ArgaAPI.Business.Implementacion
          }
 
          
-        /*
-        public IEnumerable<Data.TABGEN_PROD> GetTipoSocietario()
-        {
-           var TiposSocietarios = _tipoSocietarioRepository.GetTipoSocietario();
-
-               return TiposSocietarios;
-        }*/
+       
 
 
         public IEnumerable<TipoSocietario> GetTiposSocietarios()
@@ -37,5 +32,50 @@ namespace ArgaAPI.Business.Implementacion
         }
 
 
+        
+       public TipoSocietario GetTipoSocietarioPorCodigo(string codigo)
+       {
+          var TiposSocietario = _tipoSocietarioRepository.GetTipoSocietarioPorCodigo(codigo);
+
+              return TiposSocietario;
+       }
+
+
+
+       #region Miembros de ITipoSocietarioBusiness
+
+
+       public IEnumerable<TipoSocietario> GetTipoSocietarioPorTipo(string tipo)
+       {
+           var TiposSocietario = _tipoSocietarioRepository.GetTipoSocietarioPorTipo(tipo);
+
+           return TiposSocietario;
+       }
+
+       #endregion
+
+       #region Miembros de ITipoSocietarioBusiness
+
+
+     /*  public ResponseDTO<bool> Insert(TipoSocietario tipoSocietario)
+       {
+           var rsp = _tipoSocietarioRepository.Insert(tipoSocietario);
+
+           return rsp;
+       }*/
+
+       #endregion
+
+       #region Miembros de ITipoSocietarioBusiness
+
+
+       public IEnumerable<TipoSocietario> GetTiposSocietariosCodigosSinCeroALaIzq()
+       {
+           var TiposSocietario = _tipoSocietarioRepository.GetTiposSocietariosCodigosSinCeroALaIzq();
+
+           return TiposSocietario;
+       }
+
+       #endregion
     }
 }

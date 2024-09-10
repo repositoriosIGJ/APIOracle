@@ -52,3 +52,4 @@ C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\es\S
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\obj\Debug\ArgaAPI.dll
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\obj\Debug\ArgaAPI.pdb
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\obj\Debug\ArgaAPI.csprojResolveAssemblyReference.cache
+C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\Oracle.DataAccess.dll

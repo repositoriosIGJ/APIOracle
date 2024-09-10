@@ -19,8 +19,13 @@ namespace ArgaAPI.Services
             // Verificar si la solicitud contiene la cabecera 'Origin'
             if (request.Headers.Contains("Origin"))
             {
-                // Agregar las cabeceras de CORS
-                response.Headers.Add("Access-Control-Allow-Origin", "https://localhost:7276");
+                // Agregar las cabeceras de CORS para ambas URLs
+                var origin = request.Headers.GetValues("Origin").FirstOrDefault();
+                if (origin == "https://localhost:7276" || origin == "https://localhost:7198")
+                {
+                    response.Headers.Add("Access-Control-Allow-Origin", origin);
+                }
+
                 response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
                 response.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Accept");
 
@@ -37,7 +42,11 @@ namespace ArgaAPI.Services
                 var resp = t.Result;
                 if (request.Headers.Contains("Origin"))
                 {
-                    resp.Headers.Add("Access-Control-Allow-Origin", "https://localhost:7276");
+                    var origin = request.Headers.GetValues("Origin").FirstOrDefault();
+                    if (origin == "https://localhost:7276" || origin == "https://localhost:7198")
+                    {
+                        resp.Headers.Add("Access-Control-Allow-Origin", origin);
+                    }
                 }
                 return resp;
             });

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using ArgaAPI.Business.Contrato;
 using ArgaAPI.Data;
+using ArgaAPI.DTOs;
+using ArgaAPI.Models;
 using ArgaAPI.Repositorio.Contrato;
 
 namespace ArgaAPI.Business.Implementacion
@@ -18,11 +20,17 @@ namespace ArgaAPI.Business.Implementacion
         }
         #region Miembros de ITipoTramiteBusiness
 
-        public IEnumerable<TABGEN_PROD> GetTipoTramites()
-        {
-          var tipotramites =  _tipoTramiteRepository.GetTipoTramites();
 
-          return tipotramites;
+        #endregion
+
+        #region Miembros de ITipoTramiteBusiness
+
+
+        public IEnumerable<TipoTramite> GetTiposTramites()
+        {
+            var tipotramites = _tipoTramiteRepository.GetTiposTramites();
+
+            return tipotramites;
         }
 
         #endregion
@@ -30,11 +38,11 @@ namespace ArgaAPI.Business.Implementacion
         #region Miembros de ITipoTramiteBusiness
 
 
-        public IEnumerable<Models.TipoTramite> GetTiposTramites()
+        public ResponseDTO<TipoTramite> GetTramitesbyCodigoTramite(string codigo)
         {
-            var tipotramites = _tipoTramiteRepository.GetTiposTramites();
+            var rsp =_tipoTramiteRepository.GetTramitesbyCodigoTramite(codigo);
 
-            return tipotramites;
+            return rsp;
         }
 
         #endregion

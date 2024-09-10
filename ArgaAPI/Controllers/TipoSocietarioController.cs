@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Xml;
 using ArgaAPI.Business.Contrato;
 using ArgaAPI.Data;
+using ArgaAPI.DTOs;
 using ArgaAPI.Models;
 using Newtonsoft.Json;
 
@@ -21,39 +22,9 @@ namespace ArgaAPI.Controllers
         {
             _tipoSocietarioBusiness = tipoSocietarioBusiness;
         }
+
         // GET api/sociedad
         // GET api/TipoSocietario
-       /* public IEnumerable<TABGEN_PROD> GetTipoSocietario()
-        {
-            using (var context = new Entities())
-            {
-                const string sql = " select * from tabgen t where t.tabtipotab = 002 and t.tabclave != '*'";
-
-                
-
-                var TipoSocietario = context.Database.SqlQuery<TABGEN_PROD>(sql).ToList();
-
-              var Serializado =  JsonConvert.SerializeObject(TipoSocietario);
-
-              var JsonTipoSocietario = JsonConvert.DeserializeObject<IEnumerable<TABGEN_PROD>>(Serializado);
-
-
-
-
-
-              return TipoSocietario;
-            }
-        }*/
-
-      
-        /*public IEnumerable<TABGEN_PROD> GetTiposSocietarios()
-        {
-
-            var tiposSocietarios = _tipoSocietarioBusiness.GetTipoSocietario();
-
-            return tiposSocietarios;
-        }*/
-
         public IEnumerable<TipoSocietario> GetTiposSocietarios()
         {
 
@@ -62,17 +33,41 @@ namespace ArgaAPI.Controllers
             return tiposSocietarios;
         }
 
-        // GET api/TipoSocietario/5
-        public string Get(int id)
+        public List<TipoSocietario> GetCodigosSinCeroALaIzq()
         {
-            return "value";
+
+            var tiposSocietarios = _tipoSocietarioBusiness.GetTiposSocietariosCodigosSinCeroALaIzq().ToList();
+
+            return tiposSocietarios;
+        }
+
+        // GET api/TipoSocietario/5
+
+       
+        //GET api/tiposocietario/GetByCodigoSocietario?codigo={codigo}
+        public TipoSocietario GetByCodigoTipoSocietario(string codigo)
+        {
+            var tipoSocietario = _tipoSocietarioBusiness.GetTipoSocietarioPorCodigo(codigo);
+            return tipoSocietario;
+        }
+
+        // GET api/TipoSocietario/GetByTipo?tipo={tipo}
+        public IEnumerable<TipoSocietario> GetByTipo(string tipo)
+        {
+            var tipoSocietario = _tipoSocietarioBusiness.GetTipoSocietarioPorTipo(tipo);
+            return tipoSocietario;
         }
 
         // POST api/TipoSocietario
-        public void Post([FromBody]string value)
+        /*public void Post([FromBody]string value)
         {
         }
-
+        public ResponseDTO<bool> Post([FromBody] TipoSocietario tipoSocietario)
+        {
+            var rsp = _tipoSocietarioBusiness.Insert(tipoSocietario);
+            return rsp;
+        }
+        */
         // PUT api/TipoSocietario/5
         public void Put(int id, [FromBody]string value)
         {
