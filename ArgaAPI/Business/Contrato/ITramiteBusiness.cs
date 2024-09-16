@@ -11,6 +11,6 @@ namespace ArgaAPI.Business.Contrato
     public interface ITramiteBusiness
     {
         ResponseDTO<List<Tramite>> GetTramites(Tramite tramite);
-        ResponseDTO<List<Tramite>> GetTramitesbyCorrelativo(int Correlativo);
+      
     }
 }

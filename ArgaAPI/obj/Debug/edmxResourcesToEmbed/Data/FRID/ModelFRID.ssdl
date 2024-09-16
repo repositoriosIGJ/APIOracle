@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FridModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="9.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="FridModelStoreContainer">
+    <EntitySet Name="ADMIN_SOC" EntityType="FridModel.Store.ADMIN_SOC" store:Type="Tables" store:Schema="FRID" store:Name="ADMIN_SOC">
+      <DefiningQuery>SELECT 
+      "ADMIN_SOC"."ADSNROCORR" AS "ADSNROCORR", 
+      "ADMIN_SOC"."ADSCODTRAM" AS "ADSCODTRAM", 
+      "ADMIN_SOC"."ADSFECHACT" AS "ADSFECHACT", 
+      "ADMIN_SOC"."ADSNROTRAM" AS "ADSNROTRAM", 
+      "ADMIN_SOC"."ADSAPENOM" AS "ADSAPENOM", 
+      "ADMIN_SOC"."ADSTIPOADM" AS "ADSTIPOADM", 
+      "ADMIN_SOC"."ADSTIPDOC" AS "ADSTIPDOC", 
+      "ADMIN_SOC"."ADSNRODOC" AS "ADSNRODOC", 
+      "ADMIN_SOC"."ADSCARGO" AS "ADSCARGO", 
+      "ADMIN_SOC"."ADSFECVTO" AS "ADSFECVTO", 
+      "ADMIN_SOC"."ADSDOMREAL" AS "ADSDOMREAL", 
+      "ADMIN_SOC"."ADSDOMESPE" AS "ADSDOMESPE", 
+      "ADMIN_SOC"."ADSESTCIVIL" AS "ADSESTCIVIL", 
+      "ADMIN_SOC"."ADSEDAD" AS "ADSEDAD", 
+      "ADMIN_SOC"."ADSPROFESI" AS "ADSPROFESI", 
+      "ADMIN_SOC"."ADSNACIONAL" AS "ADSNACIONAL", 
+      "ADMIN_SOC"."ADSNROCUIT" AS "ADSNROCUIT", 
+      "ADMIN_SOC"."ADSCONSTA" AS "ADSCONSTA", 
+      "ADMIN_SOC"."ADSCUITERR" AS "ADSCUITERR", 
+      "ADMIN_SOC"."ADSNROSOC" AS "ADSNROSOC", 
+      "ADMIN_SOC"."ADSCUOTAS" AS "ADSCUOTAS", 
+      "ADMIN_SOC"."ADSFECBAJA" AS "ADSFECBAJA", 
+      "ADMIN_SOC"."ADSCODBAJA" AS "ADSCODBAJA", 
+      "ADMIN_SOC"."ADSNROBAJA" AS "ADSNROBAJA", 
+      "ADMIN_SOC"."ADSFECACTU" AS "ADSFECACTU", 
+      "ADMIN_SOC"."ADSUSUACTU" AS "ADSUSUACTU", 
+      "ADMIN_SOC"."ADSAPELLIDO" AS "ADSAPELLIDO", 
+      "ADMIN_SOC"."ADSNOMBRES" AS "ADSNOMBRES", 
+      "ADMIN_SOC"."ADSTELNRO" AS "ADSTELNRO", 
+      "ADMIN_SOC"."ADSTELCODAREA" AS "ADSTELCODAREA", 
+      "ADMIN_SOC"."ADSEMAIL" AS "ADSEMAIL", 
+      "ADMIN_SOC"."ADSFECHANACIM" AS "ADSFECHANACIM", 
+      "ADMIN_SOC"."ADSSEXO" AS "ADSSEXO", 
+      "ADMIN_SOC"."ADSFECHAVTO" AS "ADSFECHAVTO", 
+      "ADMIN_SOC"."ADSCAPITAL" AS "ADSCAPITAL", 
+      "ADMIN_SOC"."ADSINTEGRACAP" AS "ADSINTEGRACAP", 
+      "ADMIN_SOC"."ADSAPORTEDIN" AS "ADSAPORTEDIN", 
+      "ADMIN_SOC"."ADSAPORTENODIM" AS "ADSAPORTENODIM", 
+      "ADMIN_SOC"."ADSVALORUNIT" AS "ADSVALORUNIT", 
+      "ADMIN_SOC"."ADSCANTORD" AS "ADSCANTORD", 
+      "ADMIN_SOC"."ADSCANTPREF" AS "ADSCANTPREF", 
+      "ADMIN_SOC"."ADSCANTVOTORD" AS "ADSCANTVOTORD", 
+      "ADMIN_SOC"."ADSVOTPREF" AS "ADSVOTPREF", 
+      "ADMIN_SOC"."ADSFISICAOJURID" AS "ADSFISICAOJURID", 
+      "ADMIN_SOC"."ADSDENOMINACION" AS "ADSDENOMINACION", 
+      "ADMIN_SOC"."ADSJURISDIC" AS "ADSJURISDIC", 
+      "ADMIN_SOC"."ADSPAISORIG" AS "ADSPAISORIG", 
+      "ADMIN_SOC"."ADSCONTROLANTE" AS "ADSCONTROLANTE", 
+      "ADMIN_SOC"."ADSVINCULANTE" AS "ADSVINCULANTE", 
+      "ADMIN_SOC"."FAXCODAREA" AS "FAXCODAREA", 
+      "ADMIN_SOC"."FAXNUMERO" AS "FAXNUMERO", 
+      "ADMIN_SOC"."OBSERVACIONES" AS "OBSERVACIONES", 
+      "ADMIN_SOC"."ESCRITURALES" AS "ESCRITURALES"
+      FROM "FRID"."ADMIN_SOC" "ADMIN_SOC"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BALANCES" EntityType="FridModel.Store.BALANCES" store:Type="Tables" store:Schema="FRID" store:Name="BALANCES">
+      <DefiningQuery>SELECT 
+      "BALANCES"."BALNROCORR" AS "BALNROCORR", 
+      "BALANCES"."BALCODTRAM" AS "BALCODTRAM", 
+      "BALANCES"."BALFECHACT" AS "BALFECHACT", 
+      "BALANCES"."BALNROTRAM" AS "BALNROTRAM", 
+      "BALANCES"."BALFECBAL" AS "BALFECBAL", 
+      "BALANCES"."BALFECPRE" AS "BALFECPRE", 
+      "BALANCES"."BALFECACTU" AS "BALFECACTU", 
+      "BALANCES"."BALUSUACTU" AS "BALUSUACTU", 
+      "BALANCES"."BALCAPINF" AS "BALCAPINF", 
+      "BALANCES"."BALCAPAJU" AS "BALCAPAJU", 
+      "BALANCES"."BALNROROL" AS "BALNROROL", 
+      "BALANCES"."BALBALROL" AS "BALBALROL", 
+      "BALANCES"."BALCODBAL" AS "BALCODBAL", 
+      "BALANCES"."BALTIPOPRESEN" AS "BALTIPOPRESEN"
+      FROM "FRID"."BALANCES" "BALANCES"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BOLSACOM" EntityType="FridModel.Store.BOLSACOM" store:Type="Tables" store:Schema="FRID" store:Name="BOLSACOM">
+      <DefiningQuery>SELECT 
+      "BOLSACOM"."BOLNROCORR" AS "BOLNROCORR", 
+      "BOLSACOM"."BOLCODTRAM" AS "BOLCODTRAM", 
+      "BOLSACOM"."BOLFECHACT" AS "BOLFECHACT", 
+      "BOLSACOM"."BOLNROTRAM" AS "BOLNROTRAM", 
+      "BOLSACOM"."BOLFECFVIG" AS "BOLFECFVIG", 
+      "BOLSACOM"."BOLUSUACTU" AS "BOLUSUACTU", 
+      "BOLSACOM"."BOLFECACTU" AS "BOLFECACTU", 
+      "BOLSACOM"."BOLFECDESDE" AS "BOLFECDESDE"
+      FROM "FRID"."BOLSACOM" "BOLSACOM"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CAPITAL" EntityType="FridModel.Store.CAPITAL" store:Type="Tables" store:Schema="FRID" store:Name="CAPITAL">
+      <DefiningQuery>SELECT 
+      "CAPITAL"."CAPNROCORR" AS "CAPNROCORR", 
+      "CAPITAL"."CAPCODTRAM" AS "CAPCODTRAM", 
+      "CAPITAL"."CAPFECHACT" AS "CAPFECHACT", 
+      "CAPITAL"."CAPNROTRAM" AS "CAPNROTRAM", 
+      "CAPITAL"."CAPCAPITAL" AS "CAPCAPITAL", 
+      "CAPITAL"."CAPCAPINTE" AS "CAPCAPINTE", 
+      "CAPITAL"."CAPCAPSUSC" AS "CAPCAPSUSC", 
+      "CAPITAL"."CAPMONEDA" AS "CAPMONEDA", 
+      "CAPITAL"."CAPFECACTU" AS "CAPFECACTU", 
+      "CAPITAL"."CAPUSUACTU" AS "CAPUSUACTU", 
+      "CAPITAL"."CAPCAPANT" AS "CAPCAPANT"
+      FROM "FRID"."CAPITAL" "CAPITAL"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DOMICILIOS" EntityType="FridModel.Store.DOMICILIOS" store:Type="Tables" store:Schema="FRID" store:Name="DOMICILIOS">
+      <DefiningQuery>SELECT 
+      "DOMICILIOS"."DOMNROCORR" AS "DOMNROCORR", 
+      "DOMICILIOS"."DOMCODTRAM" AS "DOMCODTRAM", 
+      "DOMICILIOS"."DOMFECHACT" AS "DOMFECHACT", 
+      "DOMICILIOS"."DOMNROTRAM" AS "DOMNROTRAM", 
+      "DOMICILIOS"."DOMTIPODOM" AS "DOMTIPODOM", 
+      "DOMICILIOS"."DOMCALLE" AS "DOMCALLE", 
+      "DOMICILIOS"."DOMNUMERO" AS "DOMNUMERO", 
+      "DOMICILIOS"."DOMPISO" AS "DOMPISO", 
+      "DOMICILIOS"."DOMDPTO" AS "DOMDPTO", 
+      "DOMICILIOS"."DOMLOCAL" AS "DOMLOCAL", 
+      "DOMICILIOS"."DOMCODPOST" AS "DOMCODPOST", 
+      "DOMICILIOS"."DOMFECACTU" AS "DOMFECACTU", 
+      "DOMICILIOS"."DOMUSUACTU" AS "DOMUSUACTU", 
+      "DOMICILIOS"."DOMPCIA" AS "DOMPCIA", 
+      "DOMICILIOS"."DOMSECTOR" AS "DOMSECTOR", 
+      "DOMICILIOS"."DOMTORRE" AS "DOMTORRE", 
+      "DOMICILIOS"."DOMMANZANA" AS "DOMMANZANA", 
+      "DOMICILIOS"."DOMMUNICIPIO" AS "DOMMUNICIPIO", 
+      "DOMICILIOS"."DOMPARTIDODTO" AS "DOMPARTIDODTO", 
+      "DOMICILIOS"."DOMIDPROV" AS "DOMIDPROV", 
+      "DOMICILIOS"."DOMCODPOS" AS "DOMCODPOS"
+      FROM "FRID"."DOMICILIOS" "DOMICILIOS"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'FRID.ADMIN_SOC' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="ADMIN_SOC">
+    <Key>
+      <PropertyRef Name="ADSNROCORR" />
+      <PropertyRef Name="ADSCODTRAM" />
+      <PropertyRef Name="ADSFECHACT" />
+      <PropertyRef Name="ADSFECACTU" />
+      <PropertyRef Name="ADSUSUACTU" />
+    </Key>
+    <Property Name="ADSNROCORR" Type="number" Nullable="false" Precision="7" />
+    <Property Name="ADSCODTRAM" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="ADSFECHACT" Type="date" Nullable="false" />
+    <Property Name="ADSNROTRAM" Type="number" Precision="10" />
+    <Property Name="ADSAPENOM" Type="varchar2" MaxLength="60" />
+    <Property Name="ADSTIPOADM" Type="varchar2" MaxLength="1" />
+    <Property Name="ADSTIPDOC" Type="varchar2" MaxLength="3" />
+    <Property Name="ADSNRODOC" Type="varchar2" MaxLength="24" />
+    <Property Name="ADSCARGO" Type="varchar2" MaxLength="30" />
+    <Property Name="ADSFECVTO" Type="varchar2" MaxLength="10" />
+    <Property Name="ADSDOMREAL" Type="varchar2" MaxLength="60" />
+    <Property Name="ADSDOMESPE" Type="varchar2" MaxLength="60" />
+    <Property Name="ADSESTCIVIL" Type="varchar2" MaxLength="3" />
+    <Property Name="ADSEDAD" Type="number" Precision="3" />
+    <Property Name="ADSPROFESI" Type="varchar2" MaxLength="40" />
+    <Property Name="ADSNACIONAL" Type="varchar2" MaxLength="4" />
+    <Property Name="ADSNROCUIT" Type="number" Precision="11" />
+    <Property Name="ADSCONSTA" Type="varchar2" MaxLength="1" />
+    <Property Name="ADSCUITERR" Type="varchar2" MaxLength="1" />
+    <Property Name="ADSNROSOC" Type="number" Precision="6" />
+    <Property Name="ADSCUOTAS" Type="varchar2" MaxLength="11" />
+    <Property Name="ADSFECBAJA" Type="date" />
+    <Property Name="ADSCODBAJA" Type="varchar2" MaxLength="5" />
+    <Property Name="ADSNROBAJA" Type="number" Precision="10" />
+    <Property Name="ADSFECACTU" Type="date" Nullable="false" />
+    <Property Name="ADSUSUACTU" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ADSAPELLIDO" Type="varchar2" MaxLength="50" />
+    <Property Name="ADSNOMBRES" Type="varchar2" MaxLength="50" />
+    <Property Name="ADSTELNRO" Type="number" Precision="11" />
+    <Property Name="ADSTELCODAREA" Type="number" Precision="11" />
+    <Property Name="ADSEMAIL" Type="varchar2" MaxLength="160" />
+    <Property Name="ADSFECHANACIM" Type="date" />
+    <Property Name="ADSSEXO" Type="number" Precision="1" />
+    <Property Name="ADSFECHAVTO" Type="date" />
+    <Property Name="ADSCAPITAL" Type="number" Precision="15" Scale="2" />
+    <Property Name="ADSINTEGRACAP" Type="number" Precision="15" Scale="2" />
+    <Property Name="ADSAPORTEDIN" Type="number" Precision="15" Scale="2" />
+    <Property Name="ADSAPORTENODIM" Type="number" Precision="15" Scale="2" />
+    <Property Name="ADSVALORUNIT" Type="number" Precision="15" Scale="2" />
+    <Property Name="ADSCANTORD" Type="number" Precision="11" />
+    <Property Name="ADSCANTPREF" Type="number" Precision="11" />
+    <Property Name="ADSCANTVOTORD" Type="number" Precision="11" />
+    <Property Name="ADSVOTPREF" Type="number" Precision="11" />
+    <Property Name="ADSFISICAOJURID" Type="varchar2" MaxLength="1" />
+    <Property Name="ADSDENOMINACION" Type="varchar2" MaxLength="160" />
+    <Property Name="ADSJURISDIC" Type="number" Precision="11" />
+    <Property Name="ADSPAISORIG" Type="number" Precision="4" />
+    <Property Name="ADSCONTROLANTE" Type="number" Precision="11" />
+    <Property Name="ADSVINCULANTE" Type="number" Precision="11" />
+    <Property Name="FAXCODAREA" Type="number" Precision="11" />
+    <Property Name="FAXNUMERO" Type="number" Precision="11" />
+    <Property Name="OBSERVACIONES" Type="varchar2" MaxLength="50" />
+    <Property Name="ESCRITURALES" Type="number" Precision="1" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'FRID.BALANCES' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="BALANCES">
+    <Key>
+      <PropertyRef Name="BALNROCORR" />
+      <PropertyRef Name="BALCODTRAM" />
+      <PropertyRef Name="BALFECHACT" />
+      <PropertyRef Name="BALFECACTU" />
+      <PropertyRef Name="BALUSUACTU" />
+    </Key>
+    <Property Name="BALNROCORR" Type="number" Nullable="false" Precision="7" />
+    <Property Name="BALCODTRAM" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="BALFECHACT" Type="date" Nullable="false" />
+    <Property Name="BALNROTRAM" Type="number" Precision="10" />
+    <Property Name="BALFECBAL" Type="date" />
+    <Property Name="BALFECPRE" Type="date" />
+    <Property Name="BALFECACTU" Type="date" Nullable="false" />
+    <Property Name="BALUSUACTU" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="BALCAPINF" Type="number" Precision="15" Scale="2" />
+    <Property Name="BALCAPAJU" Type="number" Precision="15" Scale="2" />
+    <Property Name="BALNROROL" Type="number" Precision="9" />
+    <Property Name="BALBALROL" Type="number" Precision="4" />
+    <Property Name="BALCODBAL" Type="varchar2" MaxLength="1" />
+    <Property Name="BALTIPOPRESEN" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'FRID.BOLSACOM' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="BOLSACOM">
+    <Key>
+      <PropertyRef Name="BOLNROCORR" />
+      <PropertyRef Name="BOLCODTRAM" />
+      <PropertyRef Name="BOLFECHACT" />
+    </Key>
+    <Property Name="BOLNROCORR" Type="number" Nullable="false" Precision="7" />
+    <Property Name="BOLCODTRAM" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="BOLFECHACT" Type="date" Nullable="false" />
+    <Property Name="BOLNROTRAM" Type="number" Precision="10" />
+    <Property Name="BOLFECFVIG" Type="date" />
+    <Property Name="BOLUSUACTU" Type="varchar2" MaxLength="20" />
+    <Property Name="BOLFECACTU" Type="date" />
+    <Property Name="BOLFECDESDE" Type="date" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'FRID.CAPITAL' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="CAPITAL">
+    <Key>
+      <PropertyRef Name="CAPNROCORR" />
+      <PropertyRef Name="CAPCODTRAM" />
+      <PropertyRef Name="CAPFECHACT" />
+      <PropertyRef Name="CAPMONEDA" />
+      <PropertyRef Name="CAPFECACTU" />
+      <PropertyRef Name="CAPUSUACTU" />
+    </Key>
+    <Property Name="CAPNROCORR" Type="number" Nullable="false" Precision="7" />
+    <Property Name="CAPCODTRAM" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="CAPFECHACT" Type="date" Nullable="false" />
+    <Property Name="CAPNROTRAM" Type="number" Precision="10" />
+    <Property Name="CAPCAPITAL" Type="number" Precision="15" Scale="2" />
+    <Property Name="CAPCAPINTE" Type="number" Precision="15" Scale="2" />
+    <Property Name="CAPCAPSUSC" Type="number" Precision="15" Scale="2" />
+    <Property Name="CAPMONEDA" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="CAPFECACTU" Type="date" Nullable="false" />
+    <Property Name="CAPUSUACTU" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="CAPCAPANT" Type="number" Precision="15" Scale="2" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'FRID.DOMICILIOS' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="DOMICILIOS">
+    <Key>
+      <PropertyRef Name="DOMNROCORR" />
+      <PropertyRef Name="DOMCODTRAM" />
+      <PropertyRef Name="DOMFECHACT" />
+      <PropertyRef Name="DOMTIPODOM" />
+      <PropertyRef Name="DOMFECACTU" />
+      <PropertyRef Name="DOMUSUACTU" />
+    </Key>
+    <Property Name="DOMNROCORR" Type="number" Nullable="false" Precision="7" />
+    <Property Name="DOMCODTRAM" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="DOMFECHACT" Type="date" Nullable="false" />
+    <Property Name="DOMNROTRAM" Type="number" Precision="10" />
+    <Property Name="DOMTIPODOM" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DOMCALLE" Type="varchar2" MaxLength="40" />
+    <Property Name="DOMNUMERO" Type="varchar2" MaxLength="5" />
+    <Property Name="DOMPISO" Type="varchar2" MaxLength="3" />
+    <Property Name="DOMDPTO" Type="varchar2" MaxLength="5" />
+    <Property Name="DOMLOCAL" Type="varchar2" MaxLength="20" />
+    <Property Name="DOMCODPOST" Type="number" Precision="5" />
+    <Property Name="DOMFECACTU" Type="date" Nullable="false" />
+    <Property Name="DOMUSUACTU" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="DOMPCIA" Type="varchar2" MaxLength="20" />
+    <Property Name="DOMSECTOR" Type="varchar2" MaxLength="5" />
+    <Property Name="DOMTORRE" Type="varchar2" MaxLength="5" />
+    <Property Name="DOMMANZANA" Type="varchar2" MaxLength="5" />
+    <Property Name="DOMMUNICIPIO" Type="varchar2" MaxLength="50" />
+    <Property Name="DOMPARTIDODTO" Type="varchar2" MaxLength="50" />
+    <Property Name="DOMIDPROV" Type="number" Precision="3" />
+    <Property Name="DOMCODPOS" Type="varchar2" MaxLength="11" />
+  </EntityType>
+</Schema>

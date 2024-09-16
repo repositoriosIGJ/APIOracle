@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using ArgaAPI.Data;
+using ArgaAPI.Data.ARGA;
+using ArgaAPI.Data.DEVIGJ;
 using ArgaAPI.DTOs;
 using ArgaAPI.Models;
 using ArgaAPI.Repositorio.Contrato;
@@ -29,7 +31,7 @@ namespace ArgaAPI.Repositorio.Implementacion
 
         #endregion
 
-        public Expediente MapEXPTEToExpediente(EXPTES_PROD exptes) {
+        public Expediente MapEXPTEToExpediente(EXPTES exptes) {
           TipoSocietario tiposocietario = new TipoSocietario();
 
           if (exptes.EXPTIPOSOC < 100)
@@ -69,7 +71,7 @@ namespace ArgaAPI.Repositorio.Implementacion
 
             try
             {
-                using (var context = new Entities())
+                using (var context = new DEVIGJ())
                 {
 
                     // Crear el comando usando la conexión del contexto
@@ -111,7 +113,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                         while (reader.Read())
                         {
                             // Crear manualmente un objeto EXPTES_PROD a partir del reader
-                            EXPTES_PROD exptes = new EXPTES_PROD
+                            EXPTES exptes = new EXPTES
                             {
                                 //CONDICIONAL PARA QUE AGREGARLE VALOR A LOS PARAMETROS NULOS 0 A LOS ENTEROS Y "" AL STRING 
                                 EXPNROCORR = reader["EXPNROCORR"] != DBNull.Value ? Convert.ToInt32(reader["EXPNROCORR"]) : 0,

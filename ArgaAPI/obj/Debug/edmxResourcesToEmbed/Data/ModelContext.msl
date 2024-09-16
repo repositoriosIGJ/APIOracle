@@ -121,32 +121,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="VISTAREC">
-      <EntityTypeMapping TypeName="Modelo.VISTAREC">
-        <MappingFragment StoreEntitySet="VISTAREC">
-          <ScalarProperty Name="VISNROCORR" ColumnName="VISNROCORR" />
-          <ScalarProperty Name="VISCODTRAM" ColumnName="VISCODTRAM" />
-          <ScalarProperty Name="VISFECHACT" ColumnName="VISFECHACT" />
-          <ScalarProperty Name="VISNROTRAM" ColumnName="VISNROTRAM" />
-          <ScalarProperty Name="VISCODDEST" ColumnName="VISCODDEST" />
-          <ScalarProperty Name="VISFECHART" ColumnName="VISFECHART" />
-          <ScalarProperty Name="VISNROSUBD" ColumnName="VISNROSUBD" />
-          <ScalarProperty Name="VISTIPO" ColumnName="VISTIPO" />
-          <ScalarProperty Name="VISDETALLE" ColumnName="VISDETALLE" />
-          <ScalarProperty Name="VISFECACTU" ColumnName="VISFECACTU" />
-          <ScalarProperty Name="VISUSUACTU" ColumnName="VISUSUACTU" />
-          <ScalarProperty Name="VISFECBAJA" ColumnName="VISFECBAJA" />
-          <ScalarProperty Name="VISCODBAJA" ColumnName="VISCODBAJA" />
-          <ScalarProperty Name="VISREVISOR" ColumnName="VISREVISOR" />
-          <ScalarProperty Name="VISREVOK" ColumnName="VISREVOK" />
-          <ScalarProperty Name="VISNHOJA" ColumnName="VISNHOJA" />
-          <ScalarProperty Name="VISFIN" ColumnName="VISFIN" />
-          <ScalarProperty Name="VISPZONOTIF" ColumnName="VISPZONOTIF" />
-          <ScalarProperty Name="VISDIGITAL" ColumnName="VISDIGITAL" />
-          <ScalarProperty Name="VISDATREG" ColumnName="VISDATREG" />
-          <ScalarProperty Name="VISIDBPM" ColumnName="VISIDBPM" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

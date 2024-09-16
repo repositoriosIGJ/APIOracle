@@ -27,12 +27,7 @@ namespace ArgaAPI.Business.Implementacion
            
         }
 
-        public ResponseDTO<List<Tramite>> GetTramitesbyCorrelativo(int Correlativo)
-        {
-            var rsp = _tramiteRepository.GetTramitesbyCorrelativo(Correlativo);
-
-           return rsp;
-        }
+       
 
         #endregion
     }

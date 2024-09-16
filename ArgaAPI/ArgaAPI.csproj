@@ -158,8 +158,74 @@
     <Compile Include="Controllers\TipoTramiteController.cs" />
     <Compile Include="Controllers\TramiteController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Data\ARGA\DATOS_GDE.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\DESTRA.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\EXPTES.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\MATRICULADOS.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\MAT_CERTVIGENCIA.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\MAT_DOMICILIOS.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\MAT_INSCRIPCION.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\MAT_SEGUROCAU.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\ModeloARGA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloARGA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\ModeloARGA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\ModeloARGA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloARGA.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\TABGEN.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\TIMBRADOS.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\TRAMIT.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ARGA\VISTAREC.cs">
+      <DependentUpon>ModeloARGA.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\DESTRA_PROD.cs">
       <DependentUpon>ModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DEVIGJ\DEVIGJModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DEVIGJModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DEVIGJ\DEVIGJModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DEVIGJModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DEVIGJ\DEVIGJModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DEVIGJModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Data\EXPTES_PROD.cs">
       <DependentUpon>ModelContext.tt</DependentUpon>
@@ -272,6 +338,26 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Data\ARGA\ModeloARGA.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloARGA.edmx</DependentUpon>
+      <LastGenOutput>ModeloARGA.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\ARGA\ModeloARGA.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloARGA.edmx</DependentUpon>
+      <LastGenOutput>ModeloARGA.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\DEVIGJ\DEVIGJModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DEVIGJModel.edmx</DependentUpon>
+      <LastGenOutput>DEVIGJModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\DEVIGJ\DEVIGJModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DEVIGJModel.edmx</DependentUpon>
+      <LastGenOutput>DEVIGJModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Data\ModelContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelContext.edmx</DependentUpon>
@@ -294,6 +380,20 @@
     </Content>
     <Content Include="App.config.uninstall.xdt" />
     <Content Include="App.config.install.xdt" />
+    <EntityDeploy Include="Data\DEVIGJ\DEVIGJModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DEVIGJModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Data\DEVIGJ\DEVIGJModel.edmx.diagram">
+      <DependentUpon>DEVIGJModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Data\ARGA\ModeloARGA.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloARGA.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Data\ARGA\ModeloARGA.edmx.diagram">
+      <DependentUpon>ModeloARGA.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -344,7 +444,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Data\ContextDev\" />
+    <Folder Include="Data\FRID\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

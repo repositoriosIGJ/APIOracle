@@ -8,7 +8,6 @@
     <EntitySet Name="TABGEN_PROD" EntityType="Modelo.TABGEN_PROD" />
     <EntitySet Name="TRAMIT_PROD" EntityType="Modelo.TRAMIT_PROD" />
     <EntitySet Name="TRANSFORMACION" EntityType="Modelo.TRANSFORMACION" />
-    <EntitySet Name="VISTAREC" EntityType="Modelo.VISTAREC" />
   </EntityContainer>
   <EntityType Name="DESTRA_PROD">
     <Key>
@@ -141,33 +140,5 @@
     <Property Name="TRFFECACTU" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="TRFTIPOSOC_ANT" Type="Int16" />
     <Property Name="TRFTIPOSOC_ACT" Type="Int16" />
-  </EntityType>
-  <EntityType Name="VISTAREC">
-    <Key>
-      <PropertyRef Name="VISNROCORR" />
-      <PropertyRef Name="VISCODTRAM" />
-      <PropertyRef Name="VISFECHACT" />
-    </Key>
-    <Property Name="VISNROCORR" Type="Int32" Nullable="false" />
-    <Property Name="VISCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
-    <Property Name="VISFECHACT" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="VISNROTRAM" Type="Int32" />
-    <Property Name="VISCODDEST" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
-    <Property Name="VISFECHART" Type="DateTime" Precision="0" />
-    <Property Name="VISNROSUBD" Type="Int16" />
-    <Property Name="VISTIPO" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
-    <Property Name="VISDETALLE" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-    <Property Name="VISFECACTU" Type="DateTime" Precision="0" />
-    <Property Name="VISUSUACTU" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-    <Property Name="VISFECBAJA" Type="DateTime" Precision="0" />
-    <Property Name="VISCODBAJA" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
-    <Property Name="VISREVISOR" Type="Int16" />
-    <Property Name="VISREVOK" Type="Int16" />
-    <Property Name="VISNHOJA" Type="Int16" />
-    <Property Name="VISFIN" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
-    <Property Name="VISPZONOTIF" Type="Int16" />
-    <Property Name="VISDIGITAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
-    <Property Name="VISDATREG" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
-    <Property Name="VISIDBPM" Type="Int32" />
   </EntityType>
 </Schema>

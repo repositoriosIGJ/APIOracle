@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FridModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FRID" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMIN_SOC" EntityType="FridModel.ADMIN_SOC" />
+    <EntitySet Name="BALANCES" EntityType="FridModel.BALANCES" />
+    <EntitySet Name="BOLSACOM" EntityType="FridModel.BOLSACOM" />
+    <EntitySet Name="CAPITAL" EntityType="FridModel.CAPITAL" />
+    <EntitySet Name="DOMICILIOS" EntityType="FridModel.DOMICILIOS" />
+  </EntityContainer>
+  <EntityType Name="ADMIN_SOC">
+    <Key>
+      <PropertyRef Name="ADSNROCORR" />
+      <PropertyRef Name="ADSCODTRAM" />
+      <PropertyRef Name="ADSFECHACT" />
+      <PropertyRef Name="ADSFECACTU" />
+      <PropertyRef Name="ADSUSUACTU" />
+    </Key>
+    <Property Name="ADSNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="ADSCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="ADSFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ADSNROTRAM" Type="Int32" />
+    <Property Name="ADSAPENOM" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="ADSTIPOADM" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="ADSTIPDOC" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="ADSNRODOC" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="ADSCARGO" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ADSFECVTO" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ADSDOMREAL" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="ADSDOMESPE" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="ADSESTCIVIL" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="ADSEDAD" Type="Int16" />
+    <Property Name="ADSPROFESI" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="ADSNACIONAL" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="ADSNROCUIT" Type="Int64" />
+    <Property Name="ADSCONSTA" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="ADSCUITERR" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="ADSNROSOC" Type="Int32" />
+    <Property Name="ADSCUOTAS" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="ADSFECBAJA" Type="DateTime" Precision="0" />
+    <Property Name="ADSCODBAJA" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="ADSNROBAJA" Type="Int32" />
+    <Property Name="ADSFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ADSUSUACTU" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ADSAPELLIDO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ADSNOMBRES" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ADSTELNRO" Type="Int64" />
+    <Property Name="ADSTELCODAREA" Type="Int64" />
+    <Property Name="ADSEMAIL" Type="String" MaxLength="160" Unicode="false" FixedLength="false" />
+    <Property Name="ADSFECHANACIM" Type="DateTime" Precision="0" />
+    <Property Name="ADSSEXO" Type="Int16" />
+    <Property Name="ADSFECHAVTO" Type="DateTime" Precision="0" />
+    <Property Name="ADSCAPITAL" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ADSINTEGRACAP" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ADSAPORTEDIN" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ADSAPORTENODIM" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ADSVALORUNIT" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ADSCANTORD" Type="Int64" />
+    <Property Name="ADSCANTPREF" Type="Int64" />
+    <Property Name="ADSCANTVOTORD" Type="Int64" />
+    <Property Name="ADSVOTPREF" Type="Int64" />
+    <Property Name="ADSFISICAOJURID" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="ADSDENOMINACION" Type="String" MaxLength="160" Unicode="false" FixedLength="false" />
+    <Property Name="ADSJURISDIC" Type="Int64" />
+    <Property Name="ADSPAISORIG" Type="Int16" />
+    <Property Name="ADSCONTROLANTE" Type="Int64" />
+    <Property Name="ADSVINCULANTE" Type="Int64" />
+    <Property Name="FAXCODAREA" Type="Int64" />
+    <Property Name="FAXNUMERO" Type="Int64" />
+    <Property Name="OBSERVACIONES" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ESCRITURALES" Type="Int16" />
+  </EntityType>
+  <EntityType Name="BALANCES">
+    <Key>
+      <PropertyRef Name="BALNROCORR" />
+      <PropertyRef Name="BALCODTRAM" />
+      <PropertyRef Name="BALFECHACT" />
+      <PropertyRef Name="BALFECACTU" />
+      <PropertyRef Name="BALUSUACTU" />
+    </Key>
+    <Property Name="BALNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="BALCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="BALFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BALNROTRAM" Type="Int32" />
+    <Property Name="BALFECBAL" Type="DateTime" Precision="0" />
+    <Property Name="BALFECPRE" Type="DateTime" Precision="0" />
+    <Property Name="BALFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BALUSUACTU" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="BALCAPINF" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="BALCAPAJU" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="BALNROROL" Type="Int32" />
+    <Property Name="BALBALROL" Type="Int16" />
+    <Property Name="BALCODBAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="BALTIPOPRESEN" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="BOLSACOM">
+    <Key>
+      <PropertyRef Name="BOLNROCORR" />
+      <PropertyRef Name="BOLCODTRAM" />
+      <PropertyRef Name="BOLFECHACT" />
+    </Key>
+    <Property Name="BOLNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="BOLCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="BOLFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BOLNROTRAM" Type="Int32" />
+    <Property Name="BOLFECFVIG" Type="DateTime" Precision="0" />
+    <Property Name="BOLUSUACTU" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="BOLFECACTU" Type="DateTime" Precision="0" />
+    <Property Name="BOLFECDESDE" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="CAPITAL">
+    <Key>
+      <PropertyRef Name="CAPNROCORR" />
+      <PropertyRef Name="CAPCODTRAM" />
+      <PropertyRef Name="CAPFECHACT" />
+      <PropertyRef Name="CAPMONEDA" />
+      <PropertyRef Name="CAPFECACTU" />
+      <PropertyRef Name="CAPUSUACTU" />
+    </Key>
+    <Property Name="CAPNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="CAPCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="CAPFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CAPNROTRAM" Type="Int32" />
+    <Property Name="CAPCAPITAL" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="CAPCAPINTE" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="CAPCAPSUSC" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="CAPMONEDA" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="CAPFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CAPUSUACTU" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CAPCAPANT" Type="Decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <EntityType Name="DOMICILIOS">
+    <Key>
+      <PropertyRef Name="DOMNROCORR" />
+      <PropertyRef Name="DOMCODTRAM" />
+      <PropertyRef Name="DOMFECHACT" />
+      <PropertyRef Name="DOMTIPODOM" />
+      <PropertyRef Name="DOMFECACTU" />
+      <PropertyRef Name="DOMUSUACTU" />
+    </Key>
+    <Property Name="DOMNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="DOMCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DOMFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DOMNROTRAM" Type="Int32" />
+    <Property Name="DOMTIPODOM" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="DOMCALLE" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="DOMNUMERO" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DOMPISO" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="DOMDPTO" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DOMLOCAL" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DOMCODPOST" Type="Int16" />
+    <Property Name="DOMFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DOMUSUACTU" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DOMPCIA" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DOMSECTOR" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DOMTORRE" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DOMMANZANA" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DOMMUNICIPIO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DOMPARTIDODTO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DOMIDPROV" Type="Int16" />
+    <Property Name="DOMCODPOS" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

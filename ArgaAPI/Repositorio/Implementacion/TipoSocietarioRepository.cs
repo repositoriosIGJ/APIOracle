@@ -10,6 +10,8 @@ using Oracle.DataAccess.Client;
 using System.Configuration;
 using System.Data;
 using ArgaAPI.DTOs;
+using ArgaAPI.Data.DEVIGJ;
+using ArgaAPI.Data.ARGA;
 
 
 namespace ArgaAPI.Repositorio.Implementacion
@@ -26,7 +28,7 @@ namespace ArgaAPI.Repositorio.Implementacion
             List<TipoSocietario> ListaTiposSocietarios = new List<TipoSocietario>();
 
             // Usamos el contexto de Entity Framework para interactuar con la base de datos
-            using (var context = new Entities())
+            using (var context = new DEVIGJ())
             {
                 // Definimos la consulta SQL que ejecutará el procedimiento almacenado
                 var sql = "BEGIN PK_API_LEGACY.ListTiposSocietarios(:p_cursor); END;";
@@ -35,7 +37,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                 var outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
 
                 // Ejecutamos la consulta SQL y obtenemos los resultados en una lista
-                var ListaTipoSocietarioDB = context.Database.SqlQuery<TABGEN_PROD>(sql, outputCursor).ToList();
+                var ListaTipoSocietarioDB = context.Database.SqlQuery<TABGEN>(sql, outputCursor).ToList();
 
                 // Iteramos sobre cada elemento de la lista devuelta por el procedimiento
                 foreach (var tipoSocietariodb in ListaTipoSocietarioDB)
@@ -53,7 +55,7 @@ namespace ArgaAPI.Repositorio.Implementacion
 
 
     
-        public TipoSocietario MapToTipoSocietario(TABGEN_PROD tabgenProd)
+        public TipoSocietario MapToTipoSocietario(TABGEN tabgenProd)
         {
 
             TipoSocietario tiposocietario = new TipoSocietario()
@@ -68,10 +70,10 @@ namespace ArgaAPI.Repositorio.Implementacion
             return tiposocietario;
         }
 
-        public TABGEN_PROD MapToTabGen(TipoSocietario tipoSocietario)
+        public TABGEN MapToTabGen(TipoSocietario tipoSocietario)
         {
 
-            TABGEN_PROD tabgen = new TABGEN_PROD()
+            TABGEN tabgen = new TABGEN()
             {
                 TABTIPOTAB = "002",
                 TABCLAVE = tipoSocietario.Codigo,
@@ -99,7 +101,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                 OracleParameter codigoParam = new OracleParameter(":codigo", OracleDbType.Varchar2) { Value = codigo };
 
                 // Ejecutar la consulta SQL  
-                var tipoSocietarioDB = context.Database.SqlQuery<TABGEN_PROD>(sql, codigoParam).FirstOrDefault();
+                var tipoSocietarioDB = context.Database.SqlQuery<TABGEN>(sql, codigoParam).FirstOrDefault();
                 //verificar si se encontro algun registro
                 if (tipoSocietarioDB != null)
                 {
@@ -136,7 +138,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                     Value = "%" + tipo + "%" // Agregar comodines para simular un "contains"
                 };
                 // Ejecutar la consulta SQL pasando el parámetro
-                var tiposSocietariosDB = context.Database.SqlQuery<TABGEN_PROD>(sql, tipoSocParam);
+                var tiposSocietariosDB = context.Database.SqlQuery<TABGEN>(sql, tipoSocParam);
 
                 if (tiposSocietariosDB != null)
                 {
@@ -187,7 +189,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                 var outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
 
                 // Ejecutamos la consulta SQL y obtenemos los resultados en una lista
-                var ListaTipoSocietarioDB = context.Database.SqlQuery<TABGEN_PROD>(sql, outputCursor).ToList();
+                var ListaTipoSocietarioDB = context.Database.SqlQuery<TABGEN>(sql, outputCursor).ToList();
 
                 // Iteramos sobre cada elemento de la lista devuelta por el procedimiento
                 foreach (var tipoSocietariodb in ListaTipoSocietarioDB)

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FridModelStoreContainer" CdmEntityContainer="FRID">
+    <EntitySetMapping Name="ADMIN_SOC">
+      <EntityTypeMapping TypeName="FridModel.ADMIN_SOC">
+        <MappingFragment StoreEntitySet="ADMIN_SOC">
+          <ScalarProperty Name="ADSNROCORR" ColumnName="ADSNROCORR" />
+          <ScalarProperty Name="ADSCODTRAM" ColumnName="ADSCODTRAM" />
+          <ScalarProperty Name="ADSFECHACT" ColumnName="ADSFECHACT" />
+          <ScalarProperty Name="ADSNROTRAM" ColumnName="ADSNROTRAM" />
+          <ScalarProperty Name="ADSAPENOM" ColumnName="ADSAPENOM" />
+          <ScalarProperty Name="ADSTIPOADM" ColumnName="ADSTIPOADM" />
+          <ScalarProperty Name="ADSTIPDOC" ColumnName="ADSTIPDOC" />
+          <ScalarProperty Name="ADSNRODOC" ColumnName="ADSNRODOC" />
+          <ScalarProperty Name="ADSCARGO" ColumnName="ADSCARGO" />
+          <ScalarProperty Name="ADSFECVTO" ColumnName="ADSFECVTO" />
+          <ScalarProperty Name="ADSDOMREAL" ColumnName="ADSDOMREAL" />
+          <ScalarProperty Name="ADSDOMESPE" ColumnName="ADSDOMESPE" />
+          <ScalarProperty Name="ADSESTCIVIL" ColumnName="ADSESTCIVIL" />
+          <ScalarProperty Name="ADSEDAD" ColumnName="ADSEDAD" />
+          <ScalarProperty Name="ADSPROFESI" ColumnName="ADSPROFESI" />
+          <ScalarProperty Name="ADSNACIONAL" ColumnName="ADSNACIONAL" />
+          <ScalarProperty Name="ADSNROCUIT" ColumnName="ADSNROCUIT" />
+          <ScalarProperty Name="ADSCONSTA" ColumnName="ADSCONSTA" />
+          <ScalarProperty Name="ADSCUITERR" ColumnName="ADSCUITERR" />
+          <ScalarProperty Name="ADSNROSOC" ColumnName="ADSNROSOC" />
+          <ScalarProperty Name="ADSCUOTAS" ColumnName="ADSCUOTAS" />
+          <ScalarProperty Name="ADSFECBAJA" ColumnName="ADSFECBAJA" />
+          <ScalarProperty Name="ADSCODBAJA" ColumnName="ADSCODBAJA" />
+          <ScalarProperty Name="ADSNROBAJA" ColumnName="ADSNROBAJA" />
+          <ScalarProperty Name="ADSFECACTU" ColumnName="ADSFECACTU" />
+          <ScalarProperty Name="ADSUSUACTU" ColumnName="ADSUSUACTU" />
+          <ScalarProperty Name="ADSAPELLIDO" ColumnName="ADSAPELLIDO" />
+          <ScalarProperty Name="ADSNOMBRES" ColumnName="ADSNOMBRES" />
+          <ScalarProperty Name="ADSTELNRO" ColumnName="ADSTELNRO" />
+          <ScalarProperty Name="ADSTELCODAREA" ColumnName="ADSTELCODAREA" />
+          <ScalarProperty Name="ADSEMAIL" ColumnName="ADSEMAIL" />
+          <ScalarProperty Name="ADSFECHANACIM" ColumnName="ADSFECHANACIM" />
+          <ScalarProperty Name="ADSSEXO" ColumnName="ADSSEXO" />
+          <ScalarProperty Name="ADSFECHAVTO" ColumnName="ADSFECHAVTO" />
+          <ScalarProperty Name="ADSCAPITAL" ColumnName="ADSCAPITAL" />
+          <ScalarProperty Name="ADSINTEGRACAP" ColumnName="ADSINTEGRACAP" />
+          <ScalarProperty Name="ADSAPORTEDIN" ColumnName="ADSAPORTEDIN" />
+          <ScalarProperty Name="ADSAPORTENODIM" ColumnName="ADSAPORTENODIM" />
+          <ScalarProperty Name="ADSVALORUNIT" ColumnName="ADSVALORUNIT" />
+          <ScalarProperty Name="ADSCANTORD" ColumnName="ADSCANTORD" />
+          <ScalarProperty Name="ADSCANTPREF" ColumnName="ADSCANTPREF" />
+          <ScalarProperty Name="ADSCANTVOTORD" ColumnName="ADSCANTVOTORD" />
+          <ScalarProperty Name="ADSVOTPREF" ColumnName="ADSVOTPREF" />
+          <ScalarProperty Name="ADSFISICAOJURID" ColumnName="ADSFISICAOJURID" />
+          <ScalarProperty Name="ADSDENOMINACION" ColumnName="ADSDENOMINACION" />
+          <ScalarProperty Name="ADSJURISDIC" ColumnName="ADSJURISDIC" />
+          <ScalarProperty Name="ADSPAISORIG" ColumnName="ADSPAISORIG" />
+          <ScalarProperty Name="ADSCONTROLANTE" ColumnName="ADSCONTROLANTE" />
+          <ScalarProperty Name="ADSVINCULANTE" ColumnName="ADSVINCULANTE" />
+          <ScalarProperty Name="FAXCODAREA" ColumnName="FAXCODAREA" />
+          <ScalarProperty Name="FAXNUMERO" ColumnName="FAXNUMERO" />
+          <ScalarProperty Name="OBSERVACIONES" ColumnName="OBSERVACIONES" />
+          <ScalarProperty Name="ESCRITURALES" ColumnName="ESCRITURALES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BALANCES">
+      <EntityTypeMapping TypeName="FridModel.BALANCES">
+        <MappingFragment StoreEntitySet="BALANCES">
+          <ScalarProperty Name="BALNROCORR" ColumnName="BALNROCORR" />
+          <ScalarProperty Name="BALCODTRAM" ColumnName="BALCODTRAM" />
+          <ScalarProperty Name="BALFECHACT" ColumnName="BALFECHACT" />
+          <ScalarProperty Name="BALNROTRAM" ColumnName="BALNROTRAM" />
+          <ScalarProperty Name="BALFECBAL" ColumnName="BALFECBAL" />
+          <ScalarProperty Name="BALFECPRE" ColumnName="BALFECPRE" />
+          <ScalarProperty Name="BALFECACTU" ColumnName="BALFECACTU" />
+          <ScalarProperty Name="BALUSUACTU" ColumnName="BALUSUACTU" />
+          <ScalarProperty Name="BALCAPINF" ColumnName="BALCAPINF" />
+          <ScalarProperty Name="BALCAPAJU" ColumnName="BALCAPAJU" />
+          <ScalarProperty Name="BALNROROL" ColumnName="BALNROROL" />
+          <ScalarProperty Name="BALBALROL" ColumnName="BALBALROL" />
+          <ScalarProperty Name="BALCODBAL" ColumnName="BALCODBAL" />
+          <ScalarProperty Name="BALTIPOPRESEN" ColumnName="BALTIPOPRESEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOLSACOM">
+      <EntityTypeMapping TypeName="FridModel.BOLSACOM">
+        <MappingFragment StoreEntitySet="BOLSACOM">
+          <ScalarProperty Name="BOLNROCORR" ColumnName="BOLNROCORR" />
+          <ScalarProperty Name="BOLCODTRAM" ColumnName="BOLCODTRAM" />
+          <ScalarProperty Name="BOLFECHACT" ColumnName="BOLFECHACT" />
+          <ScalarProperty Name="BOLNROTRAM" ColumnName="BOLNROTRAM" />
+          <ScalarProperty Name="BOLFECFVIG" ColumnName="BOLFECFVIG" />
+          <ScalarProperty Name="BOLUSUACTU" ColumnName="BOLUSUACTU" />
+          <ScalarProperty Name="BOLFECACTU" ColumnName="BOLFECACTU" />
+          <ScalarProperty Name="BOLFECDESDE" ColumnName="BOLFECDESDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAPITAL">
+      <EntityTypeMapping TypeName="FridModel.CAPITAL">
+        <MappingFragment StoreEntitySet="CAPITAL">
+          <ScalarProperty Name="CAPNROCORR" ColumnName="CAPNROCORR" />
+          <ScalarProperty Name="CAPCODTRAM" ColumnName="CAPCODTRAM" />
+          <ScalarProperty Name="CAPFECHACT" ColumnName="CAPFECHACT" />
+          <ScalarProperty Name="CAPNROTRAM" ColumnName="CAPNROTRAM" />
+          <ScalarProperty Name="CAPCAPITAL" ColumnName="CAPCAPITAL" />
+          <ScalarProperty Name="CAPCAPINTE" ColumnName="CAPCAPINTE" />
+          <ScalarProperty Name="CAPCAPSUSC" ColumnName="CAPCAPSUSC" />
+          <ScalarProperty Name="CAPMONEDA" ColumnName="CAPMONEDA" />
+          <ScalarProperty Name="CAPFECACTU" ColumnName="CAPFECACTU" />
+          <ScalarProperty Name="CAPUSUACTU" ColumnName="CAPUSUACTU" />
+          <ScalarProperty Name="CAPCAPANT" ColumnName="CAPCAPANT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOMICILIOS">
+      <EntityTypeMapping TypeName="FridModel.DOMICILIOS">
+        <MappingFragment StoreEntitySet="DOMICILIOS">
+          <ScalarProperty Name="DOMNROCORR" ColumnName="DOMNROCORR" />
+          <ScalarProperty Name="DOMCODTRAM" ColumnName="DOMCODTRAM" />
+          <ScalarProperty Name="DOMFECHACT" ColumnName="DOMFECHACT" />
+          <ScalarProperty Name="DOMNROTRAM" ColumnName="DOMNROTRAM" />
+          <ScalarProperty Name="DOMTIPODOM" ColumnName="DOMTIPODOM" />
+          <ScalarProperty Name="DOMCALLE" ColumnName="DOMCALLE" />
+          <ScalarProperty Name="DOMNUMERO" ColumnName="DOMNUMERO" />
+          <ScalarProperty Name="DOMPISO" ColumnName="DOMPISO" />
+          <ScalarProperty Name="DOMDPTO" ColumnName="DOMDPTO" />
+          <ScalarProperty Name="DOMLOCAL" ColumnName="DOMLOCAL" />
+          <ScalarProperty Name="DOMCODPOST" ColumnName="DOMCODPOST" />
+          <ScalarProperty Name="DOMFECACTU" ColumnName="DOMFECACTU" />
+          <ScalarProperty Name="DOMUSUACTU" ColumnName="DOMUSUACTU" />
+          <ScalarProperty Name="DOMPCIA" ColumnName="DOMPCIA" />
+          <ScalarProperty Name="DOMSECTOR" ColumnName="DOMSECTOR" />
+          <ScalarProperty Name="DOMTORRE" ColumnName="DOMTORRE" />
+          <ScalarProperty Name="DOMMANZANA" ColumnName="DOMMANZANA" />
+          <ScalarProperty Name="DOMMUNICIPIO" ColumnName="DOMMUNICIPIO" />
+          <ScalarProperty Name="DOMPARTIDODTO" ColumnName="DOMPARTIDODTO" />
+          <ScalarProperty Name="DOMIDPROV" ColumnName="DOMIDPROV" />
+          <ScalarProperty Name="DOMCODPOS" ColumnName="DOMCODPOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

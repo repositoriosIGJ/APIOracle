@@ -29,24 +29,9 @@ namespace ArgaAPI.Controllers
             return rsp;
         }
 
-       /* [HttpGet]
-        [ActionName("GetTramites")]
-        public ResponseDTO<List<Tramite>> GetTramites(Tramite tramite)
-        {
-            var rsp = _tramitebusiness.GetTramites(tramite);
+ 
 
-            return rsp;
-        }*/
-
-        // GET api/tramite/GetTramitesByCorrelativo
-        [HttpGet]
-        [ActionName("GetTramitesByCorrelativo")]
-        public ResponseDTO<List<Tramite>> GetTramitesByCorrelativo(int correlativo)
-        {
-            var rsp = _tramitebusiness.GetTramitesbyCorrelativo(correlativo);
-
-            return rsp;
-        }
+     
 
      
 

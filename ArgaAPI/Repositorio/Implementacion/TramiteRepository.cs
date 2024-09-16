@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using ArgaAPI.Data;
+using ArgaAPI.Data.ARGA;
+using ArgaAPI.Data.DEVIGJ;
 using ArgaAPI.DTOs;
 using ArgaAPI.Models;
 using ArgaAPI.Repositorio.Contrato;
@@ -30,7 +32,7 @@ namespace ArgaAPI.Repositorio.Implementacion
 
             try
             {
-                using (var context = new Entities())
+                using (var context = new DEVIGJ())
                 {
                     // Crear el comando usando la conexión del contexto
                     OracleCommand command = new OracleCommand("PK_API_LEGACY.buscarTramites", (OracleConnection)context.Database.Connection);
@@ -70,7 +72,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                         while (reader.Read())
                         {
                             // Crear manualmente un objeto TRAMIT_PROD a partir del reader
-                            TRAMIT_PROD tramit = new TRAMIT_PROD
+                            TRAMIT tramit = new TRAMIT
                             {
                                 // Manejar valores nulos
                                 TRANROTRAM = reader["TRANROTRAM"] != DBNull.Value ? Convert.ToInt32(reader["TRANROTRAM"]) : 0,
@@ -107,52 +109,11 @@ namespace ArgaAPI.Repositorio.Implementacion
         #region Miembros de ITramiteRepository
 
 
-        public ResponseDTO<List<Tramite>> GetTramitesbyCorrelativo(int correlativo)
-        {
-            ResponseDTO<List<Tramite>> rsp = new ResponseDTO<List<Tramite>>();
-            List<Tramite> listaTramites = new List<Tramite>();
-
-            rsp.IsSuccess = false;
-
-            using (var context = new Entities())
-            {
-                string sql = "select * from tramit_prod t where t.tranrocorr = :correlativo  order by t.tracodtram desc";
-
-                // Crear el parámetro usando Oracle.DataAccess.Client.OracleParameter
-                OracleParameter tipoSocParam = new OracleParameter(":tipo", OracleDbType.Int32) { Value = correlativo };
-
-                // Ejecutar la consulta SQL pasando el parámetro
-                var tramitesDB = context.Database.SqlQuery<TRAMIT_PROD>(sql, tipoSocParam);
-
-                if (tramitesDB != null)
-                {
-                    // Iteramos sobre cada elemento de la lista devuelta por el procedimiento
-                    foreach (var tramitedb in tramitesDB)
-                    {
-                        // Mapeamos el objeto TRAMIT_PROD al objeto TipoSocietario
-                        Tramite tramite = MapToTramite(tramitedb);
-
-                        // Añadimos el objeto tramite a la lista final
-                        listaTramites.Add(tramite);
-
-                    }
-                    rsp.Data = listaTramites;
-                    rsp.IsSuccess = true;
-                    rsp.Message = "Ok";
-                }
-                else
-                {
-                    return null;
-                }
-
-
-                return rsp;
-            }
-        }
+       
 
         #endregion
 
-        public Tramite MapToTramite(TRAMIT_PROD tramitProd)
+        public Tramite MapToTramite(TRAMIT tramitProd)
         {
            
             Tramite tramite = new Tramite()
@@ -168,7 +129,7 @@ namespace ArgaAPI.Repositorio.Implementacion
             return tramite;
         }
 
-        public Tramite MapTramitToTramite(TRAMIT_PROD tramit)
+        public Tramite MapTramitToTramite(TRAMIT tramit)
         {
 
             var tramitedb = _tipoTramiteRepository.GetTramitesbyCodigoTramite(tramit.TRACODTRAM);

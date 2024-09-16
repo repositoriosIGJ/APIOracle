@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using ArgaAPI.Data;
+using ArgaAPI.Data.ARGA;
+using ArgaAPI.Data.DEVIGJ;
 using ArgaAPI.DTOs;
 using ArgaAPI.Models;
 using ArgaAPI.Repositorio.Contrato;
@@ -23,7 +25,7 @@ namespace ArgaAPI.Repositorio.Implementacion
         public IEnumerable<TipoTramite> GetTiposTramites()
         {
             List<TipoTramite> ListaTiposSocietarios = new List<TipoTramite>();
-            using (var context = new Entities())
+            using (var context = new DEVIGJ())
             {
 
 
@@ -36,7 +38,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                 var outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
 
                 // Ejecutamos la consulta SQL y obtenemos los resultados en una lista
-                var ListaTipoTramiteDB = context.Database.SqlQuery<TABGEN_PROD>(sql, outputCursor).ToList();
+                var ListaTipoTramiteDB = context.Database.SqlQuery<TABGEN>(sql, outputCursor).ToList();
 
                 //var ListaTipoTramiteDB = context.Database.SqlQuery<TABGEN_PROD>(sql).ToList();
 
@@ -52,7 +54,7 @@ namespace ArgaAPI.Repositorio.Implementacion
             }
         }
 
-        public TipoTramite MapToTipoTramite(TABGEN_PROD tabgenProd)
+        public TipoTramite MapToTipoTramite(TABGEN tabgenProd)
         {
 
             TipoTramite tipoTramite = new TipoTramite()
@@ -85,7 +87,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                     OracleParameter codigoParam = new OracleParameter(":codigo", OracleDbType.Varchar2) { Value = codigo };
 
                     // Ejecutar la consulta SQL  
-                    var tipotramiteDB = context.Database.SqlQuery<TABGEN_PROD>(sql, codigoParam).FirstOrDefault();
+                    var tipotramiteDB = context.Database.SqlQuery<TABGEN>(sql, codigoParam).FirstOrDefault();
 
                     //verificar si se encontro algun registro
                     if (tipotramiteDB != null)
