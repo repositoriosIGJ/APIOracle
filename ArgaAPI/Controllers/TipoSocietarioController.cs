@@ -23,9 +23,9 @@ namespace ArgaAPI.Controllers
             _tipoSocietarioBusiness = tipoSocietarioBusiness;
         }
 
-        // GET api/sociedad
-        // GET api/TipoSocietario
-        public IEnumerable<TipoSocietario> GetTiposSocietarios()
+      
+        // GET api/TipoSocietario/GetTiposSocietarios
+        public ResponseDTO<IEnumerable<TipoSocietario>> GetTiposSocietarios()
         {
 
             var tiposSocietarios = _tipoSocietarioBusiness.GetTiposSocietarios();
@@ -33,49 +33,31 @@ namespace ArgaAPI.Controllers
             return tiposSocietarios;
         }
 
-        public List<TipoSocietario> GetCodigosSinCeroALaIzq()
+        public ResponseDTO<IEnumerable<TipoSocietario>> GetCodigosSinCeroALaIzq()
         {
-
-            var tiposSocietarios = _tipoSocietarioBusiness.GetTiposSocietariosCodigosSinCeroALaIzq().ToList();
-
-            return tiposSocietarios;
+            var rst =_tipoSocietarioBusiness.GetTiposSocietariosCodigosSinCeroALaIzq();
+           
+            return rst;
         }
 
-        // GET api/TipoSocietario/5
+  
 
        
         //GET api/tiposocietario/GetByCodigoSocietario?codigo={codigo}
-        public TipoSocietario GetByCodigoTipoSocietario(string codigo)
+        public ResponseDTO<TipoSocietario> GetByCodigoTipoSocietario(string codigo)
         {
             var tipoSocietario = _tipoSocietarioBusiness.GetTipoSocietarioPorCodigo(codigo);
             return tipoSocietario;
         }
 
         // GET api/TipoSocietario/GetByTipo?tipo={tipo}
-        public IEnumerable<TipoSocietario> GetByTipo(string tipo)
+        public ResponseDTO<IEnumerable<TipoSocietario>> GetByTipo(string tipo)
         {
             var tipoSocietario = _tipoSocietarioBusiness.GetTipoSocietarioPorTipo(tipo);
             return tipoSocietario;
         }
 
-        // POST api/TipoSocietario
-        /*public void Post([FromBody]string value)
-        {
-        }
-        public ResponseDTO<bool> Post([FromBody] TipoSocietario tipoSocietario)
-        {
-            var rsp = _tipoSocietarioBusiness.Insert(tipoSocietario);
-            return rsp;
-        }
-        */
-        // PUT api/TipoSocietario/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/TipoSocietario/5
-        public void Delete(int id)
-        {
-        }
+      
+       
     }
 }

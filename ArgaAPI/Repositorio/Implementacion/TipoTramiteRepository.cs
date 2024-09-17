@@ -22,35 +22,46 @@ namespace ArgaAPI.Repositorio.Implementacion
         #region Miembros de ITipoTramiteRepository
 
 
-        public IEnumerable<TipoTramite> GetTiposTramites()
+        public ResponseDTO<IEnumerable<TipoTramite>> GetTiposTramites()
         {
+            ResponseDTO<IEnumerable<TipoTramite>> rsp = new ResponseDTO<IEnumerable<TipoTramite>>();
             List<TipoTramite> ListaTiposSocietarios = new List<TipoTramite>();
             using (var context = new DEVIGJ())
             {
 
+                try
+                {
+                    // const string sql = " select * from tabgen t where t.tabtipotab = 001 and t.tabclave != '*'";
 
-               // const string sql = " select * from tabgen t where t.tabtipotab = 001 and t.tabclave != '*'";
+                    // Definimos la consulta SQL que ejecutará el procedimiento almacenado
+                    var sql = "BEGIN PK_API_LEGACY.ListTipoTramite(:p_cursor); END;";
 
-                // Definimos la consulta SQL que ejecutará el procedimiento almacenado
-                var sql = "BEGIN PK_API_LEGACY.ListTipoTramite(:p_cursor); END;";
+                    // Creamos un parámetro para el cursor de salida
+                    var outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
 
-                // Creamos un parámetro para el cursor de salida
-                var outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
+                    // Ejecutamos la consulta SQL y obtenemos los resultados en una lista
+                    var ListaTipoTramiteDB = context.Database.SqlQuery<TABGEN>(sql, outputCursor).ToList();
 
-                // Ejecutamos la consulta SQL y obtenemos los resultados en una lista
-                var ListaTipoTramiteDB = context.Database.SqlQuery<TABGEN>(sql, outputCursor).ToList();
-
-                //var ListaTipoTramiteDB = context.Database.SqlQuery<TABGEN_PROD>(sql).ToList();
+                    //var ListaTipoTramiteDB = context.Database.SqlQuery<TABGEN_PROD>(sql).ToList();
 
 
 
-                foreach (var tipotramitedb in ListaTipoTramiteDB)
+                    foreach (var tipotramitedb in ListaTipoTramiteDB)
+                    {
+
+                        var tiposocietario = MapToTipoTramite(tipotramitedb);
+                        ListaTiposSocietarios.Add(tiposocietario);
+                    }
+                    rsp.Data = ListaTiposSocietarios;
+                    rsp.Message = "OK";
+                    rsp.IsSuccess = true;
+                }
+                catch (Exception ex)
                 {
 
-                    var tiposocietario = MapToTipoTramite(tipotramitedb);
-                    ListaTiposSocietarios.Add(tiposocietario);
+                    rsp.Message = ex.Message;
                 }
-                return ListaTiposSocietarios;
+                return rsp;
             }
         }
 

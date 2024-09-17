@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ModelARGA.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="9.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ModelARGA.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="9.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="ModelARGAStoreContainer">
           <EntitySet Name="DATOS_GDE" EntityType="ModelARGA.Store.DATOS_GDE" store:Type="Tables" store:Schema="ARGA" store:Name="DATOS_GDE">
             <DefiningQuery>SELECT 
@@ -437,32 +437,6 @@
           <Property Name="VISIDBPM" Type="number" Precision="9" />
         </EntityType>
         <!--Se encontraron errores durante la generación:
-      advertencia 6013: La tabla o vista 'ARGA.COD_TRAM' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-      
-      <EntityType Name="COD_TRAM">
-        <Property Name="CDTCODTRAM" Type="varchar2" MaxLength="5" />
-        <Property Name="CDTDESCTRAM" Type="varchar2" MaxLength="60" />
-        <Property Name="CDTTIPOTRAM" Type="varchar2" MaxLength="1" />
-        <Property Name="CDTFECALTA" Type="date" />
-        <Property Name="CDTGLOBAL" Type="varchar2" MaxLength="1" />
-        <Property Name="CDTREGISTRAL" Type="varchar2" MaxLength="1" />
-        <Property Name="CDTFECBAJA" Type="date" />
-      </EntityType>
-      Se encontraron errores durante la generación:
-      advertencia 6013: La tabla o vista 'ARGA.COD_TRAM_TIM' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-      
-      <EntityType Name="COD_TRAM_TIM">
-        <Property Name="TRTCODTRAM" Type="varchar2" MaxLength="5" />
-        <Property Name="TRTTIPOSOC" Type="number" Precision="3" />
-        <Property Name="TRTTIPOFOR" Type="varchar2" MaxLength="2" />
-        <Property Name="TRTFECACTU" Type="date" />
-        <Property Name="TRTUSUACTU" Type="varchar2" MaxLength="12" />
-        <Property Name="TRTFECBAJA" Type="date" />
-        <Property Name="TRTCOETIPOTRAM" Type="number" Precision="2" />
-        <Property Name="TRTFOR299" Type="varchar2" MaxLength="2" />
-        <Property Name="TRTFORAHORRO" Type="varchar2" MaxLength="2" />
-      </EntityType>
-      Se encontraron errores durante la generación:
       advertencia 6013: La tabla o vista 'ARGA.DESTIN' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
       
       <EntityType Name="DESTIN">
@@ -472,34 +446,8 @@
         <Property Name="DESRELACIO1" Type="varchar2" MaxLength="1" />
         <Property Name="DESRELACIO2" Type="varchar2" MaxLength="1" />
         <Property Name="DESMEENVIA" Type="varchar2" MaxLength="4" />
-      </EntityType>
-      Se encontraron errores durante la generación:
-      advertencia 6013: La tabla o vista 'ARGA.DESTINOS_WEB' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-      
-      <EntityType Name="DESTINOS_WEB">
-        <Property Name="DESCODDEST" Type="varchar2" MaxLength="4" />
-        <Property Name="DESDESCRIP1" Type="varchar2" MaxLength="60" />
-        <Property Name="DESDESCRIP2" Type="varchar2" MaxLength="60" />
-        <Property Name="DESRELACIO1" Type="varchar2" MaxLength="1" />
-        <Property Name="DESRELACIO2" Type="varchar2" MaxLength="1" />
-        <Property Name="DESMEENVIA" Type="varchar2" MaxLength="4" />
-      </EntityType>
-      Se encontraron errores durante la generación:
-      advertencia 6013: La tabla o vista 'ARGA.USUARIO' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-      
-      <EntityType Name="USUARIO">
-        <Property Name="USUUSUARIO" Type="varchar2" MaxLength="4" />
-        <Property Name="USUDESTINO" Type="varchar2" MaxLength="4" />
-        <Property Name="USUNOMBRE" Type="varchar2" MaxLength="60" />
-        <Property Name="USUUSERN" Type="varchar2" MaxLength="8" />
-        <Property Name="USUPASSWD" Type="varchar2" MaxLength="8" />
-        <Property Name="USUGRUPO" Type="varchar2" MaxLength="5" />
-        <Property Name="USUFECALT" Type="date" />
-        <Property Name="USUFECBAJ" Type="date" />
-        <Property Name="USUABPM" Type="varchar2" MaxLength="30" />
       </EntityType>-->
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ModelARGA" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

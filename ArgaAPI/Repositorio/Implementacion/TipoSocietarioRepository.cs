@@ -23,34 +23,50 @@ namespace ArgaAPI.Repositorio.Implementacion
 
         #region Miembros de ITipoSocietarioReposity
 
-        public IEnumerable<TipoSocietario> GetTiposSocietarios()
+        public  ResponseDTO<IEnumerable<TipoSocietario>> GetTiposSocietarios()
         {
+            ResponseDTO<IEnumerable<TipoSocietario>> rst = new ResponseDTO<IEnumerable<TipoSocietario>>();
+            rst.IsSuccess = false;
+
             List<TipoSocietario> ListaTiposSocietarios = new List<TipoSocietario>();
 
             // Usamos el contexto de Entity Framework para interactuar con la base de datos
             using (var context = new DEVIGJ())
             {
-                // Definimos la consulta SQL que ejecutará el procedimiento almacenado
-                var sql = "BEGIN PK_API_LEGACY.ListTiposSocietarios(:p_cursor); END;";
-
-                // Creamos un parámetro para el cursor de salida
-                var outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
-
-                // Ejecutamos la consulta SQL y obtenemos los resultados en una lista
-                var ListaTipoSocietarioDB = context.Database.SqlQuery<TABGEN>(sql, outputCursor).ToList();
-
-                // Iteramos sobre cada elemento de la lista devuelta por el procedimiento
-                foreach (var tipoSocietariodb in ListaTipoSocietarioDB)
+                try
                 {
-                    // Mapeamos el objeto TABGEN_PROD al objeto TipoSocietario
-                    TipoSocietario tiposocietario = MapToTipoSocietario(tipoSocietariodb);
+                    // Definimos la consulta SQL que ejecutará el procedimiento almacenado
+                    var sql = "BEGIN PK_API_LEGACY.ListTiposSocietarios(:p_cursor); END;";
 
-                    // Añadimos el objeto TipoSocietario a la lista final
-                    ListaTiposSocietarios.Add(tiposocietario);
+                    // Creamos un parámetro para el cursor de salida
+                    var outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
+
+                    // Ejecutamos la consulta SQL y obtenemos los resultados en una lista
+                    var ListaTipoSocietarioDB = context.Database.SqlQuery<TABGEN>(sql, outputCursor).ToList();
+
+                    // Iteramos sobre cada elemento de la lista devuelta por el procedimiento
+                    foreach (var tipoSocietariodb in ListaTipoSocietarioDB)
+                    {
+                        // Mapeamos el objeto TABGEN_PROD al objeto TipoSocietario
+                        TipoSocietario tiposocietario = MapToTipoSocietario(tipoSocietariodb);
+
+                        // Añadimos el objeto TipoSocietario a la lista final
+                        ListaTiposSocietarios.Add(tiposocietario);
+                    }
+
+                    rst.Data = ListaTiposSocietarios;
+                    rst.IsSuccess = true;
+                    rst.Message = "OK";
                 }
+                catch (Exception ex)
+                {
+
+                    rst.Message = ex.Message;
+                }
+               
             }
-            // Retornamos la lista de tipos societarios
-            return ListaTiposSocietarios;
+           
+            return rst;
         }
 
 
@@ -89,11 +105,16 @@ namespace ArgaAPI.Repositorio.Implementacion
         #region Miembros de ITipoSocietarioReposity
 
 
-        public TipoSocietario GetTipoSocietarioPorCodigo(string codigo)
+        public  ResponseDTO<TipoSocietario> GetTipoSocietarioPorCodigo(string codigo)
         {
+             ResponseDTO<TipoSocietario> rst = new ResponseDTO<TipoSocietario>();
+             rst.IsSuccess = false ;
+
             using (var context = new Entities()) {
 
-                // Definir la consulta SQL parametrizada para evitar SQL Injection
+                try
+                {
+                     // Definir la consulta SQL parametrizada para evitar SQL Injection
                 //parámetros con sintaxis de Oracle :parametro
                 const string sql = "select * from tabgen t where t.tabtipotab = 002 and t.tabclave = :codigo and t.tabclave != '*'";
 
@@ -109,58 +130,79 @@ namespace ArgaAPI.Repositorio.Implementacion
                     // Mapear el resultado a TipoSocietario
                     var tipoSocietario = MapToTipoSocietario(tipoSocietarioDB);
 
-                    return tipoSocietario;
-
+                    rst.Data = tipoSocietario ;
+                    rst.IsSuccess = true;
+                    rst.Message = "OK";
+                    
+                }}
+                catch (Exception ex)
+                {
+                    
+                    rst.Message = ex.Message ;
                 }
-                else { 
+               
+                return rst ;
                 
-                    return null ;
-                }
-            }
-        }
+              
+            
+        }}
 
         #endregion
 
         #region Miembros de ITipoSocietarioReposity
 
 
-        public IEnumerable<TipoSocietario> GetTipoSocietarioPorTipo(string tipo)
+        public ResponseDTO<IEnumerable<TipoSocietario>> GetTipoSocietarioPorTipo(string tipo)
         {
+            ResponseDTO<IEnumerable<TipoSocietario>> rst = new ResponseDTO<IEnumerable<TipoSocietario>>();
+            rst.IsSuccess = false;
             List<TipoSocietario> ListaTiposSocietarios = new List<TipoSocietario>();
+
             using (var context = new Entities())
             {
-                // Convertir tanto el campo como el parámetro a mayúsculas para afinar la busqueda dado a la DB es sensible a mayusculas y min y estan en mayusculas
-                const string sql = "select * from tabgen t where t.tabtipotab = '002' and UPPER(t.tabconten1) LIKE UPPER(:tipo) and t.tabclave != '*'";
-                
-                // Crear el parámetro usando Oracle.DataAccess.Client.OracleParameter
-                OracleParameter tipoSocParam = new OracleParameter(":tipo", OracleDbType.Varchar2)
+                try
                 {
-                    Value = "%" + tipo + "%" // Agregar comodines para simular un "contains"
-                };
-                // Ejecutar la consulta SQL pasando el parámetro
-                var tiposSocietariosDB = context.Database.SqlQuery<TABGEN>(sql, tipoSocParam);
+                    // Convertir tanto el campo como el parámetro a mayúsculas para afinar la búsqueda
+                    const string sql = "select * from tabgen t where t.tabtipotab = '002' and UPPER(t.tabconten1) LIKE UPPER(:tipo) and t.tabclave != '*'";
 
-                if (tiposSocietariosDB != null)
-                {
-                         // Iteramos sobre cada elemento de la lista devuelta por el procedimiento
-                    foreach (var tipoSocietariodb in tiposSocietariosDB)
+                    // Crear el parámetro usando Oracle.DataAccess.Client.OracleParameter
+                    OracleParameter tipoSocParam = new OracleParameter(":tipo", OracleDbType.Varchar2)
                     {
-                        // Mapeamos el objeto TABGEN_PROD al objeto TipoSocietario
-                        TipoSocietario tiposocietario = MapToTipoSocietario(tipoSocietariodb);
+                        Value = "%" + tipo + "%" // Agregar comodines para simular un "contains"
+                    };
 
-                        // Añadimos el objeto TipoSocietario a la lista final
-                        ListaTiposSocietarios.Add(tiposocietario);
+                    // Ejecutar la consulta SQL pasando el parámetro
+                    var tiposSocietariosDB = context.Database.SqlQuery<TABGEN>(sql, tipoSocParam).ToList();
+
+                    // Verificar si la consulta devolvió algún resultado
+                    if (tiposSocietariosDB != null)
+                    {
+                        // Iterar sobre cada elemento de la lista devuelta
+                        foreach (var tipoSocietariodb in tiposSocietariosDB)
+                        {
+                            // Mapear el objeto TABGEN a TipoSocietario
+                            TipoSocietario tiposocietario = MapToTipoSocietario(tipoSocietariodb);
+                            // Añadir el objeto a la lista final
+                            ListaTiposSocietarios.Add(tiposocietario);
+                        }
+
+                        // Indicar que la operación fue exitosa y asignar la lista resultante
+                        rst.IsSuccess = true;
+                        rst.Data = ListaTiposSocietarios;
                     }
-
-                    return ListaTiposSocietarios;
                 }
-                else
+                catch (Exception ex)
                 {
-                    return null;
+                    // Manejar la excepción según sea necesario
+                    rst.Message = "Error al obtener los tipos societarios: " + ex.Message;
                 }
             }
 
+           
+            return rst;
         }
+            
+        
         #endregion
 
         #region Miembros de ITipoSocietarioReposity
@@ -173,37 +215,52 @@ namespace ArgaAPI.Repositorio.Implementacion
         #region Miembros de ITipoSocietarioReposity
 
 
-        public IEnumerable<TipoSocietario> GetTiposSocietariosCodigosSinCeroALaIzq()
+        public ResponseDTO<IEnumerable<TipoSocietario>> GetTiposSocietariosCodigosSinCeroALaIzq()
         {
-            
-
+            ResponseDTO<IEnumerable<TipoSocietario>> rst = new ResponseDTO<IEnumerable<TipoSocietario>>();
+            rst.IsSuccess = false;
                List<TipoSocietario> ListaTiposSocietarios = new List<TipoSocietario>();
 
             // Usamos el contexto de Entity Framework para interactuar con la base de datos
             using (var context = new Entities())
             {
-                // Definimos la consulta SQL que ejecutará el procedimiento almacenado
-                var sql = "BEGIN PK_API_LEGACY.ListTiposSocietarios(:p_cursor); END;";
-
-                // Creamos un parámetro para el cursor de salida
-                var outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
-
-                // Ejecutamos la consulta SQL y obtenemos los resultados en una lista
-                var ListaTipoSocietarioDB = context.Database.SqlQuery<TABGEN>(sql, outputCursor).ToList();
-
-                // Iteramos sobre cada elemento de la lista devuelta por el procedimiento
-                foreach (var tipoSocietariodb in ListaTipoSocietarioDB)
+                try
                 {
-                    // Mapeamos el objeto TABGEN_PROD al objeto TipoSocietario
-                    TipoSocietario tiposocietario = MapToTipoSocietario(tipoSocietariodb);
-                    // Le saco el cero a la izquierda y asigno el resultado a la propiedad
-                    tiposocietario.Codigo = tiposocietario.Codigo.TrimStart('0');
-                    // Añadimos el objeto TipoSocietario a la lista final
-                    ListaTiposSocietarios.Add(tiposocietario);
+                    // Definimos la consulta SQL que ejecutará el procedimiento almacenado
+                    var sql = "BEGIN PK_API_LEGACY.ListTiposSocietarios(:p_cursor); END;";
+
+                    // Creamos un parámetro para el cursor de salida
+                    var outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
+
+                    // Ejecutamos la consulta SQL y obtenemos los resultados en una lista
+                    var ListaTipoSocietarioDB = context.Database.SqlQuery<TABGEN>(sql, outputCursor).ToList();
+
+                    // Iteramos sobre cada elemento de la lista devuelta por el procedimiento
+                    foreach (var tipoSocietariodb in ListaTipoSocietarioDB)
+                    {
+                        // Mapeamos el objeto TABGEN_PROD al objeto TipoSocietario
+                        TipoSocietario tiposocietario = MapToTipoSocietario(tipoSocietariodb);
+                        // Le saco el cero a la izquierda y asigno el resultado a la propiedad
+                        tiposocietario.Codigo = tiposocietario.Codigo.TrimStart('0');
+                        // Añadimos el objeto TipoSocietario a la lista final
+                        ListaTiposSocietarios.Add(tiposocietario);
+                        
+                    }
+
+                       rst.Data = ListaTiposSocietarios;
+                       rst.IsSuccess = true;
+                       rst.Message = "OK";
                 }
+                catch (Exception ex)
+                {
+
+                    rst.Message = ex.Message;
+                }
+             
             }
-            // Retornamos la lista de tipos societarios
-            return ListaTiposSocietarios;
+          
+            
+             return rst;
         }
 
         #endregion

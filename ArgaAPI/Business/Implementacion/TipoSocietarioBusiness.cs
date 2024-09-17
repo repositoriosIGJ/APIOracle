@@ -21,10 +21,9 @@ namespace ArgaAPI.Business.Implementacion
          }
 
          
-       
+      
 
-
-        public IEnumerable<TipoSocietario> GetTiposSocietarios()
+        public ResponseDTO<IEnumerable<TipoSocietario>> GetTiposSocietarios()
         {
             var TiposSocietarios = _tipoSocietarioRepository.GetTiposSocietarios();
 
@@ -33,7 +32,7 @@ namespace ArgaAPI.Business.Implementacion
 
 
         
-       public TipoSocietario GetTipoSocietarioPorCodigo(string codigo)
+       public ResponseDTO<TipoSocietario> GetTipoSocietarioPorCodigo(string codigo)
        {
           var TiposSocietario = _tipoSocietarioRepository.GetTipoSocietarioPorCodigo(codigo);
 
@@ -45,7 +44,7 @@ namespace ArgaAPI.Business.Implementacion
        #region Miembros de ITipoSocietarioBusiness
 
 
-       public IEnumerable<TipoSocietario> GetTipoSocietarioPorTipo(string tipo)
+       public ResponseDTO<IEnumerable<TipoSocietario>> GetTipoSocietarioPorTipo(string tipo)
        {
            var TiposSocietario = _tipoSocietarioRepository.GetTipoSocietarioPorTipo(tipo);
 
@@ -57,19 +56,14 @@ namespace ArgaAPI.Business.Implementacion
        #region Miembros de ITipoSocietarioBusiness
 
 
-     /*  public ResponseDTO<bool> Insert(TipoSocietario tipoSocietario)
-       {
-           var rsp = _tipoSocietarioRepository.Insert(tipoSocietario);
-
-           return rsp;
-       }*/
+     
 
        #endregion
 
        #region Miembros de ITipoSocietarioBusiness
 
 
-       public IEnumerable<TipoSocietario> GetTiposSocietariosCodigosSinCeroALaIzq()
+       public ResponseDTO<IEnumerable<TipoSocietario>> GetTiposSocietariosCodigosSinCeroALaIzq()
        {
            var TiposSocietario = _tipoSocietarioRepository.GetTiposSocietariosCodigosSinCeroALaIzq();
 

@@ -26,7 +26,7 @@ namespace ArgaAPI.Business.Implementacion
         #region Miembros de ITipoTramiteBusiness
 
 
-        public IEnumerable<TipoTramite> GetTiposTramites()
+        public ResponseDTO<IEnumerable<TipoTramite>> GetTiposTramites()
         {
             var tipotramites = _tipoTramiteRepository.GetTiposTramites();
 

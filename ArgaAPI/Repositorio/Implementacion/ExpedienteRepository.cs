@@ -38,11 +38,13 @@ namespace ArgaAPI.Repositorio.Implementacion
           {
 
               string numeroConCeroIzquierda = exptes.EXPTIPOSOC.ToString("D3");
-              tiposocietario = _tiposocietarioRepository.GetTipoSocietarioPorCodigo(numeroConCeroIzquierda);
+              var rst =  _tiposocietarioRepository.GetTipoSocietarioPorCodigo(numeroConCeroIzquierda);
+              tiposocietario = rst.Data;
           }
           else
           {
-              tiposocietario = _tiposocietarioRepository.GetTipoSocietarioPorCodigo(exptes.EXPTIPOSOC.ToString());
+              var rst = _tiposocietarioRepository.GetTipoSocietarioPorCodigo(exptes.EXPTIPOSOC.ToString());
+              tiposocietario = rst.Data;
 
           }
             Expediente expediente = new Expediente()

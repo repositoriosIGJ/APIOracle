@@ -9,6 +9,7 @@ C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\Micr
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\Microsoft.Practices.Unity.Interception.dll
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\Newtonsoft.Json.dll
+C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\Oracle.DataAccess.dll
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\Oracle.ManagedDataAccess.dll
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\System.Net.Http.Formatting.dll
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\System.Web.Helpers.dll
@@ -49,7 +50,6 @@ C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\es\S
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\es\System.Web.WebPages.resources.dll
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\obj\Debug\ArgaAPI.csprojResolveAssemblyReference.cache
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\obj\Debug\ArgaAPI.dll
 C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\obj\Debug\ArgaAPI.pdb
-C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\obj\Debug\ArgaAPI.csprojResolveAssemblyReference.cache
-C:\Users\amalerba\Documents\Visual Studio 2012\Projects\ArgaAPI\ArgaAPI\bin\Oracle.DataAccess.dll

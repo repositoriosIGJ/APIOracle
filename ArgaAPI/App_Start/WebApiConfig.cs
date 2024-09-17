@@ -94,6 +94,12 @@ namespace ArgaAPI
                 defaults: new { controller = "TipoTramite", action = "GetTipoTramitebyCodigo" }
             );
 
+            // Ruta específica para GetTramites
+            config.Routes.MapHttpRoute(
+                name: "GetDestinosRoute",
+                routeTemplate: "api/destino/GetDestinos",
+                defaults: new { controller = "Destino", action = "GetDestinos" }
+            );
 
             // Añadir el CorsHandler al pipeline de mensajes
             config.MessageHandlers.Add(new CorsHandler());

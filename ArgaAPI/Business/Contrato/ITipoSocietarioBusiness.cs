@@ -15,10 +15,10 @@ namespace ArgaAPI.Business.Contrato
      public interface ITipoSocietarioBusiness
     {
          
-         IEnumerable<TipoSocietario> GetTiposSocietarios();
-         IEnumerable<TipoSocietario> GetTiposSocietariosCodigosSinCeroALaIzq();
-         TipoSocietario GetTipoSocietarioPorCodigo(string codigo);
-         IEnumerable<TipoSocietario> GetTipoSocietarioPorTipo(string tipo);
-         // ResponseDTO<bool> Insert(TipoSocietario tipoSocietario);
+         ResponseDTO<IEnumerable<TipoSocietario>> GetTiposSocietarios();
+          ResponseDTO<IEnumerable<TipoSocietario>> GetTiposSocietariosCodigosSinCeroALaIzq();
+          ResponseDTO<TipoSocietario> GetTipoSocietarioPorCodigo(string codigo);
+          ResponseDTO<IEnumerable<TipoSocietario>> GetTipoSocietarioPorTipo(string tipo);
+         
     }
 }

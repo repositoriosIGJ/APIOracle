@@ -20,14 +20,15 @@ namespace ArgaAPI.Controllers
             _tipoTramiteBusiness = tipoTramiteBusiness;
         }
 
+        //GET api/tipotramite/GetAllTipoTramites
         [HttpGet]
-        public IEnumerable<TipoTramite> GetAllTipoTramites()
+        public ResponseDTO<IEnumerable<TipoTramite>> GetAllTipoTramites()
         {
             var tipostramites = _tipoTramiteBusiness.GetTiposTramites();
             return tipostramites;
         }
-
-        [HttpGet]
+        //GET api/tipotramite/GetAllTipoTramitesbyCodigo?codigo={codigo}
+        [HttpGet] 
         public ResponseDTO<TipoTramite> GetTipoTramitebyCodigo(string codigo)
         {
             var tipotramite = _tipoTramiteBusiness.GetTramitesbyCodigoTramite(codigo);
