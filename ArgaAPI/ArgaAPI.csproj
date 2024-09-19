@@ -144,16 +144,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Business\Contrato\IDatosCivilesBusiness.cs" />
     <Compile Include="Business\Contrato\IDestinoBusiness.cs" />
     <Compile Include="Business\Contrato\IExpedienteBusiness.cs" />
     <Compile Include="Business\Contrato\ITipoSocietarioBusiness.cs" />
     <Compile Include="Business\Contrato\ITipoTramiteBusiness.cs" />
     <Compile Include="Business\Contrato\ITramiteBusiness.cs" />
+    <Compile Include="Business\Implementacion\DatosCivilesBusiness.cs" />
     <Compile Include="Business\Implementacion\DestinoBusiness.cs" />
     <Compile Include="Business\Implementacion\ExpedienteBusiness.cs" />
     <Compile Include="Business\Implementacion\TipoSocietarioBusiness.cs" />
     <Compile Include="Business\Implementacion\TipoTramiteBusiness.cs" />
     <Compile Include="Business\Implementacion\TramiteBusiness.cs" />
+    <Compile Include="Controllers\DatosCivilesController.cs" />
     <Compile Include="Controllers\DestinoController.cs" />
     <Compile Include="Controllers\ExpedienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -270,6 +273,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DatosCiviles.cs" />
+    <Compile Include="Models\DatosCivilesDTO.cs" />
+    <Compile Include="Models\DatosCivilesRequest.cs" />
     <Compile Include="Models\DESTIN.cs" />
     <Compile Include="Models\Destino.cs" />
     <Compile Include="Models\Expediente.cs" />
@@ -277,11 +283,13 @@
     <Compile Include="Models\TipoTramite.cs" />
     <Compile Include="Models\Tramite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\Contrato\IDatosCivilesRepository.cs" />
     <Compile Include="Repositorio\Contrato\IDestinoRepository.cs" />
     <Compile Include="Repositorio\Contrato\IExpedienteRepository.cs" />
     <Compile Include="Repositorio\Contrato\ITipoSocietarioReposity.cs" />
     <Compile Include="Repositorio\Contrato\ITipoTramiteRepository.cs" />
     <Compile Include="Repositorio\Contrato\ITramiteRepository.cs" />
+    <Compile Include="Repositorio\Implementacion\DatosCivilesRepository.cs" />
     <Compile Include="Repositorio\Implementacion\DestinoRepository.cs" />
     <Compile Include="Repositorio\Implementacion\ExpedienteRepository.cs" />
     <Compile Include="Repositorio\Implementacion\TipoSocietarioRepository.cs" />
