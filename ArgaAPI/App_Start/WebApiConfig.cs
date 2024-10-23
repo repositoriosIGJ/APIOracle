@@ -23,11 +23,7 @@ namespace ArgaAPI
                 routeTemplate: "api/tiposocietario/GetCodigosSinCeroALaIzq",
                 defaults: new { controller = "TipoSocietario", action = "GetCodigosSinCeroALaIzq" }
             );
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+         
 
             // Ruta específica para GetByRazonSocial
             config.Routes.MapHttpRoute(
@@ -94,13 +90,33 @@ namespace ArgaAPI
                 defaults: new { controller = "TipoTramite", action = "GetTipoTramitebyCodigo" }
             );
 
-            // Ruta específica para GetTramites
+            // Ruta específica para GetDestinos
             config.Routes.MapHttpRoute(
                 name: "GetDestinosRoute",
                 routeTemplate: "api/destino/GetDestinos",
                 defaults: new { controller = "Destino", action = "GetDestinos" }
             );
 
+            // Ruta específica para GetDestinosTramite
+            config.Routes.MapHttpRoute(
+                 name: "GetDestinosTramiteRoute",
+                 routeTemplate: "api/destinoTramite/GetDestinosTramite",
+                 defaults: new { controller = "DestinoTramite", action = "GetDestinosTramite" }
+            );
+
+            // Ruta específica para GetULtimoDestinoTramite
+            config.Routes.MapHttpRoute(
+                name: "GetUltimoDestinoTramiteRoute",
+                routeTemplate: "api/destinoTramite/GetUltimoDestinoTramite",
+                defaults: new { controller = "DestinoTramite", action = "GetUltimoDestinoTramite" }
+            );
+
+
+            config.Routes.MapHttpRoute(
+             name: "DefaultApi",
+             routeTemplate: "api/{controller}/{id}",
+             defaults: new { id = RouteParameter.Optional }
+         );
             // Añadir el CorsHandler al pipeline de mensajes
             config.MessageHandlers.Add(new CorsHandler());
 

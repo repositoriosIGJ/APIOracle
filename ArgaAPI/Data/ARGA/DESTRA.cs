@@ -16,11 +16,11 @@ namespace ArgaAPI.Data.ARGA
     {
         public int DTRNROCORR { get; set; }
         public string DTRCODTRAM { get; set; }
-        public System.DateTime DTRFECHACT { get; set; }
+        public Nullable<System.DateTime> DTRFECHACT { get; set; }
         public Nullable<int> DTRNROTRAM { get; set; }
         public string DTRCODDEST { get; set; }
         public string DTRUSUDEST { get; set; }
-        public System.DateTime DTRFECHART { get; set; }
+        public Nullable<System.DateTime> DTRFECHART { get; set; }
         public string DTRDESTANT { get; set; }
         public Nullable<System.DateTime> DTRFECHAST { get; set; }
         public Nullable<short> DTRNROSUBD { get; set; }
