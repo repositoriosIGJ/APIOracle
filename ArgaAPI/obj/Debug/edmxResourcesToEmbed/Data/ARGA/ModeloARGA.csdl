@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelARGA" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ARGA" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="DATOS_GDE" EntityType="ModelARGA.DATOS_GDE" />
+    <EntitySet Name="DESTRA" EntityType="ModelARGA.DESTRA" />
+    <EntitySet Name="EXPTES" EntityType="ModelARGA.EXPTES" />
+    <EntitySet Name="MAT_CERTVIGENCIA" EntityType="ModelARGA.MAT_CERTVIGENCIA" />
+    <EntitySet Name="MAT_DOMICILIOS" EntityType="ModelARGA.MAT_DOMICILIOS" />
+    <EntitySet Name="MAT_INSCRIPCION" EntityType="ModelARGA.MAT_INSCRIPCION" />
+    <EntitySet Name="MAT_SEGUROCAU" EntityType="ModelARGA.MAT_SEGUROCAU" />
+    <EntitySet Name="MATRICULADOS" EntityType="ModelARGA.MATRICULADOS" />
+    <EntitySet Name="TABGEN" EntityType="ModelARGA.TABGEN" />
+    <EntitySet Name="TIMBRADOS" EntityType="ModelARGA.TIMBRADOS" />
+    <EntitySet Name="TRAMIT" EntityType="ModelARGA.TRAMIT" />
+    <EntitySet Name="VISTAREC" EntityType="ModelARGA.VISTAREC" />
+  </EntityContainer>
+  <EntityType Name="DATOS_GDE">
+    <Key>
+      <PropertyRef Name="GDENROCORR" />
+      <PropertyRef Name="GDECODTRAM" />
+      <PropertyRef Name="GDEFECHACT" />
+      <PropertyRef Name="GDENROTRAM" />
+      <PropertyRef Name="GDECODACT" />
+      <PropertyRef Name="GDEUSUACTU" />
+      <PropertyRef Name="GDEFECACTU" />
+    </Key>
+    <Property Name="GDENROCORR" Type="Int32" Nullable="false" />
+    <Property Name="GDECODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="GDEFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="GDENROTRAM" Type="Int32" Nullable="false" />
+    <Property Name="GDECODACT" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GDECODANT" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GDEUSUACTU" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="GDEFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="DESTRA">
+    <Key>
+      <PropertyRef Name="DTRNROCORR" />
+      <PropertyRef Name="DTRCODTRAM" />
+      <PropertyRef Name="DTRFECHACT" />
+      <PropertyRef Name="DTRCODDEST" />
+      <PropertyRef Name="DTRUSUDEST" />
+      <PropertyRef Name="DTRFECHART" />
+      <PropertyRef Name="DTRDESTANT" />
+    </Key>
+    <Property Name="DTRNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="DTRCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DTRFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DTRNROTRAM" Type="Int32" />
+    <Property Name="DTRCODDEST" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="DTRUSUDEST" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="DTRFECHART" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DTRDESTANT" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="DTRFECHAST" Type="DateTime" Precision="0" />
+    <Property Name="DTRNROSUBD" Type="Int16" />
+  </EntityType>
+  <EntityType Name="EXPTES">
+    <Key>
+      <PropertyRef Name="EXPNROCORR" />
+    </Key>
+    <Property Name="EXPNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="EXPCODHABI" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="EXPEXPREFE" Type="Int32" />
+    <Property Name="EXPFECHACC" Type="DateTime" Precision="0" />
+    <Property Name="EXPTIPOSOC" Type="Int16" Nullable="false" />
+    <Property Name="EXPRAZONSO" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="EXPADITAME" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="EXPSALIO" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPFOJAS" Type="Int16" />
+    <Property Name="EXPNROCUIT" Type="Int64" />
+    <Property Name="EXPFECVTO" Type="DateTime" Precision="0" />
+    <Property Name="EXPREGULAR" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPAHORRO" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPCODBAJA" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="EXPFECBAJA" Type="DateTime" Precision="0" />
+    <Property Name="EXPART118" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPART123" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPTIPOCON" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="EXPDIGITAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPBALANCES" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPDDJJ" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPRAZONSOINS" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="EXPNRORESERVA" Type="Int32" />
+    <Property Name="EXPHOMONIMIAID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MAT_CERTVIGENCIA">
+    <Key>
+      <PropertyRef Name="MCVNROCORR" />
+      <PropertyRef Name="MCVNROTRAM" />
+    </Key>
+    <Property Name="MCVNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="MCVNROTRAM" Type="Int32" Nullable="false" />
+    <Property Name="MCVFECEMISION" Type="DateTime" Precision="0" />
+    <Property Name="MCVFECACTU" Type="DateTime" Precision="0" />
+    <Property Name="MCVUSUACTU" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MCVCODTRAM" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="MCVFECHACT" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="MAT_DOMICILIOS">
+    <Key>
+      <PropertyRef Name="MDONROCORR" />
+      <PropertyRef Name="MDONROTRAM" />
+      <PropertyRef Name="MDOTIPODOM" />
+    </Key>
+    <Property Name="MDONROCORR" Type="Int32" Nullable="false" />
+    <Property Name="MDONROTRAM" Type="Int32" Nullable="false" />
+    <Property Name="MDOTIPODOM" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="MDOCALLE" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="MDONUMERO" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="MDOPISO" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="MDODPTO" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="MDOCODPOS" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="MDOLOCAL" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="MDOUSUACTU" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MDOFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="MAT_INSCRIPCION">
+    <Key>
+      <PropertyRef Name="MAINROCORR" />
+      <PropertyRef Name="MAINROTRAM" />
+    </Key>
+    <Property Name="MAINROCORR" Type="Int32" Nullable="false" />
+    <Property Name="MAINROTRAM" Type="Int32" Nullable="false" />
+    <Property Name="MAINROINS" Type="String" Nullable="false" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="MAILIBRO" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="MAIFOLIO" Type="Int32" Nullable="false" />
+    <Property Name="MAIFECINS" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MAIUSUACTU" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MAIFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="MAT_SEGUROCAU">
+    <Key>
+      <PropertyRef Name="MSGNROCORR" />
+      <PropertyRef Name="MSGNROTRAM" />
+      <PropertyRef Name="MSGUSUACTU" />
+      <PropertyRef Name="MSGFECACTU" />
+    </Key>
+    <Property Name="MSGNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="MSGNROTRAM" Type="Int32" Nullable="false" />
+    <Property Name="MSGCODCIA" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="MSGNPOLIZA" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MSGFDESDE" Type="DateTime" Precision="0" />
+    <Property Name="MSGHASTA" Type="DateTime" Precision="0" />
+    <Property Name="MSGIMPORTE" Type="Decimal" Precision="12" Scale="3" />
+    <Property Name="MSGUSUACTU" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MSGFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MSGTIPO" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MATRICULADOS">
+    <Key>
+      <PropertyRef Name="MATNROCORR" />
+      <PropertyRef Name="MATCODTRAM" />
+      <PropertyRef Name="MATNROTRAM" />
+      <PropertyRef Name="MATFECHACT" />
+      <PropertyRef Name="MATNOMBRE" />
+      <PropertyRef Name="MATTIPOMAT" />
+      <PropertyRef Name="MATUSUACTU" />
+      <PropertyRef Name="MATFECACTU" />
+    </Key>
+    <Property Name="MATNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="MATCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="MATNROTRAM" Type="Int32" Nullable="false" />
+    <Property Name="MATFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MATNOMBRE" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="MATTIPOMAT" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="MATRAMO" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="MATTIPODOC" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="MATNRODOC" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="MATNACION" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="MATESTCIV" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="MATFECNAC" Type="DateTime" Precision="0" />
+    <Property Name="MATCUIT" Type="Int64" />
+    <Property Name="MATUSUACTU" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MATFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MATMATREFE" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TABGEN">
+    <Key>
+      <PropertyRef Name="TABTIPOTAB" />
+      <PropertyRef Name="TABCLAVE" />
+    </Key>
+    <Property Name="TABTIPOTAB" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TABCLAVE" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN1" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN2" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN3" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN4" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN5" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TIMBRADOS">
+    <Key>
+      <PropertyRef Name="TIMNCAJA" />
+      <PropertyRef Name="TIMNROPE" />
+      <PropertyRef Name="TIMNROFOR" />
+      <PropertyRef Name="TIMFECTIM" />
+      <PropertyRef Name="TIMCONTROL" />
+      <PropertyRef Name="TIMMONTO" />
+      <PropertyRef Name="TIMTIPOFOR" />
+    </Key>
+    <Property Name="TIMNCAJA" Type="Int16" Nullable="false" />
+    <Property Name="TIMNROPE" Type="Int32" Nullable="false" />
+    <Property Name="TIMNROFOR" Type="Int64" Nullable="false" />
+    <Property Name="TIMFECTIM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TIMCONTROL" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TIMMONTO" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="TIMNROCORR" Type="Int32" />
+    <Property Name="TIMCODTRAM" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="TIMFECHACT" Type="DateTime" Precision="0" />
+    <Property Name="TIMNROTRAM" Type="Int32" />
+    <Property Name="TIMFECBAJA" Type="DateTime" Precision="0" />
+    <Property Name="TIMOPERADOR" Type="Int16" />
+    <Property Name="TIMCODRET" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="TIMFECACTU" Type="DateTime" Precision="0" />
+    <Property Name="TIMTRAMENTE" Type="Int32" />
+    <Property Name="TIMCORRENTE" Type="Int32" />
+    <Property Name="TIMNROORIG" Type="Int32" />
+    <Property Name="TIMCODWEB" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="TIMTIPOFOR" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="TIMCODREIN" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="TIMNROTRAMREIN" Type="Int32" />
+    <Property Name="TIMFECHACTREIN" Type="DateTime" Precision="0" />
+    <Property Name="TIMMONTOREIN" Type="Decimal" Precision="9" Scale="2" />
+  </EntityType>
+  <EntityType Name="TRAMIT">
+    <Key>
+      <PropertyRef Name="TRANROCORR" />
+      <PropertyRef Name="TRACODTRAM" />
+      <PropertyRef Name="TRAFECHACT" />
+    </Key>
+    <Property Name="TRANROCORR" Type="Int32" Nullable="false" />
+    <Property Name="TRACODHABI" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TRACODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="TRAFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TRAFECHAFT" Type="DateTime" Precision="0" />
+    <Property Name="TRAREGTRAM" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TRAREFTRAM" Type="Int32" />
+    <Property Name="TRANROTRAM" Type="Int32" />
+    <Property Name="TRAGRPTRAM" Type="Int16" />
+    <Property Name="TRAFOJAS" Type="Int16" />
+    <Property Name="TRACONEXPE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="TRAFECREG" Type="DateTime" Precision="0" />
+    <Property Name="TRAFECREGNA" Type="DateTime" Precision="0" />
+    <Property Name="TRADESISTE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="TRAREQCONTABLE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="TRADIGITAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="VISTAREC">
+    <Key>
+      <PropertyRef Name="VISNROCORR" />
+      <PropertyRef Name="VISCODTRAM" />
+      <PropertyRef Name="VISFECHACT" />
+    </Key>
+    <Property Name="VISNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="VISCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="VISNROTRAM" Type="Int32" />
+    <Property Name="VISCODDEST" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECHART" Type="DateTime" Precision="0" />
+    <Property Name="VISNROSUBD" Type="Int16" />
+    <Property Name="VISTIPO" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="VISDETALLE" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECACTU" Type="DateTime" Precision="0" />
+    <Property Name="VISUSUACTU" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECBAJA" Type="DateTime" Precision="0" />
+    <Property Name="VISCODBAJA" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="VISREVISOR" Type="Int16" />
+    <Property Name="VISREVOK" Type="Int16" />
+    <Property Name="VISNHOJA" Type="Int16" />
+    <Property Name="VISFIN" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="VISPZONOTIF" Type="Int16" />
+    <Property Name="VISDIGITAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="VISDATREG" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="VISIDBPM" Type="Int32" />
+  </EntityType>
+</Schema>

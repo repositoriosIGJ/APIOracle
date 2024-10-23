@@ -77,7 +77,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                 {
 
                     // Crear el comando usando la conexión del contexto
-                    OracleCommand command = new OracleCommand("PK_API_LEGACY.buscarxRazonSocial", (OracleConnection)context.Database.Connection);
+                    OracleCommand command = new OracleCommand("PK_API_LEGACY.buscarExpediente", (OracleConnection)context.Database.Connection);
                     command.CommandType = CommandType.StoredProcedure;
 
                     // Definir los parámetros del procedimiento almacenado
@@ -90,8 +90,9 @@ namespace ArgaAPI.Repositorio.Implementacion
                     command.Parameters.Add(new OracleParameter("p_refe", OracleDbType.Varchar2)).Value =
                         expediente.Referencial != 0 ? (object)expediente.Referencial.ToString() : DBNull.Value;
 
-                    command.Parameters.Add(new OracleParameter("p_tiposoc", OracleDbType.Varchar2)).Value =
-                        expediente.CodigoTipoSocietario != 0 ? (object)expediente.CodigoTipoSocietario.ToString() : DBNull.Value;
+                    command.Parameters.Add(new OracleParameter("p_tiposoc", OracleDbType.Int32)).Value =
+                        expediente.CodigoTipoSocietario != 0 ? (object)expediente.CodigoTipoSocietario : DBNull.Value;
+
 
                     command.Parameters.Add(new OracleParameter("p_nrocorr", OracleDbType.Varchar2)).Value =
                         expediente.Correlativo != 0 ? (object)expediente.Correlativo.ToString() : DBNull.Value;
