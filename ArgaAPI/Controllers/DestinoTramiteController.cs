@@ -35,5 +35,14 @@ namespace ArgaAPI.Controllers
             var rst = _destinoTramitebusiness.GetUltimoDestinoTramite(destinoTramite);
             return rst;
         }
+
+        [HttpGet]
+        [ActionName("GetTramiteSinAsignarXDestinoDpto")]
+        public ResponseDTO<List<DestinoTramite>> GetTramiteSinAsignarXDestinoDpto(string destino)
+        {
+            var rst = _destinoTramitebusiness.GetTramiteSinAsignarXDestinoDpto(destino);
+
+            return rst;
+        }
     }
 }

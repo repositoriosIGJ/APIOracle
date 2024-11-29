@@ -111,6 +111,12 @@ namespace ArgaAPI
                 defaults: new { controller = "DestinoTramite", action = "GetUltimoDestinoTramite" }
             );
 
+            // Ruta específica para GetTramiteSinAsignarXDestinoDpto
+            config.Routes.MapHttpRoute(
+                name: "GetTramiteSinAsignarXDestinoDpto",
+                routeTemplate: "api/destinoTramite/GetTramiteSinAsignarXDestinoDpto",
+                defaults: new { controller = "DestinoTramite", action = "GetTramiteSinAsignarXDestinoDpto" }
+            );
 
             config.Routes.MapHttpRoute(
              name: "DefaultApi",

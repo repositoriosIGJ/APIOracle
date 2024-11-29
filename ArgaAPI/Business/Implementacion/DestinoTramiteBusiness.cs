@@ -40,5 +40,17 @@ namespace ArgaAPI.Business.Implementacion
         }
 
         #endregion
+
+        #region Miembros de IDestinoTramiteBusiness
+
+
+        public ResponseDTO<List<DestinoTramite>> GetTramiteSinAsignarXDestinoDpto(string destino)
+        {
+            var rst = _destinoTramiteRepository.GetTramiteSinRecibirXDestinoDpto(destino);
+
+            return rst;
+        }
+
+        #endregion
     }
 }
