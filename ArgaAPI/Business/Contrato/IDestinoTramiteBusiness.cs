@@ -13,5 +13,6 @@ namespace ArgaAPI.Business.Contrato
         ResponseDTO<List<DestinoTramite>> GetDestinosTramite(DestinoTramite destinoTramite);
         ResponseDTO<List<DestinoTramite>> GetUltimoDestinoTramite(DestinoTramite destinoTramite);
         ResponseDTO<List<DestinoTramite>> GetTramiteSinAsignarXDestinoDpto(string destino);
+        ResponseDTO<List<DestinoTramite>> GetTramitesRecibidosXDestinoDepto(DestinoTramite destinoTramite);
     }
 }

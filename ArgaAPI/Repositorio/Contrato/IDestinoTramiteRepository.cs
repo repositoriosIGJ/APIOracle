@@ -13,5 +13,6 @@ namespace ArgaAPI.Repositorio.Contrato
         ResponseDTO<List<DestinoTramite>> GetDestinosTramite(DestinoTramite destinoTramite);
         ResponseDTO<List<DestinoTramite>> GetUltimoDestinoTramite(DestinoTramite destinoTramite);
         ResponseDTO<List<DestinoTramite>> GetTramiteSinRecibirXDestinoDpto(string destino);
+        ResponseDTO<List<DestinoTramite>> GetTramitesRecibidosXDestinoDepto(DestinoTramite destinoTramite);
     }
 }

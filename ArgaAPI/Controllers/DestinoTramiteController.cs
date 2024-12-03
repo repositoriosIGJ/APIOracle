@@ -44,5 +44,14 @@ namespace ArgaAPI.Controllers
 
             return rst;
         }
+
+        // GET api/destino/GetTramitesRecibidosXDestinoDepartamento
+        [HttpPost]
+        [ActionName("GetTramitesRecibidosXDestinoDepartamento")]
+        public ResponseDTO<List<DestinoTramite>> GetTramitesRecibidosXDestinoDepartamento(DestinoTramite destinoTramite)
+        {
+            var rst = _destinoTramitebusiness.GetTramitesRecibidosXDestinoDepto(destinoTramite);
+            return rst;
+        }
     }
 }
