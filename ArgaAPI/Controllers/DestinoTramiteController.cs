@@ -38,7 +38,7 @@ namespace ArgaAPI.Controllers
 
         [HttpGet]
         [ActionName("GetTramiteSinAsignarXDestinoDpto")]
-        public ResponseDTO<List<DestinoTramite>> GetTramiteSinAsignarXDestinoDpto(string destino)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetTramiteSinAsignarXDestinoDpto(string destino)
         {
             var rst = _destinoTramitebusiness.GetTramiteSinAsignarXDestinoDpto(destino);
 
@@ -48,7 +48,7 @@ namespace ArgaAPI.Controllers
         // GET api/destino/GetTramitesRecibidosXDestinoDepartamento
         [HttpPost]
         [ActionName("GetTramitesRecibidosXDestinoDepartamento")]
-        public ResponseDTO<List<DestinoTramite>> GetTramitesRecibidosXDestinoDepartamento(DestinoTramite destinoTramite)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetTramitesRecibidosXDestinoDepartamento(DestinoTramiteDTO destinoTramite)
         {
             var rst = _destinoTramitebusiness.GetTramitesRecibidosXDestinoDepto(destinoTramite);
             return rst;

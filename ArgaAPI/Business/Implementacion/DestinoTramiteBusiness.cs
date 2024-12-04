@@ -44,7 +44,7 @@ namespace ArgaAPI.Business.Implementacion
         #region Miembros de IDestinoTramiteBusiness
 
 
-        public ResponseDTO<List<DestinoTramite>> GetTramiteSinAsignarXDestinoDpto(string destino)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetTramiteSinAsignarXDestinoDpto(string destino)
         {
             var rst = _destinoTramiteRepository.GetTramiteSinRecibirXDestinoDpto(destino);
 
@@ -56,7 +56,7 @@ namespace ArgaAPI.Business.Implementacion
         #region Miembros de IDestinoTramiteBusiness
 
 
-        public ResponseDTO<List<DestinoTramite>> GetTramitesRecibidosXDestinoDepto(DestinoTramite destinoTramite)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetTramitesRecibidosXDestinoDepto(DestinoTramiteDTO destinoTramite)
         {
             var rst = _destinoTramiteRepository.GetTramitesRecibidosXDestinoDepto(destinoTramite);
 

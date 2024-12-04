@@ -226,11 +226,11 @@ namespace ArgaAPI.Repositorio.Implementacion
         #region Miembros de IDestinoTramiteRepository
 
 
-        public ResponseDTO<List<DestinoTramite>> GetTramiteSinRecibirXDestinoDpto(string destino)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetTramiteSinRecibirXDestinoDpto(string destino)
         {
-            ResponseDTO<List<DestinoTramite>> rsp = new ResponseDTO<List<DestinoTramite>>();
+            ResponseDTO<List<DestinoTramiteDTO>> rsp = new ResponseDTO<List<DestinoTramiteDTO>>();
             rsp.IsSuccess = false;
-            List<DestinoTramite> listaDestinos = new List<DestinoTramite>();
+            List<DestinoTramiteDTO> listaDestinos = new List<DestinoTramiteDTO>();
 
             try
             {
@@ -260,7 +260,9 @@ namespace ArgaAPI.Repositorio.Implementacion
                     {
                         while (reader.Read())
                         {
-                            DestinoTramite destinoTramiteDB = new DestinoTramite
+                          
+                                 // Crear manualmente un objeto DestinoTramiteDTO a partir del reader
+                            DestinoTramiteDTO destinoTramiteDB = new DestinoTramiteDTO
                             {
                                 Correlativo = reader["DTRNROCORR"] != DBNull.Value ? Convert.ToInt32(reader["DTRNROCORR"]) : 0,
                                 Numerotramite = reader["DTRNROTRAM"] != DBNull.Value ? Convert.ToInt32(reader["DTRNROTRAM"]) : 0,
@@ -272,9 +274,24 @@ namespace ArgaAPI.Repositorio.Implementacion
                                 FechaComienzoTramite = reader["DTRFECHACT"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHACT"]) : (DateTime?)null,
                                 FechaSalidaDestino = reader["DTRFECHAST"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHAST"]) : (DateTime?)null,
                                 FechaIngresoDestino = reader["DTRFECHACT"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHACT"]) : (DateTime?)null,
+
+                                //props innner join
+                                RazonSocial = reader["EXPRAZONSO"] != DBNull.Value ? reader["EXPRAZONSO"].ToString() : string.Empty,
+                                CodigoSocietario = reader["EXPTIPOSOC"] != DBNull.Value ? reader["EXPTIPOSOC"].ToString() : string.Empty,
+                                DescripcionTramite = reader["TABCONTEN1"] != DBNull.Value ? reader["TABCONTEN1"].ToString() : string.Empty,
+                                UrgenteNormal = reader["CDTTIPOTRAM"] != DBNull.Value ? reader["CDTTIPOTRAM"].ToString() : string.Empty,
+                                RegistralInfoContable = reader["CDTREGISTRAL"] != DBNull.Value ? reader["CDTREGISTRAL"].ToString() : string.Empty,
+                                AreaDestinoActual = reader["DEST_ACTUAL_AREA"] != DBNull.Value ? reader["DEST_ACTUAL_AREA"].ToString() : string.Empty,
+                                DepartamentoDestinoActual = reader["DEST_ACTUAL_DEPTO"] != DBNull.Value ? reader["DEST_ACTUAL_DEPTO"].ToString() : string.Empty,
+                                DestinoAnteriordArea = reader["DEST_ANTERIOR_AREA"] != DBNull.Value ? reader["DEST_ANTERIOR_AREA"].ToString() : string.Empty,
+                                DestinoAnteriordDpto = reader["DEST_ANTERIOR_DEPTO"] != DBNull.Value ? reader["DEST_ANTERIOR_DEPTO"].ToString() : string.Empty,
+                                NombreUsuarioRecepciona = reader["USUARIO RECEPTOR"] != DBNull.Value ? reader["USUARIO RECEPTOR"].ToString() : string.Empty,
+                                UserRecepciona = reader["CODIGO RECEPTOR"] != DBNull.Value ? reader["CODIGO RECEPTOR"].ToString() : string.Empty,
+                                NombreUsuarioAsigando = reader["USUARIO ASIGNADO"] != DBNull.Value ? reader["USUARIO ASIGNADO"].ToString() : string.Empty,
+                                UserUsuarioAsignado = reader["CODIGO ASIGNADO"] != DBNull.Value ? reader["CODIGO ASIGNADO"].ToString() : string.Empty,
                             };
 
-                            
+
                             listaDestinos.Add(destinoTramiteDB);
                         }
                     }
@@ -297,12 +314,12 @@ namespace ArgaAPI.Repositorio.Implementacion
         #region Miembros de IDestinoTramiteRepository
 
 
-        public ResponseDTO<List<DestinoTramite>> GetTramitesRecibidosXDestinoDepto(DestinoTramite destinoTramite)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetTramitesRecibidosXDestinoDepto(DestinoTramiteDTO destinoTramite)
         {
-            ResponseDTO<List<DestinoTramite>> rsp = new ResponseDTO<List<DestinoTramite>>();
+            ResponseDTO<List<DestinoTramiteDTO>> rsp = new ResponseDTO<List<DestinoTramiteDTO>>();
             rsp.IsSuccess = false;
 
-            List<DestinoTramite> listaDestinos = new List<DestinoTramite>();
+            List<DestinoTramiteDTO> listaDestinos = new List<DestinoTramiteDTO>();
 
             try
             {
@@ -339,8 +356,8 @@ namespace ArgaAPI.Repositorio.Implementacion
                     {
                         while (reader.Read())
                         {
-                            // Crear manualmente un objeto DESTRA a partir del reader
-                            DestinoTramite destinoTramiteDB = new DestinoTramite
+                            // Crear manualmente un objeto DestinoTramiteDTO a partir del reader
+                            DestinoTramiteDTO destinoTramiteDB = new DestinoTramiteDTO
                             {
                                 Correlativo = reader["DTRNROCORR"] != DBNull.Value ? Convert.ToInt32(reader["DTRNROCORR"]) : 0,
                                 Numerotramite = reader["DTRNROTRAM"] != DBNull.Value ? Convert.ToInt32(reader["DTRNROTRAM"]) : 0,
@@ -352,12 +369,25 @@ namespace ArgaAPI.Repositorio.Implementacion
                                 FechaComienzoTramite = reader["DTRFECHACT"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHACT"]) : (DateTime?)null,
                                 FechaSalidaDestino = reader["DTRFECHAST"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHAST"]) : (DateTime?)null,
                                 FechaIngresoDestino = reader["DTRFECHACT"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHACT"]) : (DateTime?)null,
+
+                                //props innner join
+                                RazonSocial = reader["EXPRAZONSO"] != DBNull.Value ? reader["EXPRAZONSO"].ToString() : string.Empty,
+                                CodigoSocietario = reader["EXPTIPOSOC"] != DBNull.Value ? reader["EXPTIPOSOC"].ToString() : string.Empty,
+                                DescripcionTramite = reader["TABCONTEN1"] != DBNull.Value ? reader["TABCONTEN1"].ToString() : string.Empty,
+                                UrgenteNormal = reader["CDTTIPOTRAM"] != DBNull.Value ? reader["CDTTIPOTRAM"].ToString() : string.Empty,
+                                RegistralInfoContable = reader["CDTREGISTRAL"] != DBNull.Value ? reader["CDTREGISTRAL"].ToString() : string.Empty,
+                                AreaDestinoActual = reader["DEST_ACTUAL_AREA"] != DBNull.Value ? reader["DEST_ACTUAL_AREA"].ToString() : string.Empty,
+                                DepartamentoDestinoActual = reader["DEST_ACTUAL_DEPTO"] != DBNull.Value ? reader["DEST_ACTUAL_DEPTO"].ToString() : string.Empty,
+                                DestinoAnteriordArea = reader["DEST_ANTERIOR_AREA"] != DBNull.Value ? reader["DEST_ANTERIOR_AREA"].ToString() : string.Empty,
+                                DestinoAnteriordDpto = reader["DEST_ANTERIOR_DEPTO"] != DBNull.Value ? reader["DEST_ANTERIOR_DEPTO"].ToString() : string.Empty,
+                                NombreUsuarioRecepciona = reader["USUARIO RECEPTOR"] != DBNull.Value ? reader["USUARIO RECEPTOR"].ToString() : string.Empty,
+                                UserRecepciona = reader["CODIGO RECEPTOR"] != DBNull.Value ? reader["CODIGO RECEPTOR"].ToString() : string.Empty,
+                                NombreUsuarioAsigando = reader["USUARIO ASIGNADO"] != DBNull.Value ? reader["USUARIO ASIGNADO"].ToString() : string.Empty,
+                                UserUsuarioAsignado = reader["CODIGO ASIGNADO"] != DBNull.Value ? reader["CODIGO ASIGNADO"].ToString() : string.Empty,
+                               
+
                             };
-
-
-                            listaDestinos.Add(destinoTramiteDB);
-
-
+                             listaDestinos.Add(destinoTramiteDB);
                         }
                     }
 

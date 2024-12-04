@@ -272,6 +272,7 @@
     <Compile Include="Data\VISTAREC.cs">
       <DependentUpon>ModelContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTOs\DestinoTramiteDTO.cs" />
     <Compile Include="DTOs\ResponseDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
