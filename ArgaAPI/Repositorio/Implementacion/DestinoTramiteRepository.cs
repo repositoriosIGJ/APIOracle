@@ -278,6 +278,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                                 //props innner join
                                 RazonSocial = reader["EXPRAZONSO"] != DBNull.Value ? reader["EXPRAZONSO"].ToString() : string.Empty,
                                 CodigoSocietario = reader["EXPTIPOSOC"] != DBNull.Value ? reader["EXPTIPOSOC"].ToString() : string.Empty,
+                                TipoSocietario = reader["TIPO SOCIETARIO"] != DBNull.Value ? reader["TIPO SOCIETARIO"].ToString() : string.Empty,
                                 DescripcionTramite = reader["TABCONTEN1"] != DBNull.Value ? reader["TABCONTEN1"].ToString() : string.Empty,
                                 UrgenteNormal = reader["CDTTIPOTRAM"] != DBNull.Value ? reader["CDTTIPOTRAM"].ToString() : string.Empty,
                                 RegistralInfoContable = reader["CDTREGISTRAL"] != DBNull.Value ? reader["CDTREGISTRAL"].ToString() : string.Empty,
@@ -373,6 +374,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                                 //props innner join
                                 RazonSocial = reader["EXPRAZONSO"] != DBNull.Value ? reader["EXPRAZONSO"].ToString() : string.Empty,
                                 CodigoSocietario = reader["EXPTIPOSOC"] != DBNull.Value ? reader["EXPTIPOSOC"].ToString() : string.Empty,
+                                TipoSocietario = reader["TIPO SOCIETARIO"] != DBNull.Value ? reader["TIPO SOCIETARIO"].ToString() : string.Empty,
                                 DescripcionTramite = reader["TABCONTEN1"] != DBNull.Value ? reader["TABCONTEN1"].ToString() : string.Empty,
                                 UrgenteNormal = reader["CDTTIPOTRAM"] != DBNull.Value ? reader["CDTTIPOTRAM"].ToString() : string.Empty,
                                 RegistralInfoContable = reader["CDTREGISTRAL"] != DBNull.Value ? reader["CDTREGISTRAL"].ToString() : string.Empty,

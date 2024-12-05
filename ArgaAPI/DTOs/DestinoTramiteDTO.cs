@@ -10,7 +10,7 @@ namespace ArgaAPI.DTOs
         // NUEVAS PROP DE INNER JOINS
         public string RazonSocial { get; set; }
         
-        public string tipoSocietario { get; set; }
+        public string TipoSocietario { get; set; }
 
         public string CodigoSocietario { get; set; }
 
