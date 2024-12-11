@@ -10,9 +10,10 @@ namespace ArgaAPI.Business.Contrato
 {
     public interface IDestinoTramiteBusiness
     {
-        ResponseDTO<List<DestinoTramite>> GetDestinosTramite(DestinoTramite destinoTramite);
-        ResponseDTO<List<DestinoTramite>> GetUltimoDestinoTramite(DestinoTramite destinoTramite);
+        ResponseDTO<List<DestinoTramiteDTO>> GetDestinosTramite(DestinoTramite destinoTramite);
+        ResponseDTO<List<DestinoTramiteDTO>> GetUltimoDestinoTramite(DestinoTramite destinoTramite);
         ResponseDTO<List<DestinoTramiteDTO>> GetTramiteSinAsignarXDestinoDpto(string destino);
         ResponseDTO<List<DestinoTramiteDTO>> GetTramitesRecibidosXDestinoDepto(DestinoTramiteDTO destinoTramite);
+        ResponseDTO<bool> RecibirAsignarSubDestinTramite(DestinoTramite destinoTramite);
     }
 }

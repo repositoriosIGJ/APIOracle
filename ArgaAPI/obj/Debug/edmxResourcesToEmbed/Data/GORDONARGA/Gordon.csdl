@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GordonModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="GORDON" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="BOLSACOM" EntityType="GordonModel.BOLSACOM" />
+    <EntitySet Name="DESTRA" EntityType="GordonModel.DESTRA" />
+    <EntitySet Name="EXPTES" EntityType="GordonModel.EXPTES" />
+    <EntitySet Name="SUBDESTIN" EntityType="GordonModel.SUBDESTIN" />
+    <EntitySet Name="TABGEN" EntityType="GordonModel.TABGEN" />
+    <EntitySet Name="TRAMITE_DESISTIDO" EntityType="GordonModel.TRAMITE_DESISTIDO" />
+    <EntitySet Name="VISTAREC" EntityType="GordonModel.VISTAREC" />
+    <EntitySet Name="VISTAS" EntityType="GordonModel.VISTAS" />
+  </EntityContainer>
+  <EntityType Name="BOLSACOM">
+    <Key>
+      <PropertyRef Name="BOLNROCORR" />
+      <PropertyRef Name="BOLCODTRAM" />
+      <PropertyRef Name="BOLFECHACT" />
+    </Key>
+    <Property Name="BOLNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="BOLCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="BOLFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BOLNROTRAM" Type="Int32" />
+    <Property Name="BOLFECFVIG" Type="DateTime" Precision="0" />
+    <Property Name="BOLUSUACTU" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="BOLFECACTU" Type="DateTime" Precision="0" />
+    <Property Name="BOLFECVIGE" Type="DateTime" Precision="0" />
+    <Property Name="BOLNRORESOL" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="BOLNROFVIG" Type="Int32" />
+    <Property Name="BOLFECDESDE" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="DESTRA">
+    <Key>
+      <PropertyRef Name="DTRNROCORR" />
+      <PropertyRef Name="DTRCODTRAM" />
+      <PropertyRef Name="DTRFECHACT" />
+      <PropertyRef Name="DTRCODDEST" />
+      <PropertyRef Name="DTRUSUDEST" />
+      <PropertyRef Name="DTRFECHART" />
+      <PropertyRef Name="DTRDESTANT" />
+    </Key>
+    <Property Name="DTRNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="DTRCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DTRFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DTRNROTRAM" Type="Int32" />
+    <Property Name="DTRCODDEST" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="DTRUSUDEST" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="DTRFECHART" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DTRDESTANT" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="DTRFECHAST" Type="DateTime" Precision="0" />
+    <Property Name="DTRNROSUBD" Type="Int16" />
+  </EntityType>
+  <EntityType Name="EXPTES">
+    <Key>
+      <PropertyRef Name="EXPNROCORR" />
+    </Key>
+    <Property Name="EXPNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="EXPCODHABI" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="EXPEXPREFE" Type="Int32" />
+    <Property Name="EXPFECHACC" Type="DateTime" Precision="0" />
+    <Property Name="EXPTIPOSOC" Type="Int16" Nullable="false" />
+    <Property Name="EXPRAZONSO" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="EXPADITAME" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="EXPSALIO" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPFOJAS" Type="Int16" />
+    <Property Name="EXPNROCUIT" Type="Int64" />
+    <Property Name="EXPFECVTO" Type="DateTime" Precision="0" />
+    <Property Name="EXPREGULAR" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPAHORRO" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPCODBAJA" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="EXPFECBAJA" Type="DateTime" Precision="0" />
+    <Property Name="EXPART118" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPART123" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPTIPOCON" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="EXPDIGITAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPBALANCES" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPDDJJ" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPRAZONSOINS" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="EXPNRORESERVA" Type="Int32" />
+    <Property Name="EXPUSUARIOSAE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="EXPHOMONIMIAID" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="SUBDESTIN">
+    <Key>
+      <PropertyRef Name="SUBDESTINO" />
+      <PropertyRef Name="SUBNROSUBD" />
+    </Key>
+    <Property Name="SUBDESTINO" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="SUBNROSUBD" Type="Int16" Nullable="false" />
+    <Property Name="SUBNOMBRE" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="SUBPASSW" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="SUBVISTA" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="SUBFECBAJ" Type="DateTime" Precision="0" />
+    <Property Name="SUBUSUARIO" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TABGEN">
+    <Key>
+      <PropertyRef Name="TABTIPOTAB" />
+      <PropertyRef Name="TABCLAVE" />
+    </Key>
+    <Property Name="TABTIPOTAB" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TABCLAVE" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN1" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN2" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN3" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN4" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TABCONTEN5" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TRAMITE_DESISTIDO">
+    <Key>
+      <PropertyRef Name="TRDNROCORR" />
+      <PropertyRef Name="TRDNROTRAM_ORIG" />
+      <PropertyRef Name="TRDFECHACT_ORIG" />
+      <PropertyRef Name="TRDCODTRAM_ORIG" />
+      <PropertyRef Name="TRDNROTRAM_DES" />
+      <PropertyRef Name="TRDFECHACT_DES" />
+      <PropertyRef Name="TRDCODTRAM_DES" />
+      <PropertyRef Name="TRDNCAJA" />
+      <PropertyRef Name="TRDNROPE" />
+      <PropertyRef Name="TRDUSUACTU" />
+      <PropertyRef Name="TRDFECACTU" />
+    </Key>
+    <Property Name="TRDNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="TRDNROTRAM_ORIG" Type="Int32" Nullable="false" />
+    <Property Name="TRDFECHACT_ORIG" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TRDCODTRAM_ORIG" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="TRDNROTRAM_DES" Type="Int32" Nullable="false" />
+    <Property Name="TRDFECHACT_DES" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TRDCODTRAM_DES" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="TRDNCAJA" Type="Int16" Nullable="false" />
+    <Property Name="TRDNROPE" Type="Int32" Nullable="false" />
+    <Property Name="TRDUSUACTU" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TRDFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="VISTAREC">
+    <Key>
+      <PropertyRef Name="VISNROCORR" />
+      <PropertyRef Name="VISCODTRAM" />
+      <PropertyRef Name="VISFECHACT" />
+    </Key>
+    <Property Name="VISNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="VISCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="VISNROTRAM" Type="Int32" />
+    <Property Name="VISCODDEST" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECHART" Type="DateTime" Precision="0" />
+    <Property Name="VISNROSUBD" Type="Int16" />
+    <Property Name="VISTIPO" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="VISDETALLE" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECACTU" Type="DateTime" Precision="0" />
+    <Property Name="VISUSUACTU" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECBAJA" Type="DateTime" Precision="0" />
+    <Property Name="VISCODBAJA" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="VISREVISOR" Type="Int16" />
+    <Property Name="VISREVOK" Type="Int16" />
+    <Property Name="VISNHOJA" Type="Int16" />
+    <Property Name="VISFIN" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="VISPZONOTIF" Type="Int16" />
+    <Property Name="VISDIGITAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="VISDATREG" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="VISIDBPM" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VISTAS">
+    <Key>
+      <PropertyRef Name="VISVISTAID" />
+    </Key>
+    <Property Name="VISVISTAID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="VISNROCORR" Type="Int32" Nullable="false" />
+    <Property Name="VISNROTRAM" Type="Int32" Nullable="false" />
+    <Property Name="VISCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="VISNROVERSION" Type="Int16" Nullable="false" />
+    <Property Name="VISTIPOVISTAID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="VISTEXT" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="VISINSPECTORID" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="VISREVISORID" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="VISFECREVISION" Type="DateTime" Precision="0" />
+    <Property Name="VISTEXTREVISOR" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+    <Property Name="VISESTADOID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="VISTIPOPROFINTERVINIENTE" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="VISACEPTREVISOR" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="VISAYUDAMEMORIA" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

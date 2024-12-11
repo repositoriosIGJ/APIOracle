@@ -148,6 +148,7 @@
     <Compile Include="Business\Contrato\IDestinoBusiness.cs" />
     <Compile Include="Business\Contrato\IDestinoTramiteBusiness.cs" />
     <Compile Include="Business\Contrato\IExpedienteBusiness.cs" />
+    <Compile Include="Business\Contrato\ISubdestinoBusiness.cs" />
     <Compile Include="Business\Contrato\ITipoSocietarioBusiness.cs" />
     <Compile Include="Business\Contrato\ITipoTramiteBusiness.cs" />
     <Compile Include="Business\Contrato\ITramiteBusiness.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="Business\Implementacion\DestinoBusiness.cs" />
     <Compile Include="Business\Implementacion\DestinoTramiteBusiness.cs" />
     <Compile Include="Business\Implementacion\ExpedienteBusiness.cs" />
+    <Compile Include="Business\Implementacion\SubdestinoBusiness.cs" />
     <Compile Include="Business\Implementacion\TipoSocietarioBusiness.cs" />
     <Compile Include="Business\Implementacion\TipoTramiteBusiness.cs" />
     <Compile Include="Business\Implementacion\TramiteBusiness.cs" />
@@ -163,6 +165,7 @@
     <Compile Include="Controllers\DestinoTramiteController.cs" />
     <Compile Include="Controllers\ExpedienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SubdestinoController.cs" />
     <Compile Include="Controllers\TipoSocietarioController.cs" />
     <Compile Include="Controllers\TipoTramiteController.cs" />
     <Compile Include="Controllers\TramiteController.cs" />
@@ -239,6 +242,45 @@
     <Compile Include="Data\EXPTES_PROD.cs">
       <DependentUpon>ModelContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\GORDONARGA\BOLSACOM.cs">
+      <DependentUpon>Gordon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\DESTRA.cs">
+      <DependentUpon>Gordon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\EXPTES.cs">
+      <DependentUpon>Gordon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\Gordon.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gordon.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\Gordon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gordon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\Gordon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gordon.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\SUBDESTIN.cs">
+      <DependentUpon>Gordon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\TABGEN.cs">
+      <DependentUpon>Gordon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\TRAMITE_DESISTIDO.cs">
+      <DependentUpon>Gordon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\VISTAREC.cs">
+      <DependentUpon>Gordon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GORDONARGA\VISTAS.cs">
+      <DependentUpon>Gordon.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\LIB_A_RUB_PROD.cs">
       <DependentUpon>ModelContext.tt</DependentUpon>
     </Compile>
@@ -284,6 +326,8 @@
     <Compile Include="Models\Destino.cs" />
     <Compile Include="Models\DestinoTramite.cs" />
     <Compile Include="Models\Expediente.cs" />
+    <Compile Include="Models\SUBDESTIN.cs" />
+    <Compile Include="Models\Subdestino.cs" />
     <Compile Include="Models\TipoSocietario.cs" />
     <Compile Include="Models\TipoTramite.cs" />
     <Compile Include="Models\Tramite.cs" />
@@ -292,6 +336,7 @@
     <Compile Include="Repositorio\Contrato\IDestinoRepository.cs" />
     <Compile Include="Repositorio\Contrato\IDestinoTramiteRepository.cs" />
     <Compile Include="Repositorio\Contrato\IExpedienteRepository.cs" />
+    <Compile Include="Repositorio\Contrato\ISubdestinoRepository.cs" />
     <Compile Include="Repositorio\Contrato\ITipoSocietarioReposity.cs" />
     <Compile Include="Repositorio\Contrato\ITipoTramiteRepository.cs" />
     <Compile Include="Repositorio\Contrato\ITramiteRepository.cs" />
@@ -299,6 +344,7 @@
     <Compile Include="Repositorio\Implementacion\DestinoRepository.cs" />
     <Compile Include="Repositorio\Implementacion\DestinoTramiteRepository.cs" />
     <Compile Include="Repositorio\Implementacion\ExpedienteRepository.cs" />
+    <Compile Include="Repositorio\Implementacion\SubdestinoRepository.cs" />
     <Compile Include="Repositorio\Implementacion\TipoSocietarioRepository.cs" />
     <Compile Include="Repositorio\Implementacion\TipoTramiteRepository.cs" />
     <Compile Include="Repositorio\Implementacion\TramiteRepository.cs" />
@@ -380,6 +426,16 @@
       <DependentUpon>DEVIGJModel.edmx</DependentUpon>
       <LastGenOutput>DEVIGJModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Data\GORDONARGA\Gordon.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Gordon.edmx</DependentUpon>
+      <LastGenOutput>Gordon.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\GORDONARGA\Gordon.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Gordon.edmx</DependentUpon>
+      <LastGenOutput>Gordon.cs</LastGenOutput>
+    </Content>
     <Content Include="Data\ModelContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelContext.edmx</DependentUpon>
@@ -415,6 +471,13 @@
     </EntityDeploy>
     <Content Include="Data\ARGA\ModeloARGA.edmx.diagram">
       <DependentUpon>ModeloARGA.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Data\GORDONARGA\Gordon.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Gordon.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Data\GORDONARGA\Gordon.edmx.diagram">
+      <DependentUpon>Gordon.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />

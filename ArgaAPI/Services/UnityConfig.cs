@@ -27,6 +27,7 @@ namespace ArgaAPI.Services
             container.RegisterType<IDestinoBusiness, DestinoBusiness>(new HierarchicalLifetimeManager());
             container.RegisterType<IDestinoTramiteBusiness, DestinoTramiteBusiness>(new HierarchicalLifetimeManager());
             container.RegisterType<IDatosCivilesBusiness, DatosCivilesBusiness>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISubdestinoBusiness, SubdestinoBusiness>(new HierarchicalLifetimeManager());
 
 
             container.RegisterType<ITipoSocietarioReposity, TipoSocietarioRepository>(new HierarchicalLifetimeManager());
@@ -36,6 +37,7 @@ namespace ArgaAPI.Services
             container.RegisterType<IDestinoRepository, DestinoRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IDestinoTramiteRepository, DestinoTramiteRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IDatosCivilesRepository, DatosCivilesRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISubdestinoRepository, SubdestinoRepository>(new HierarchicalLifetimeManager());
              
             // Registrar controladores
              container.RegisterType<TipoSocietarioController>();
@@ -45,6 +47,7 @@ namespace ArgaAPI.Services
              container.RegisterType<DestinoController>();
              container.RegisterType<DestinoTramiteController>();
              container.RegisterType<DatosCivilesController>();
+             container.RegisterType<SubdestinoController>();
 
             // Configurar DependencyResolver manualmente
             GlobalConfiguration.Configuration.DependencyResolver = new UnityResolver(container);

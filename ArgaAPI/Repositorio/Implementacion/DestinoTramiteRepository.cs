@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using ArgaAPI.Data.ARGA;
 using ArgaAPI.Data.DEVIGJ;
+using ArgaAPI.Data.GORDONARGA;
 using ArgaAPI.DTOs;
 using ArgaAPI.Models;
 using ArgaAPI.Repositorio.Contrato;
@@ -19,12 +20,12 @@ namespace ArgaAPI.Repositorio.Implementacion
 
         #region Miembros de IDestinoTramiteRepository
 
-        public ResponseDTO<List<DestinoTramite>> GetUltimoDestinoTramite(DestinoTramite destinoTramite)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetUltimoDestinoTramite(DestinoTramite destinoTramite)
         {
-            ResponseDTO<List<DestinoTramite>> rsp = new ResponseDTO<List<DestinoTramite>>();
+            ResponseDTO<List<DestinoTramiteDTO>> rsp = new ResponseDTO<List<DestinoTramiteDTO>>();
             rsp.IsSuccess = false;
 
-            List<DestinoTramite> listaDestinos = new List<DestinoTramite>();
+            List<DestinoTramiteDTO> listaDestinos = new List<DestinoTramiteDTO>();
 
             try
             {
@@ -38,6 +39,9 @@ namespace ArgaAPI.Repositorio.Implementacion
                     // Definir los parámetros del procedimiento almacenado
                     command.Parameters.Add(new OracleParameter("p_nrotram", OracleDbType.Varchar2)).Value =
                     destinoTramite.Numerotramite != 0 ? (object)destinoTramite.Numerotramite : DBNull.Value;
+
+                    command.Parameters.Add(new OracleParameter("p_nrocorr", OracleDbType.Varchar2)).Value =
+                    destinoTramite.Correlativo != 0 ? (object)destinoTramite.Correlativo : DBNull.Value;
                     /*
                command.Parameters.Add(new OracleParameter("p_nrocorr", OracleDbType.Varchar2)).Value =
                destinoTramite.Correlativo != 0 ? (object)destinoTramite.Correlativo : DBNull.Value;
@@ -87,7 +91,7 @@ namespace ArgaAPI.Repositorio.Implementacion
                         while (reader.Read())
                         {
                             // Crear manualmente un objeto DESTRA a partir del reader
-                            DestinoTramite destinoTramiteDB = new DestinoTramite
+                            DestinoTramiteDTO destinoTramiteDB = new DestinoTramiteDTO
                             {
                                 Correlativo = reader["DTRNROCORR"] != DBNull.Value ? Convert.ToInt32(reader["DTRNROCORR"]) : 0,
                                 Numerotramite = reader["DTRNROTRAM"] != DBNull.Value ? Convert.ToInt32(reader["DTRNROTRAM"]) : 0,
@@ -99,6 +103,22 @@ namespace ArgaAPI.Repositorio.Implementacion
                                 FechaComienzoTramite = reader["DTRFECHACT"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHACT"]) : (DateTime?)null,
                                 FechaSalidaDestino = reader["DTRFECHAST"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHAST"]) : (DateTime?)null,
                                 FechaIngresoDestino = reader["DTRFECHACT"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHACT"]) : (DateTime?)null,
+
+                                //props innner join
+                                RazonSocial = reader["EXPRAZONSO"] != DBNull.Value ? reader["EXPRAZONSO"].ToString() : string.Empty,
+                                CodigoSocietario = reader["EXPTIPOSOC"] != DBNull.Value ? reader["EXPTIPOSOC"].ToString() : string.Empty,
+                                TipoSocietario = reader["TIPO SOCIETARIO"] != DBNull.Value ? reader["TIPO SOCIETARIO"].ToString() : string.Empty,
+                                DescripcionTramite = reader["TABCONTEN1"] != DBNull.Value ? reader["TABCONTEN1"].ToString() : string.Empty,
+                                UrgenteNormal = reader["CDTTIPOTRAM"] != DBNull.Value ? reader["CDTTIPOTRAM"].ToString() : string.Empty,
+                                RegistralInfoContable = reader["CDTREGISTRAL"] != DBNull.Value ? reader["CDTREGISTRAL"].ToString() : string.Empty,
+                                AreaDestinoActual = reader["DEST_ACTUAL_AREA"] != DBNull.Value ? reader["DEST_ACTUAL_AREA"].ToString() : string.Empty,
+                                DepartamentoDestinoActual = reader["DEST_ACTUAL_DEPTO"] != DBNull.Value ? reader["DEST_ACTUAL_DEPTO"].ToString() : string.Empty,
+                                DestinoAnteriordArea = reader["DEST_ANTERIOR_AREA"] != DBNull.Value ? reader["DEST_ANTERIOR_AREA"].ToString() : string.Empty,
+                                DestinoAnteriordDpto = reader["DEST_ANTERIOR_DEPTO"] != DBNull.Value ? reader["DEST_ANTERIOR_DEPTO"].ToString() : string.Empty,
+                                NombreUsuarioRecepciona = reader["USUARIO RECEPTOR"] != DBNull.Value ? reader["USUARIO RECEPTOR"].ToString() : string.Empty,
+                                UserRecepciona = reader["CODIGO RECEPTOR"] != DBNull.Value ? reader["CODIGO RECEPTOR"].ToString() : string.Empty,
+                                NombreUsuarioAsigando = reader["USUARIO ASIGNADO"] != DBNull.Value ? reader["USUARIO ASIGNADO"].ToString() : string.Empty,
+                                UserUsuarioAsignado = reader["CODIGO ASIGNADO"] != DBNull.Value ? reader["CODIGO ASIGNADO"].ToString() : string.Empty,
                             };
 
 
@@ -121,7 +141,7 @@ namespace ArgaAPI.Repositorio.Implementacion
         }
 
 
-        private DestinoTramite MapDESTRAToDestinoTramite(DESTRA destra)
+      /*  private DestinoTramite MapDESTRAToDestinoTramite(DESTRA destra)
         {
             DestinoTramite destinoTramite = new DestinoTramite
             {
@@ -139,19 +159,19 @@ namespace ArgaAPI.Repositorio.Implementacion
             };
 
             return destinoTramite;
-        }
+        }*/
 
         #endregion
 
         #region Miembros de IDestinoTramiteRepository
 
 
-        public ResponseDTO<List<DestinoTramite>> GetDestinosTramite(DestinoTramite destinoTramite)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetDestinosTramite(DestinoTramite destinoTramite)
         {
-            ResponseDTO<List<DestinoTramite>> rsp = new ResponseDTO<List<DestinoTramite>>();
+            ResponseDTO<List<DestinoTramiteDTO>> rsp = new ResponseDTO<List<DestinoTramiteDTO>>();
             rsp.IsSuccess = false;
 
-            List<DestinoTramite> listaDestinos = new List<DestinoTramite>();
+            List<DestinoTramiteDTO> listaDestinos = new List<DestinoTramiteDTO>();
 
             try
             {
@@ -165,7 +185,8 @@ namespace ArgaAPI.Repositorio.Implementacion
                     // Definir los parámetros del procedimiento almacenado
                     command.Parameters.Add(new OracleParameter("p_nrotram", OracleDbType.Varchar2)).Value =
                     destinoTramite.Numerotramite != 0 ? (object)destinoTramite.Numerotramite : DBNull.Value;
-              
+                    command.Parameters.Add(new OracleParameter("p_nrocorr", OracleDbType.Varchar2)).Value =
+                    destinoTramite.Correlativo != 0 ? (object)destinoTramite.Correlativo : DBNull.Value;
 
                     // Parámetro de salida que obtendrá el cursor
                     OracleParameter outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor)
@@ -185,8 +206,8 @@ namespace ArgaAPI.Repositorio.Implementacion
                     {
                         while (reader.Read())
                         {
-                            // Crear manualmente un objeto DESTRA a partir del reader
-                            DestinoTramite destinoTramiteDB = new DestinoTramite
+                            // Crear manualmente un objeto DestinoTramiteDTO a partir del reader
+                            DestinoTramiteDTO destinoTramiteDB = new DestinoTramiteDTO
                             {
                                 Correlativo = reader["DTRNROCORR"] != DBNull.Value ? Convert.ToInt32(reader["DTRNROCORR"]) : 0,
                                 Numerotramite = reader["DTRNROTRAM"] != DBNull.Value ? Convert.ToInt32(reader["DTRNROTRAM"]) : 0,
@@ -198,6 +219,22 @@ namespace ArgaAPI.Repositorio.Implementacion
                                 FechaComienzoTramite = reader["DTRFECHACT"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHACT"]) : (DateTime?)null,
                                 FechaSalidaDestino = reader["DTRFECHAST"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHAST"]) : (DateTime?)null,
                                 FechaIngresoDestino = reader["DTRFECHACT"] != DBNull.Value ? Convert.ToDateTime(reader["DTRFECHACT"]) : (DateTime?)null,
+
+                                //props innner join
+                                RazonSocial = reader["EXPRAZONSO"] != DBNull.Value ? reader["EXPRAZONSO"].ToString() : string.Empty,
+                                CodigoSocietario = reader["EXPTIPOSOC"] != DBNull.Value ? reader["EXPTIPOSOC"].ToString() : string.Empty,
+                                TipoSocietario = reader["TIPO SOCIETARIO"] != DBNull.Value ? reader["TIPO SOCIETARIO"].ToString() : string.Empty,
+                                DescripcionTramite = reader["TABCONTEN1"] != DBNull.Value ? reader["TABCONTEN1"].ToString() : string.Empty,
+                                UrgenteNormal = reader["CDTTIPOTRAM"] != DBNull.Value ? reader["CDTTIPOTRAM"].ToString() : string.Empty,
+                                RegistralInfoContable = reader["CDTREGISTRAL"] != DBNull.Value ? reader["CDTREGISTRAL"].ToString() : string.Empty,
+                                AreaDestinoActual = reader["DEST_ACTUAL_AREA"] != DBNull.Value ? reader["DEST_ACTUAL_AREA"].ToString() : string.Empty,
+                                DepartamentoDestinoActual = reader["DEST_ACTUAL_DEPTO"] != DBNull.Value ? reader["DEST_ACTUAL_DEPTO"].ToString() : string.Empty,
+                                DestinoAnteriordArea = reader["DEST_ANTERIOR_AREA"] != DBNull.Value ? reader["DEST_ANTERIOR_AREA"].ToString() : string.Empty,
+                                DestinoAnteriordDpto = reader["DEST_ANTERIOR_DEPTO"] != DBNull.Value ? reader["DEST_ANTERIOR_DEPTO"].ToString() : string.Empty,
+                                NombreUsuarioRecepciona = reader["USUARIO RECEPTOR"] != DBNull.Value ? reader["USUARIO RECEPTOR"].ToString() : string.Empty,
+                                UserRecepciona = reader["CODIGO RECEPTOR"] != DBNull.Value ? reader["CODIGO RECEPTOR"].ToString() : string.Empty,
+                                NombreUsuarioAsigando = reader["USUARIO ASIGNADO"] != DBNull.Value ? reader["USUARIO ASIGNADO"].ToString() : string.Empty,
+                                UserUsuarioAsignado = reader["CODIGO ASIGNADO"] != DBNull.Value ? reader["CODIGO ASIGNADO"].ToString() : string.Empty,
                             };
 
 
@@ -304,7 +341,7 @@ namespace ArgaAPI.Repositorio.Implementacion
             }
             catch (Exception ex)
             {
-                rsp.Message = ex.Message;
+                rsp.Message = ex.Message +"-"+  ex.InnerException.Message;
             }
 
             return rsp;
@@ -338,6 +375,9 @@ namespace ArgaAPI.Repositorio.Implementacion
 
                     command.Parameters.Add(new OracleParameter("p_dtrnrosubd", OracleDbType.Int32)).Value =
                         destinoTramite.NroSubdestino != 0 ? (object)destinoTramite.NroSubdestino : DBNull.Value;
+                    
+                    command.Parameters.Add(new OracleParameter("p_nrocorr", OracleDbType.Varchar2)).Value =
+                    destinoTramite.Correlativo != 0 ? (object)destinoTramite.Correlativo : DBNull.Value;
 
                     // Parámetro de salida que obtendrá el cursor
                     OracleParameter outputCursor = new OracleParameter("p_cursor", OracleDbType.RefCursor)
@@ -406,6 +446,66 @@ namespace ArgaAPI.Repositorio.Implementacion
 
             return rsp;
         }
+
+        #endregion
+
+        #region Miembros de IDestinoTramiteRepository
+
+
+        public ResponseDTO<bool> RecibirAsignarSubDestinTramite(DestinoTramite destinoTramite)
+        {
+          var rst = new ResponseDTO<bool>
+        {
+            IsSuccess = false,
+            Data = false
+        };
+
+        try
+        {
+            using (var context = new GORDON())
+            {
+                // Ejecutar el procedimiento almacenado mediante EF
+                var parameters = new List<OracleParameter>
+                {
+                    new OracleParameter("p_codigodestino", OracleDbType.Varchar2) 
+                    { Value = destinoTramite.CodigoDestino ?? (object)DBNull.Value },
+                    
+                    new OracleParameter("p_nrotram", OracleDbType.Int32) 
+                    { Value = destinoTramite.Numerotramite ?? (object)DBNull.Value },
+                    
+                    new OracleParameter("p_correlativo", OracleDbType.Int32) 
+                    { Value = destinoTramite.Correlativo },
+                    
+                    new OracleParameter("p_codigoUsuarioReceptor", OracleDbType.Int32) 
+                        {
+                            Value = !string.IsNullOrEmpty(destinoTramite.UsuarioDestino) 
+                                ? (object)Convert.ToInt32(destinoTramite.UsuarioDestino) 
+                                : DBNull.Value
+                        },
+                    new OracleParameter("p_nrosubestinoUser", OracleDbType.Int32) 
+                    { Value = destinoTramite.NroSubdestino ?? (object)DBNull.Value }
+                };
+
+                // Ejecutar el procedimiento almacenado
+                context.Database.ExecuteSqlCommand(
+                    "BEGIN PK_API_LEGACY.RecibirAsignarSubDestinTramite(:p_codigodestino, :p_nrotram, :p_correlativo, :p_codigoUsuarioReceptor, :p_nrosubestinoUser); END;",
+                    parameters.ToArray()
+                );
+
+                // Configurar respuesta
+                rst.IsSuccess = true;
+                rst.Data = true;
+                rst.Message = "Actualización realizada correctamente.";
+            }
+        }
+        catch (Exception ex)
+        {
+            rst.Message =  ex.Message +"--"+ ex.InnerException.Message;
+        }
+
+        return rst;
+        }
+
 
         #endregion
     }

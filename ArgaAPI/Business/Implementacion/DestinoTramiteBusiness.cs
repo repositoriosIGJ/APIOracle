@@ -20,7 +20,7 @@ namespace ArgaAPI.Business.Implementacion
 
         #region Miembros de IDestinoTramiteBusiness
 
-        public ResponseDTO<List<DestinoTramite>> GetDestinosTramite(DestinoTramite destinoTramite)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetDestinosTramite(DestinoTramite destinoTramite)
         {
             var rst = _destinoTramiteRepository.GetDestinosTramite(destinoTramite);
 
@@ -32,7 +32,7 @@ namespace ArgaAPI.Business.Implementacion
         #region Miembros de IDestinoTramiteBusiness
 
 
-        public ResponseDTO<List<DestinoTramite>> GetUltimoDestinoTramite(DestinoTramite destinoTramite)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetUltimoDestinoTramite(DestinoTramite destinoTramite)
         {
             var rst = _destinoTramiteRepository.GetUltimoDestinoTramite(destinoTramite);
 
@@ -64,5 +64,17 @@ namespace ArgaAPI.Business.Implementacion
         }
 
         #endregion
+
+        #region Miembros de IDestinoTramiteBusiness
+
+
+        public ResponseDTO<bool> RecibirAsignarSubDestinTramite(DestinoTramite destinoTramite)
+        {
+            var rst = _destinoTramiteRepository.RecibirAsignarSubDestinTramite(destinoTramite);
+
+            return rst;
+
+        #endregion
+        }
     }
 }

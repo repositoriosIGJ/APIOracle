@@ -21,7 +21,7 @@ namespace ArgaAPI.Controllers
          // GET api/destino/GetDestinosTramite
         [HttpPost]
          [ActionName("GetDestinosTramite")]
-         public ResponseDTO<List<DestinoTramite>> GetDestinos(DestinoTramite destinoTramite)
+         public ResponseDTO<List<DestinoTramiteDTO>> GetDestinos(DestinoTramite destinoTramite)
          {
              var rst = _destinoTramitebusiness.GetDestinosTramite(destinoTramite);
              return rst;
@@ -30,7 +30,7 @@ namespace ArgaAPI.Controllers
         // GET api/destino/GetUltimoDestinoTramite
         [HttpPost]
         [ActionName("GetUltimoDestinoTramite")]
-        public ResponseDTO<List<DestinoTramite>> GetUltimoDestino( DestinoTramite destinoTramite)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetUltimoDestino( DestinoTramite destinoTramite)
         {
             var rst = _destinoTramitebusiness.GetUltimoDestinoTramite(destinoTramite);
             return rst;
@@ -52,6 +52,16 @@ namespace ArgaAPI.Controllers
         {
             var rst = _destinoTramitebusiness.GetTramitesRecibidosXDestinoDepto(destinoTramite);
             return rst;
+        }
+
+        [HttpPut]
+          [ActionName("RecibirAsignarSubDestinTramite")]
+         public ResponseDTO<bool> RecibirAsignarSubDestinTramite(DestinoTramite destinoTramite)
+        {
+            var rst = _destinoTramitebusiness.RecibirAsignarSubDestinTramite(destinoTramite);
+
+            return rst;
+
         }
     }
 }

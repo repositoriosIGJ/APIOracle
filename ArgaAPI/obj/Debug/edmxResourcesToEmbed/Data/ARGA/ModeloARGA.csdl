@@ -13,6 +13,7 @@
     <EntitySet Name="TIMBRADOS" EntityType="ModelARGA.TIMBRADOS" />
     <EntitySet Name="TRAMIT" EntityType="ModelARGA.TRAMIT" />
     <EntitySet Name="VISTAREC" EntityType="ModelARGA.VISTAREC" />
+    <EntitySet Name="SUBDESTIN" EntityType="ModelARGA.SUBDESTIN" />
   </EntityContainer>
   <EntityType Name="DATOS_GDE">
     <Key>
@@ -271,5 +272,18 @@
     <Property Name="VISDIGITAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
     <Property Name="VISDATREG" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
     <Property Name="VISIDBPM" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SUBDESTIN">
+    <Key>
+      <PropertyRef Name="SUBDESTINO" />
+      <PropertyRef Name="SUBNROSUBD" />
+    </Key>
+    <Property Type="String" Name="SUBDESTINO" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="SUBNROSUBD" Nullable="false" />
+    <Property Type="String" Name="SUBNOMBRE" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUBPASSW" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUBVISTA" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SUBFECBAJ" Precision="0" />
+    <Property Type="String" Name="SUBUSUARIO" MaxLength="4" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GordonModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="9.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="GordonModelStoreContainer">
+          <EntitySet Name="BOLSACOM" EntityType="GordonModel.Store.BOLSACOM" store:Type="Tables" store:Schema="ARGA" store:Name="BOLSACOM">
+            <DefiningQuery>SELECT 
+      "BOLSACOM"."BOLNROCORR" AS "BOLNROCORR", 
+      "BOLSACOM"."BOLCODTRAM" AS "BOLCODTRAM", 
+      "BOLSACOM"."BOLFECHACT" AS "BOLFECHACT", 
+      "BOLSACOM"."BOLNROTRAM" AS "BOLNROTRAM", 
+      "BOLSACOM"."BOLFECFVIG" AS "BOLFECFVIG", 
+      "BOLSACOM"."BOLUSUACTU" AS "BOLUSUACTU", 
+      "BOLSACOM"."BOLFECACTU" AS "BOLFECACTU", 
+      "BOLSACOM"."BOLFECVIGE" AS "BOLFECVIGE", 
+      "BOLSACOM"."BOLNRORESOL" AS "BOLNRORESOL", 
+      "BOLSACOM"."BOLNROFVIG" AS "BOLNROFVIG", 
+      "BOLSACOM"."BOLFECDESDE" AS "BOLFECDESDE"
+      FROM "ARGA"."BOLSACOM" "BOLSACOM"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DESTRA" EntityType="GordonModel.Store.DESTRA" store:Type="Tables" store:Schema="ARGA" store:Name="DESTRA">
+            <DefiningQuery>SELECT 
+      "DESTRA"."DTRNROCORR" AS "DTRNROCORR", 
+      "DESTRA"."DTRCODTRAM" AS "DTRCODTRAM", 
+      "DESTRA"."DTRFECHACT" AS "DTRFECHACT", 
+      "DESTRA"."DTRNROTRAM" AS "DTRNROTRAM", 
+      "DESTRA"."DTRCODDEST" AS "DTRCODDEST", 
+      "DESTRA"."DTRUSUDEST" AS "DTRUSUDEST", 
+      "DESTRA"."DTRFECHART" AS "DTRFECHART", 
+      "DESTRA"."DTRDESTANT" AS "DTRDESTANT", 
+      "DESTRA"."DTRFECHAST" AS "DTRFECHAST", 
+      "DESTRA"."DTRNROSUBD" AS "DTRNROSUBD"
+      FROM "ARGA"."DESTRA" "DESTRA"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EXPTES" EntityType="GordonModel.Store.EXPTES" store:Type="Tables" Schema="ARGA" />
+          <EntitySet Name="SUBDESTIN" EntityType="GordonModel.Store.SUBDESTIN" store:Type="Tables" Schema="ARGA" />
+          <EntitySet Name="TABGEN" EntityType="GordonModel.Store.TABGEN" store:Type="Tables" Schema="ARGA" />
+          <EntitySet Name="TRAMITE_DESISTIDO" EntityType="GordonModel.Store.TRAMITE_DESISTIDO" store:Type="Tables" store:Schema="ARGA" store:Name="TRAMITE_DESISTIDO">
+            <DefiningQuery>SELECT 
+      "TRAMITE_DESISTIDO"."TRDNROCORR" AS "TRDNROCORR", 
+      "TRAMITE_DESISTIDO"."TRDNROTRAM_ORIG" AS "TRDNROTRAM_ORIG", 
+      "TRAMITE_DESISTIDO"."TRDFECHACT_ORIG" AS "TRDFECHACT_ORIG", 
+      "TRAMITE_DESISTIDO"."TRDCODTRAM_ORIG" AS "TRDCODTRAM_ORIG", 
+      "TRAMITE_DESISTIDO"."TRDNROTRAM_DES" AS "TRDNROTRAM_DES", 
+      "TRAMITE_DESISTIDO"."TRDFECHACT_DES" AS "TRDFECHACT_DES", 
+      "TRAMITE_DESISTIDO"."TRDCODTRAM_DES" AS "TRDCODTRAM_DES", 
+      "TRAMITE_DESISTIDO"."TRDNCAJA" AS "TRDNCAJA", 
+      "TRAMITE_DESISTIDO"."TRDNROPE" AS "TRDNROPE", 
+      "TRAMITE_DESISTIDO"."TRDUSUACTU" AS "TRDUSUACTU", 
+      "TRAMITE_DESISTIDO"."TRDFECACTU" AS "TRDFECACTU"
+      FROM "ARGA"."TRAMITE_DESISTIDO" "TRAMITE_DESISTIDO"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VISTAREC" EntityType="GordonModel.Store.VISTAREC" store:Type="Tables" store:Schema="ARGA" store:Name="VISTAREC">
+            <DefiningQuery>SELECT 
+      "VISTAREC"."VISNROCORR" AS "VISNROCORR", 
+      "VISTAREC"."VISCODTRAM" AS "VISCODTRAM", 
+      "VISTAREC"."VISFECHACT" AS "VISFECHACT", 
+      "VISTAREC"."VISNROTRAM" AS "VISNROTRAM", 
+      "VISTAREC"."VISCODDEST" AS "VISCODDEST", 
+      "VISTAREC"."VISFECHART" AS "VISFECHART", 
+      "VISTAREC"."VISNROSUBD" AS "VISNROSUBD", 
+      "VISTAREC"."VISTIPO" AS "VISTIPO", 
+      "VISTAREC"."VISDETALLE" AS "VISDETALLE", 
+      "VISTAREC"."VISFECACTU" AS "VISFECACTU", 
+      "VISTAREC"."VISUSUACTU" AS "VISUSUACTU", 
+      "VISTAREC"."VISFECBAJA" AS "VISFECBAJA", 
+      "VISTAREC"."VISCODBAJA" AS "VISCODBAJA", 
+      "VISTAREC"."VISREVISOR" AS "VISREVISOR", 
+      "VISTAREC"."VISREVOK" AS "VISREVOK", 
+      "VISTAREC"."VISNHOJA" AS "VISNHOJA", 
+      "VISTAREC"."VISFIN" AS "VISFIN", 
+      "VISTAREC"."VISPZONOTIF" AS "VISPZONOTIF", 
+      "VISTAREC"."VISDIGITAL" AS "VISDIGITAL", 
+      "VISTAREC"."VISDATREG" AS "VISDATREG", 
+      "VISTAREC"."VISIDBPM" AS "VISIDBPM"
+      FROM "ARGA"."VISTAREC" "VISTAREC"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VISTAS" EntityType="GordonModel.Store.VISTAS" store:Type="Tables" Schema="ARGA" />
+        </EntityContainer>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ARGA.BOLSACOM' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="BOLSACOM">
+          <Key>
+            <PropertyRef Name="BOLNROCORR" />
+            <PropertyRef Name="BOLCODTRAM" />
+            <PropertyRef Name="BOLFECHACT" />
+          </Key>
+          <Property Name="BOLNROCORR" Type="number" Nullable="false" Precision="7" />
+          <Property Name="BOLCODTRAM" Type="varchar2" Nullable="false" MaxLength="5" />
+          <Property Name="BOLFECHACT" Type="date" Nullable="false" />
+          <Property Name="BOLNROTRAM" Type="number" Precision="10" />
+          <Property Name="BOLFECFVIG" Type="date" />
+          <Property Name="BOLUSUACTU" Type="varchar2" MaxLength="20" />
+          <Property Name="BOLFECACTU" Type="date" />
+          <Property Name="BOLFECVIGE" Type="date" />
+          <Property Name="BOLNRORESOL" Type="varchar2" MaxLength="12" />
+          <Property Name="BOLNROFVIG" Type="number" Precision="6" />
+          <Property Name="BOLFECDESDE" Type="date" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ARGA.DESTRA' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="DESTRA">
+          <Key>
+            <PropertyRef Name="DTRNROCORR" />
+            <PropertyRef Name="DTRCODTRAM" />
+            <PropertyRef Name="DTRFECHACT" />
+            <PropertyRef Name="DTRCODDEST" />
+            <PropertyRef Name="DTRUSUDEST" />
+            <PropertyRef Name="DTRFECHART" />
+            <PropertyRef Name="DTRDESTANT" />
+          </Key>
+          <Property Name="DTRNROCORR" Type="number" Nullable="false" Precision="7" />
+          <Property Name="DTRCODTRAM" Type="varchar2" Nullable="false" MaxLength="5" />
+          <Property Name="DTRFECHACT" Type="date" Nullable="false" />
+          <Property Name="DTRNROTRAM" Type="number" Precision="10" />
+          <Property Name="DTRCODDEST" Type="varchar2" Nullable="false" MaxLength="4" />
+          <Property Name="DTRUSUDEST" Type="varchar2" Nullable="false" MaxLength="4" />
+          <Property Name="DTRFECHART" Type="date" Nullable="false" />
+          <Property Name="DTRDESTANT" Type="varchar2" Nullable="false" MaxLength="4" />
+          <Property Name="DTRFECHAST" Type="date" />
+          <Property Name="DTRNROSUBD" Type="number" Precision="4" />
+        </EntityType>
+        <EntityType Name="EXPTES">
+          <Key>
+            <PropertyRef Name="EXPNROCORR" />
+          </Key>
+          <Property Name="EXPNROCORR" Type="number" Nullable="false" Precision="7" />
+          <Property Name="EXPCODHABI" Type="varchar2" MaxLength="3" />
+          <Property Name="EXPEXPREFE" Type="number" Precision="6" />
+          <Property Name="EXPFECHACC" Type="date" />
+          <Property Name="EXPTIPOSOC" Type="number" Nullable="false" Precision="3" />
+          <Property Name="EXPRAZONSO" Type="varchar2" Nullable="false" MaxLength="60" />
+          <Property Name="EXPADITAME" Type="varchar2" MaxLength="60" />
+          <Property Name="EXPSALIO" Type="varchar2" MaxLength="1" />
+          <Property Name="EXPFOJAS" Type="number" Precision="4" />
+          <Property Name="EXPNROCUIT" Type="number" Precision="11" />
+          <Property Name="EXPFECVTO" Type="date" />
+          <Property Name="EXPREGULAR" Type="varchar2" MaxLength="1" />
+          <Property Name="EXPAHORRO" Type="varchar2" MaxLength="1" />
+          <Property Name="EXPCODBAJA" Type="varchar2" MaxLength="5" />
+          <Property Name="EXPFECBAJA" Type="date" />
+          <Property Name="EXPART118" Type="varchar2" MaxLength="1" />
+          <Property Name="EXPART123" Type="varchar2" MaxLength="1" />
+          <Property Name="EXPTIPOCON" Type="varchar2" MaxLength="2" />
+          <Property Name="EXPDIGITAL" Type="varchar2" MaxLength="1" />
+          <Property Name="EXPBALANCES" Type="varchar2" MaxLength="1" />
+          <Property Name="EXPDDJJ" Type="varchar2" MaxLength="1" />
+          <Property Name="EXPRAZONSOINS" Type="varchar2" MaxLength="250" />
+          <Property Name="EXPNRORESERVA" Type="number" Precision="7" />
+          <Property Name="EXPUSUARIOSAE" Type="varchar2" MaxLength="1" />
+          <Property Name="EXPHOMONIMIAID" Type="number" />
+        </EntityType>
+        <EntityType Name="SUBDESTIN">
+          <Key>
+            <PropertyRef Name="SUBDESTINO" />
+            <PropertyRef Name="SUBNROSUBD" />
+          </Key>
+          <Property Name="SUBDESTINO" Type="varchar2" Nullable="false" MaxLength="4" />
+          <Property Name="SUBNROSUBD" Type="number" Nullable="false" Precision="4" />
+          <Property Name="SUBNOMBRE" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="SUBPASSW" Type="varchar2" MaxLength="8" />
+          <Property Name="SUBVISTA" Type="varchar2" MaxLength="1" />
+          <Property Name="SUBFECBAJ" Type="date" />
+          <Property Name="SUBUSUARIO" Type="varchar2" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="TABGEN">
+          <Key>
+            <PropertyRef Name="TABTIPOTAB" />
+            <PropertyRef Name="TABCLAVE" />
+          </Key>
+          <Property Name="TABTIPOTAB" Type="varchar2" Nullable="false" MaxLength="3" />
+          <Property Name="TABCLAVE" Type="varchar2" Nullable="false" MaxLength="40" />
+          <Property Name="TABCONTEN1" Type="varchar2" MaxLength="60" />
+          <Property Name="TABCONTEN2" Type="varchar2" MaxLength="60" />
+          <Property Name="TABCONTEN3" Type="varchar2" MaxLength="60" />
+          <Property Name="TABCONTEN4" Type="varchar2" MaxLength="10" />
+          <Property Name="TABCONTEN5" Type="varchar2" MaxLength="10" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ARGA.TRAMITE_DESISTIDO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="TRAMITE_DESISTIDO">
+          <Key>
+            <PropertyRef Name="TRDNROCORR" />
+            <PropertyRef Name="TRDNROTRAM_ORIG" />
+            <PropertyRef Name="TRDFECHACT_ORIG" />
+            <PropertyRef Name="TRDCODTRAM_ORIG" />
+            <PropertyRef Name="TRDNROTRAM_DES" />
+            <PropertyRef Name="TRDFECHACT_DES" />
+            <PropertyRef Name="TRDCODTRAM_DES" />
+            <PropertyRef Name="TRDNCAJA" />
+            <PropertyRef Name="TRDNROPE" />
+            <PropertyRef Name="TRDUSUACTU" />
+            <PropertyRef Name="TRDFECACTU" />
+          </Key>
+          <Property Name="TRDNROCORR" Type="number" Nullable="false" Precision="7" />
+          <Property Name="TRDNROTRAM_ORIG" Type="number" Nullable="false" Precision="10" />
+          <Property Name="TRDFECHACT_ORIG" Type="date" Nullable="false" />
+          <Property Name="TRDCODTRAM_ORIG" Type="varchar2" Nullable="false" MaxLength="5" />
+          <Property Name="TRDNROTRAM_DES" Type="number" Nullable="false" Precision="10" />
+          <Property Name="TRDFECHACT_DES" Type="date" Nullable="false" />
+          <Property Name="TRDCODTRAM_DES" Type="varchar2" Nullable="false" MaxLength="5" />
+          <Property Name="TRDNCAJA" Type="number" Nullable="false" Precision="2" />
+          <Property Name="TRDNROPE" Type="number" Nullable="false" Precision="9" />
+          <Property Name="TRDUSUACTU" Type="varchar2" Nullable="false" MaxLength="10" />
+          <Property Name="TRDFECACTU" Type="date" Nullable="false" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ARGA.VISTAREC' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="VISTAREC">
+          <Key>
+            <PropertyRef Name="VISNROCORR" />
+            <PropertyRef Name="VISCODTRAM" />
+            <PropertyRef Name="VISFECHACT" />
+          </Key>
+          <Property Name="VISNROCORR" Type="number" Nullable="false" Precision="7" />
+          <Property Name="VISCODTRAM" Type="varchar2" Nullable="false" MaxLength="5" />
+          <Property Name="VISFECHACT" Type="date" Nullable="false" />
+          <Property Name="VISNROTRAM" Type="number" Precision="10" />
+          <Property Name="VISCODDEST" Type="varchar2" MaxLength="4" />
+          <Property Name="VISFECHART" Type="date" />
+          <Property Name="VISNROSUBD" Type="number" Precision="4" />
+          <Property Name="VISTIPO" Type="varchar2" MaxLength="3" />
+          <Property Name="VISDETALLE" Type="long" />
+          <Property Name="VISFECACTU" Type="date" />
+          <Property Name="VISUSUACTU" Type="varchar2" MaxLength="10" />
+          <Property Name="VISFECBAJA" Type="date" />
+          <Property Name="VISCODBAJA" Type="varchar2" MaxLength="2" />
+          <Property Name="VISREVISOR" Type="number" Precision="4" />
+          <Property Name="VISREVOK" Type="number" Precision="4" />
+          <Property Name="VISNHOJA" Type="number" Precision="2" />
+          <Property Name="VISFIN" Type="varchar2" MaxLength="1" />
+          <Property Name="VISPZONOTIF" Type="number" Precision="3" />
+          <Property Name="VISDIGITAL" Type="varchar2" MaxLength="1" />
+          <Property Name="VISDATREG" Type="varchar2" MaxLength="1" />
+          <Property Name="VISIDBPM" Type="number" Precision="9" />
+        </EntityType>
+        <EntityType Name="VISTAS">
+          <Key>
+            <PropertyRef Name="VISVISTAID" />
+          </Key>
+          <Property Name="VISVISTAID" Type="number" Nullable="false" />
+          <Property Name="VISNROCORR" Type="number" Nullable="false" Precision="7" />
+          <Property Name="VISNROTRAM" Type="number" Nullable="false" Precision="10" />
+          <Property Name="VISCODTRAM" Type="varchar2" Nullable="false" MaxLength="5" />
+          <Property Name="VISFECHACT" Type="date" Nullable="false" />
+          <Property Name="VISNROVERSION" Type="number" Nullable="false" Precision="3" />
+          <Property Name="VISTIPOVISTAID" Type="number" Nullable="false" />
+          <Property Name="VISTEXT" Type="long" Nullable="false" />
+          <Property Name="VISINSPECTORID" Type="varchar2" Nullable="false" MaxLength="4" />
+          <Property Name="VISFECACTU" Type="date" Nullable="false" />
+          <Property Name="VISREVISORID" Type="varchar2" MaxLength="4" />
+          <Property Name="VISFECREVISION" Type="date" />
+          <Property Name="VISTEXTREVISOR" Type="varchar2" />
+          <Property Name="VISESTADOID" Type="number" Nullable="false" />
+          <Property Name="VISTIPOPROFINTERVINIENTE" Type="varchar2" Nullable="false" MaxLength="1" />
+          <Property Name="VISACEPTREVISOR" Type="varchar2" MaxLength="1" />
+          <Property Name="VISAYUDAMEMORIA" Type="varchar2" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'ARGA.COD_TRAM' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="COD_TRAM">
+        <Property Name="CDTCODTRAM" Type="varchar2" MaxLength="5" />
+        <Property Name="CDTDESCTRAM" Type="varchar2" MaxLength="60" />
+        <Property Name="CDTTIPOTRAM" Type="varchar2" MaxLength="1" />
+        <Property Name="CDTFECALTA" Type="date" />
+        <Property Name="CDTGLOBAL" Type="varchar2" MaxLength="1" />
+        <Property Name="CDTREGISTRAL" Type="varchar2" MaxLength="1" />
+        <Property Name="CDTFECBAJA" Type="date" />
+      </EntityType>
+      Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'ARGA.DDJJ' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="DDJJ">
+        <Property Name="DDJJ_ID" Type="number" />
+        <Property Name="NROCOR" Type="number" />
+        <Property Name="TIPODDJJ" Type="number" />
+        <Property Name="FECHA" Type="date" />
+        <Property Name="CODHASH" Type="varchar2" MaxLength="40" />
+        <Property Name="RECIBIDA" Type="number" />
+        <Property Name="NROTRAM" Type="number" />
+        <Property Name="FECHAREC" Type="date" />
+      </EntityType>
+      Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'ARGA.DEPT' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="DEPT">
+        <Property Name="DEPTNO" Type="number" Precision="2" />
+        <Property Name="DNAME" Type="varchar2" MaxLength="14" />
+        <Property Name="LOC" Type="varchar2" MaxLength="13" />
+      </EntityType>
+      Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'ARGA.DESTIN' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="DESTIN">
+        <Property Name="DESCODDEST" Type="varchar2" MaxLength="4" />
+        <Property Name="DESDESCRIP1" Type="varchar2" MaxLength="60" />
+        <Property Name="DESDESCRIP2" Type="varchar2" MaxLength="60" />
+        <Property Name="DESRELACIO1" Type="varchar2" MaxLength="1" />
+        <Property Name="DESRELACIO2" Type="varchar2" MaxLength="1" />
+        <Property Name="DESMEENVIA" Type="varchar2" MaxLength="4" />
+      </EntityType>
+      Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'ARGA.USUARIO' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="USUARIO">
+        <Property Name="USUUSUARIO" Type="varchar2" MaxLength="4" />
+        <Property Name="USUDESTINO" Type="varchar2" MaxLength="4" />
+        <Property Name="USUNOMBRE" Type="varchar2" MaxLength="60" />
+        <Property Name="USUUSERN" Type="varchar2" MaxLength="8" />
+        <Property Name="USUPASSWD" Type="varchar2" MaxLength="8" />
+        <Property Name="USUGRUPO" Type="varchar2" MaxLength="5" />
+        <Property Name="USUFECALT" Type="date" />
+        <Property Name="USUFECBAJ" Type="date" />
+        <Property Name="USUABPM" Type="varchar2" MaxLength="30" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GordonModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GORDON" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="BOLSACOM" EntityType="GordonModel.BOLSACOM" />
+          <EntitySet Name="DESTRA" EntityType="GordonModel.DESTRA" />
+          <EntitySet Name="EXPTES" EntityType="GordonModel.EXPTES" />
+          <EntitySet Name="SUBDESTIN" EntityType="GordonModel.SUBDESTIN" />
+          <EntitySet Name="TABGEN" EntityType="GordonModel.TABGEN" />
+          <EntitySet Name="TRAMITE_DESISTIDO" EntityType="GordonModel.TRAMITE_DESISTIDO" />
+          <EntitySet Name="VISTAREC" EntityType="GordonModel.VISTAREC" />
+          <EntitySet Name="VISTAS" EntityType="GordonModel.VISTAS" />
+        </EntityContainer>
+        <EntityType Name="BOLSACOM">
+          <Key>
+            <PropertyRef Name="BOLNROCORR" />
+            <PropertyRef Name="BOLCODTRAM" />
+            <PropertyRef Name="BOLFECHACT" />
+          </Key>
+          <Property Name="BOLNROCORR" Type="Int32" Nullable="false" />
+          <Property Name="BOLCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="BOLFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="BOLNROTRAM" Type="Int32" />
+          <Property Name="BOLFECFVIG" Type="DateTime" Precision="0" />
+          <Property Name="BOLUSUACTU" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BOLFECACTU" Type="DateTime" Precision="0" />
+          <Property Name="BOLFECVIGE" Type="DateTime" Precision="0" />
+          <Property Name="BOLNRORESOL" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="BOLNROFVIG" Type="Int32" />
+          <Property Name="BOLFECDESDE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="DESTRA">
+          <Key>
+            <PropertyRef Name="DTRNROCORR" />
+            <PropertyRef Name="DTRCODTRAM" />
+            <PropertyRef Name="DTRFECHACT" />
+            <PropertyRef Name="DTRCODDEST" />
+            <PropertyRef Name="DTRUSUDEST" />
+            <PropertyRef Name="DTRFECHART" />
+            <PropertyRef Name="DTRDESTANT" />
+          </Key>
+          <Property Name="DTRNROCORR" Type="Int32" Nullable="false" />
+          <Property Name="DTRCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="DTRFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DTRNROTRAM" Type="Int32" />
+          <Property Name="DTRCODDEST" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="DTRUSUDEST" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="DTRFECHART" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DTRDESTANT" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="DTRFECHAST" Type="DateTime" Precision="0" />
+          <Property Name="DTRNROSUBD" Type="Int16" />
+        </EntityType>
+        <EntityType Name="EXPTES">
+          <Key>
+            <PropertyRef Name="EXPNROCORR" />
+          </Key>
+          <Property Name="EXPNROCORR" Type="Int32" Nullable="false" />
+          <Property Name="EXPCODHABI" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="EXPEXPREFE" Type="Int32" />
+          <Property Name="EXPFECHACC" Type="DateTime" Precision="0" />
+          <Property Name="EXPTIPOSOC" Type="Int16" Nullable="false" />
+          <Property Name="EXPRAZONSO" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="EXPADITAME" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="EXPSALIO" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="EXPFOJAS" Type="Int16" />
+          <Property Name="EXPNROCUIT" Type="Int64" />
+          <Property Name="EXPFECVTO" Type="DateTime" Precision="0" />
+          <Property Name="EXPREGULAR" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="EXPAHORRO" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="EXPCODBAJA" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="EXPFECBAJA" Type="DateTime" Precision="0" />
+          <Property Name="EXPART118" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="EXPART123" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="EXPTIPOCON" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="EXPDIGITAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="EXPBALANCES" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="EXPDDJJ" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="EXPRAZONSOINS" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="EXPNRORESERVA" Type="Int32" />
+          <Property Name="EXPUSUARIOSAE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="EXPHOMONIMIAID" Type="Decimal" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="SUBDESTIN">
+          <Key>
+            <PropertyRef Name="SUBDESTINO" />
+            <PropertyRef Name="SUBNROSUBD" />
+          </Key>
+          <Property Name="SUBDESTINO" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="SUBNROSUBD" Type="Int16" Nullable="false" />
+          <Property Name="SUBNOMBRE" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="SUBPASSW" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="SUBVISTA" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="SUBFECBAJ" Type="DateTime" Precision="0" />
+          <Property Name="SUBUSUARIO" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TABGEN">
+          <Key>
+            <PropertyRef Name="TABTIPOTAB" />
+            <PropertyRef Name="TABCLAVE" />
+          </Key>
+          <Property Name="TABTIPOTAB" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="TABCLAVE" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="TABCONTEN1" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="TABCONTEN2" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="TABCONTEN3" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="TABCONTEN4" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="TABCONTEN5" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TRAMITE_DESISTIDO">
+          <Key>
+            <PropertyRef Name="TRDNROCORR" />
+            <PropertyRef Name="TRDNROTRAM_ORIG" />
+            <PropertyRef Name="TRDFECHACT_ORIG" />
+            <PropertyRef Name="TRDCODTRAM_ORIG" />
+            <PropertyRef Name="TRDNROTRAM_DES" />
+            <PropertyRef Name="TRDFECHACT_DES" />
+            <PropertyRef Name="TRDCODTRAM_DES" />
+            <PropertyRef Name="TRDNCAJA" />
+            <PropertyRef Name="TRDNROPE" />
+            <PropertyRef Name="TRDUSUACTU" />
+            <PropertyRef Name="TRDFECACTU" />
+          </Key>
+          <Property Name="TRDNROCORR" Type="Int32" Nullable="false" />
+          <Property Name="TRDNROTRAM_ORIG" Type="Int32" Nullable="false" />
+          <Property Name="TRDFECHACT_ORIG" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TRDCODTRAM_ORIG" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="TRDNROTRAM_DES" Type="Int32" Nullable="false" />
+          <Property Name="TRDFECHACT_DES" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TRDCODTRAM_DES" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="TRDNCAJA" Type="Int16" Nullable="false" />
+          <Property Name="TRDNROPE" Type="Int32" Nullable="false" />
+          <Property Name="TRDUSUACTU" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="TRDFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="VISTAREC">
+          <Key>
+            <PropertyRef Name="VISNROCORR" />
+            <PropertyRef Name="VISCODTRAM" />
+            <PropertyRef Name="VISFECHACT" />
+          </Key>
+          <Property Name="VISNROCORR" Type="Int32" Nullable="false" />
+          <Property Name="VISCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="VISFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="VISNROTRAM" Type="Int32" />
+          <Property Name="VISCODDEST" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="VISFECHART" Type="DateTime" Precision="0" />
+          <Property Name="VISNROSUBD" Type="Int16" />
+          <Property Name="VISTIPO" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="VISDETALLE" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="VISFECACTU" Type="DateTime" Precision="0" />
+          <Property Name="VISUSUACTU" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="VISFECBAJA" Type="DateTime" Precision="0" />
+          <Property Name="VISCODBAJA" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="VISREVISOR" Type="Int16" />
+          <Property Name="VISREVOK" Type="Int16" />
+          <Property Name="VISNHOJA" Type="Int16" />
+          <Property Name="VISFIN" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="VISPZONOTIF" Type="Int16" />
+          <Property Name="VISDIGITAL" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="VISDATREG" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="VISIDBPM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="VISTAS">
+          <Key>
+            <PropertyRef Name="VISVISTAID" />
+          </Key>
+          <Property Name="VISVISTAID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="VISNROCORR" Type="Int32" Nullable="false" />
+          <Property Name="VISNROTRAM" Type="Int32" Nullable="false" />
+          <Property Name="VISCODTRAM" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="VISFECHACT" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="VISNROVERSION" Type="Int16" Nullable="false" />
+          <Property Name="VISTIPOVISTAID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="VISTEXT" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="VISINSPECTORID" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="VISFECACTU" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="VISREVISORID" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="VISFECREVISION" Type="DateTime" Precision="0" />
+          <Property Name="VISTEXTREVISOR" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <Property Name="VISESTADOID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="VISTIPOPROFINTERVINIENTE" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="VISACEPTREVISOR" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="VISAYUDAMEMORIA" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GordonModelStoreContainer" CdmEntityContainer="GORDON">
+          <EntitySetMapping Name="BOLSACOM">
+            <EntityTypeMapping TypeName="GordonModel.BOLSACOM">
+              <MappingFragment StoreEntitySet="BOLSACOM">
+                <ScalarProperty Name="BOLNROCORR" ColumnName="BOLNROCORR" />
+                <ScalarProperty Name="BOLCODTRAM" ColumnName="BOLCODTRAM" />
+                <ScalarProperty Name="BOLFECHACT" ColumnName="BOLFECHACT" />
+                <ScalarProperty Name="BOLNROTRAM" ColumnName="BOLNROTRAM" />
+                <ScalarProperty Name="BOLFECFVIG" ColumnName="BOLFECFVIG" />
+                <ScalarProperty Name="BOLUSUACTU" ColumnName="BOLUSUACTU" />
+                <ScalarProperty Name="BOLFECACTU" ColumnName="BOLFECACTU" />
+                <ScalarProperty Name="BOLFECVIGE" ColumnName="BOLFECVIGE" />
+                <ScalarProperty Name="BOLNRORESOL" ColumnName="BOLNRORESOL" />
+                <ScalarProperty Name="BOLNROFVIG" ColumnName="BOLNROFVIG" />
+                <ScalarProperty Name="BOLFECDESDE" ColumnName="BOLFECDESDE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DESTRA">
+            <EntityTypeMapping TypeName="GordonModel.DESTRA">
+              <MappingFragment StoreEntitySet="DESTRA">
+                <ScalarProperty Name="DTRNROCORR" ColumnName="DTRNROCORR" />
+                <ScalarProperty Name="DTRCODTRAM" ColumnName="DTRCODTRAM" />
+                <ScalarProperty Name="DTRFECHACT" ColumnName="DTRFECHACT" />
+                <ScalarProperty Name="DTRNROTRAM" ColumnName="DTRNROTRAM" />
+                <ScalarProperty Name="DTRCODDEST" ColumnName="DTRCODDEST" />
+                <ScalarProperty Name="DTRUSUDEST" ColumnName="DTRUSUDEST" />
+                <ScalarProperty Name="DTRFECHART" ColumnName="DTRFECHART" />
+                <ScalarProperty Name="DTRDESTANT" ColumnName="DTRDESTANT" />
+                <ScalarProperty Name="DTRFECHAST" ColumnName="DTRFECHAST" />
+                <ScalarProperty Name="DTRNROSUBD" ColumnName="DTRNROSUBD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EXPTES">
+            <EntityTypeMapping TypeName="GordonModel.EXPTES">
+              <MappingFragment StoreEntitySet="EXPTES">
+                <ScalarProperty Name="EXPNROCORR" ColumnName="EXPNROCORR" />
+                <ScalarProperty Name="EXPCODHABI" ColumnName="EXPCODHABI" />
+                <ScalarProperty Name="EXPEXPREFE" ColumnName="EXPEXPREFE" />
+                <ScalarProperty Name="EXPFECHACC" ColumnName="EXPFECHACC" />
+                <ScalarProperty Name="EXPTIPOSOC" ColumnName="EXPTIPOSOC" />
+                <ScalarProperty Name="EXPRAZONSO" ColumnName="EXPRAZONSO" />
+                <ScalarProperty Name="EXPADITAME" ColumnName="EXPADITAME" />
+                <ScalarProperty Name="EXPSALIO" ColumnName="EXPSALIO" />
+                <ScalarProperty Name="EXPFOJAS" ColumnName="EXPFOJAS" />
+                <ScalarProperty Name="EXPNROCUIT" ColumnName="EXPNROCUIT" />
+                <ScalarProperty Name="EXPFECVTO" ColumnName="EXPFECVTO" />
+                <ScalarProperty Name="EXPREGULAR" ColumnName="EXPREGULAR" />
+                <ScalarProperty Name="EXPAHORRO" ColumnName="EXPAHORRO" />
+                <ScalarProperty Name="EXPCODBAJA" ColumnName="EXPCODBAJA" />
+                <ScalarProperty Name="EXPFECBAJA" ColumnName="EXPFECBAJA" />
+                <ScalarProperty Name="EXPART118" ColumnName="EXPART118" />
+                <ScalarProperty Name="EXPART123" ColumnName="EXPART123" />
+                <ScalarProperty Name="EXPTIPOCON" ColumnName="EXPTIPOCON" />
+                <ScalarProperty Name="EXPDIGITAL" ColumnName="EXPDIGITAL" />
+                <ScalarProperty Name="EXPBALANCES" ColumnName="EXPBALANCES" />
+                <ScalarProperty Name="EXPDDJJ" ColumnName="EXPDDJJ" />
+                <ScalarProperty Name="EXPRAZONSOINS" ColumnName="EXPRAZONSOINS" />
+                <ScalarProperty Name="EXPNRORESERVA" ColumnName="EXPNRORESERVA" />
+                <ScalarProperty Name="EXPUSUARIOSAE" ColumnName="EXPUSUARIOSAE" />
+                <ScalarProperty Name="EXPHOMONIMIAID" ColumnName="EXPHOMONIMIAID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SUBDESTIN">
+            <EntityTypeMapping TypeName="GordonModel.SUBDESTIN">
+              <MappingFragment StoreEntitySet="SUBDESTIN">
+                <ScalarProperty Name="SUBDESTINO" ColumnName="SUBDESTINO" />
+                <ScalarProperty Name="SUBNROSUBD" ColumnName="SUBNROSUBD" />
+                <ScalarProperty Name="SUBNOMBRE" ColumnName="SUBNOMBRE" />
+                <ScalarProperty Name="SUBPASSW" ColumnName="SUBPASSW" />
+                <ScalarProperty Name="SUBVISTA" ColumnName="SUBVISTA" />
+                <ScalarProperty Name="SUBFECBAJ" ColumnName="SUBFECBAJ" />
+                <ScalarProperty Name="SUBUSUARIO" ColumnName="SUBUSUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TABGEN">
+            <EntityTypeMapping TypeName="GordonModel.TABGEN">
+              <MappingFragment StoreEntitySet="TABGEN">
+                <ScalarProperty Name="TABTIPOTAB" ColumnName="TABTIPOTAB" />
+                <ScalarProperty Name="TABCLAVE" ColumnName="TABCLAVE" />
+                <ScalarProperty Name="TABCONTEN1" ColumnName="TABCONTEN1" />
+                <ScalarProperty Name="TABCONTEN2" ColumnName="TABCONTEN2" />
+                <ScalarProperty Name="TABCONTEN3" ColumnName="TABCONTEN3" />
+                <ScalarProperty Name="TABCONTEN4" ColumnName="TABCONTEN4" />
+                <ScalarProperty Name="TABCONTEN5" ColumnName="TABCONTEN5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRAMITE_DESISTIDO">
+            <EntityTypeMapping TypeName="GordonModel.TRAMITE_DESISTIDO">
+              <MappingFragment StoreEntitySet="TRAMITE_DESISTIDO">
+                <ScalarProperty Name="TRDNROCORR" ColumnName="TRDNROCORR" />
+                <ScalarProperty Name="TRDNROTRAM_ORIG" ColumnName="TRDNROTRAM_ORIG" />
+                <ScalarProperty Name="TRDFECHACT_ORIG" ColumnName="TRDFECHACT_ORIG" />
+                <ScalarProperty Name="TRDCODTRAM_ORIG" ColumnName="TRDCODTRAM_ORIG" />
+                <ScalarProperty Name="TRDNROTRAM_DES" ColumnName="TRDNROTRAM_DES" />
+                <ScalarProperty Name="TRDFECHACT_DES" ColumnName="TRDFECHACT_DES" />
+                <ScalarProperty Name="TRDCODTRAM_DES" ColumnName="TRDCODTRAM_DES" />
+                <ScalarProperty Name="TRDNCAJA" ColumnName="TRDNCAJA" />
+                <ScalarProperty Name="TRDNROPE" ColumnName="TRDNROPE" />
+                <ScalarProperty Name="TRDUSUACTU" ColumnName="TRDUSUACTU" />
+                <ScalarProperty Name="TRDFECACTU" ColumnName="TRDFECACTU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VISTAREC">
+            <EntityTypeMapping TypeName="GordonModel.VISTAREC">
+              <MappingFragment StoreEntitySet="VISTAREC">
+                <ScalarProperty Name="VISNROCORR" ColumnName="VISNROCORR" />
+                <ScalarProperty Name="VISCODTRAM" ColumnName="VISCODTRAM" />
+                <ScalarProperty Name="VISFECHACT" ColumnName="VISFECHACT" />
+                <ScalarProperty Name="VISNROTRAM" ColumnName="VISNROTRAM" />
+                <ScalarProperty Name="VISCODDEST" ColumnName="VISCODDEST" />
+                <ScalarProperty Name="VISFECHART" ColumnName="VISFECHART" />
+                <ScalarProperty Name="VISNROSUBD" ColumnName="VISNROSUBD" />
+                <ScalarProperty Name="VISTIPO" ColumnName="VISTIPO" />
+                <ScalarProperty Name="VISDETALLE" ColumnName="VISDETALLE" />
+                <ScalarProperty Name="VISFECACTU" ColumnName="VISFECACTU" />
+                <ScalarProperty Name="VISUSUACTU" ColumnName="VISUSUACTU" />
+                <ScalarProperty Name="VISFECBAJA" ColumnName="VISFECBAJA" />
+                <ScalarProperty Name="VISCODBAJA" ColumnName="VISCODBAJA" />
+                <ScalarProperty Name="VISREVISOR" ColumnName="VISREVISOR" />
+                <ScalarProperty Name="VISREVOK" ColumnName="VISREVOK" />
+                <ScalarProperty Name="VISNHOJA" ColumnName="VISNHOJA" />
+                <ScalarProperty Name="VISFIN" ColumnName="VISFIN" />
+                <ScalarProperty Name="VISPZONOTIF" ColumnName="VISPZONOTIF" />
+                <ScalarProperty Name="VISDIGITAL" ColumnName="VISDIGITAL" />
+                <ScalarProperty Name="VISDATREG" ColumnName="VISDATREG" />
+                <ScalarProperty Name="VISIDBPM" ColumnName="VISIDBPM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VISTAS">
+            <EntityTypeMapping TypeName="GordonModel.VISTAS">
+              <MappingFragment StoreEntitySet="VISTAS">
+                <ScalarProperty Name="VISVISTAID" ColumnName="VISVISTAID" />
+                <ScalarProperty Name="VISNROCORR" ColumnName="VISNROCORR" />
+                <ScalarProperty Name="VISNROTRAM" ColumnName="VISNROTRAM" />
+                <ScalarProperty Name="VISCODTRAM" ColumnName="VISCODTRAM" />
+                <ScalarProperty Name="VISFECHACT" ColumnName="VISFECHACT" />
+                <ScalarProperty Name="VISNROVERSION" ColumnName="VISNROVERSION" />
+                <ScalarProperty Name="VISTIPOVISTAID" ColumnName="VISTIPOVISTAID" />
+                <ScalarProperty Name="VISTEXT" ColumnName="VISTEXT" />
+                <ScalarProperty Name="VISINSPECTORID" ColumnName="VISINSPECTORID" />
+                <ScalarProperty Name="VISFECACTU" ColumnName="VISFECACTU" />
+                <ScalarProperty Name="VISREVISORID" ColumnName="VISREVISORID" />
+                <ScalarProperty Name="VISFECREVISION" ColumnName="VISFECREVISION" />
+                <ScalarProperty Name="VISTEXTREVISOR" ColumnName="VISTEXTREVISOR" />
+                <ScalarProperty Name="VISESTADOID" ColumnName="VISESTADOID" />
+                <ScalarProperty Name="VISTIPOPROFINTERVINIENTE" ColumnName="VISTIPOPROFINTERVINIENTE" />
+                <ScalarProperty Name="VISACEPTREVISOR" ColumnName="VISACEPTREVISOR" />
+                <ScalarProperty Name="VISAYUDAMEMORIA" ColumnName="VISAYUDAMEMORIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

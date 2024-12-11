@@ -125,6 +125,20 @@ namespace ArgaAPI
                 defaults: new { controller = "DestinoTramite", action = "GetTramitesRecibidosXDestinoDepartamento" }
             );
 
+            // Ruta específica para RecibirAsignarSubDestinTramite
+            config.Routes.MapHttpRoute(
+                name: "RecibirAsignarSubDestinTramite",
+                routeTemplate: "api/destinoTramite/RecibirAsignarSubDestinTramite",
+                defaults: new { controller = "DestinoTramite", action = "RecibirAsignarSubDestinTramite" }
+            );
+
+            // Ruta específica para GetAgentesXSubdestino
+            config.Routes.MapHttpRoute(
+                name: "GetAgentesXSubdestino",
+                routeTemplate: "api/subdestino/GetAgentesXSubdestino",
+                defaults: new { controller = "Subdestino", action = "GetAgentesXSubdestino" }
+            );
+
             config.Routes.MapHttpRoute(
              name: "DefaultApi",
              routeTemplate: "api/{controller}/{id}",
