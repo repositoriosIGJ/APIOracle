@@ -152,6 +152,7 @@
     <Compile Include="Business\Contrato\ITipoSocietarioBusiness.cs" />
     <Compile Include="Business\Contrato\ITipoTramiteBusiness.cs" />
     <Compile Include="Business\Contrato\ITramiteBusiness.cs" />
+    <Compile Include="Business\Contrato\IUserDestinoBusiness.cs" />
     <Compile Include="Business\Implementacion\DatosCivilesBusiness.cs" />
     <Compile Include="Business\Implementacion\DestinoBusiness.cs" />
     <Compile Include="Business\Implementacion\DestinoTramiteBusiness.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Business\Implementacion\TipoSocietarioBusiness.cs" />
     <Compile Include="Business\Implementacion\TipoTramiteBusiness.cs" />
     <Compile Include="Business\Implementacion\TramiteBusiness.cs" />
+    <Compile Include="Business\Implementacion\UserDestinoBusiness.cs" />
     <Compile Include="Controllers\DatosCivilesController.cs" />
     <Compile Include="Controllers\DestinoController.cs" />
     <Compile Include="Controllers\DestinoTramiteController.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="Controllers\TipoSocietarioController.cs" />
     <Compile Include="Controllers\TipoTramiteController.cs" />
     <Compile Include="Controllers\TramiteController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Data\ARGA\DATOS_GDE.cs">
       <DependentUpon>ModeloARGA.tt</DependentUpon>
@@ -331,6 +334,7 @@
     <Compile Include="Models\TipoSocietario.cs" />
     <Compile Include="Models\TipoTramite.cs" />
     <Compile Include="Models\Tramite.cs" />
+    <Compile Include="Models\UserDestino.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\Contrato\IDatosCivilesRepository.cs" />
     <Compile Include="Repositorio\Contrato\IDestinoRepository.cs" />
@@ -344,10 +348,12 @@
     <Compile Include="Repositorio\Implementacion\DestinoRepository.cs" />
     <Compile Include="Repositorio\Implementacion\DestinoTramiteRepository.cs" />
     <Compile Include="Repositorio\Implementacion\ExpedienteRepository.cs" />
+    <Compile Include="Repositorio\Contrato\IUserDestinoRepository.cs" />
     <Compile Include="Repositorio\Implementacion\SubdestinoRepository.cs" />
     <Compile Include="Repositorio\Implementacion\TipoSocietarioRepository.cs" />
     <Compile Include="Repositorio\Implementacion\TipoTramiteRepository.cs" />
     <Compile Include="Repositorio\Implementacion\TramiteRepository.cs" />
+    <Compile Include="Repositorio\Implementacion\UserDestinoRepository.cs" />
     <Compile Include="Services\CorsHandler.cs" />
     <Compile Include="Services\UnityConfig.cs" />
   </ItemGroup>

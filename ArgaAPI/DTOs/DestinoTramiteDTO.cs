@@ -36,12 +36,14 @@ namespace ArgaAPI.DTOs
 
         public string UserUsuarioAsignado { get; set; }
 
+        public string Destino { get; set; }
+
         // FIN 
         public int Correlativo { get; set; }
 
         public string CodigoTramite { get; set; }
 
-        public DateTime? FechaComienzoTramite { get; set; }
+        public string FechaComienzoTramite { get; set; }
 
         public int? Numerotramite { get; set; }
 
@@ -49,13 +51,15 @@ namespace ArgaAPI.DTOs
 
         public string UsuarioDestino { get; set; }
 
-        public DateTime? FechaIngresoDestino { get; set; }
+        public string FechaIngresoDestino { get; set; }
 
-        public DateTime? FechaSalidaDestino { get; set; }
+        public string FechaSalidaDestino { get; set; }
 
         public string DestinoAnterior { get; set; }
 
         public int? NroSubdestino { get; set; }
+        
+        public string DestinoHacia { get; set; }
         
     }
 }

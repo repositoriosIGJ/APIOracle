@@ -76,5 +76,17 @@ namespace ArgaAPI.Business.Implementacion
 
         #endregion
         }
+
+        #region Miembros de IDestinoTramiteBusiness
+
+
+        public ResponseDTO<bool> EnviarTramiteAOtroDestino(DestinoTramiteDTO destinoTramite)
+        {
+            var rst = _destinoTramiteRepository.EnviarTramiteAOtroDestino(destinoTramite);
+
+            return rst;
+        }
+
+        #endregion
     }
 }

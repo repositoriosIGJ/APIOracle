@@ -55,13 +55,22 @@ namespace ArgaAPI.Controllers
         }
 
         [HttpPut]
-          [ActionName("RecibirAsignarSubDestinTramite")]
+        [ActionName("RecibirAsignarSubDestinTramite")]
          public ResponseDTO<bool> RecibirAsignarSubDestinTramite(DestinoTramite destinoTramite)
         {
             var rst = _destinoTramitebusiness.RecibirAsignarSubDestinTramite(destinoTramite);
 
             return rst;
 
+        }
+
+        [HttpPut]
+        [ActionName("EnviarTramiteAOtroDestino")]
+        public ResponseDTO<bool> EnviarTramiteAOtroDestino(DestinoTramiteDTO destinoTramite)
+        {
+            var rst = _destinoTramitebusiness.EnviarTramiteAOtroDestino(destinoTramite);
+
+            return rst;
         }
     }
 }

@@ -15,5 +15,6 @@ namespace ArgaAPI.Repositorio.Contrato
         ResponseDTO<List<DestinoTramiteDTO>> GetTramiteSinRecibirXDestinoDpto(string destino);
         ResponseDTO<List<DestinoTramiteDTO>> GetTramitesRecibidosXDestinoDepto(DestinoTramiteDTO destinoTramite);
         ResponseDTO<bool> RecibirAsignarSubDestinTramite(DestinoTramite destinoTramite);
+        ResponseDTO<bool> EnviarTramiteAOtroDestino(DestinoTramiteDTO destinoTramite);
     }
 }
