@@ -111,6 +111,48 @@ namespace ArgaAPI
                 defaults: new { controller = "DestinoTramite", action = "GetUltimoDestinoTramite" }
             );
 
+            // Ruta específica para GetTramiteSinAsignarXDestinoDpto
+            config.Routes.MapHttpRoute(
+                name: "GetTramiteSinAsignarXDestinoDpto",
+                routeTemplate: "api/destinoTramite/GetTramiteSinAsignarXDestinoDpto",
+                defaults: new { controller = "DestinoTramite", action = "GetTramiteSinAsignarXDestinoDpto" }
+            );
+
+            // Ruta específica para GetTramitesRecibidosXDestinoDepartamento
+            config.Routes.MapHttpRoute(
+                name: "GetTramitesRecibidosXDestinoDepartamento",
+                routeTemplate: "api/destinoTramite/GetTramitesRecibidosXDestinoDepartamento",
+                defaults: new { controller = "DestinoTramite", action = "GetTramitesRecibidosXDestinoDepartamento" }
+            );
+
+            // Ruta específica para RecibirAsignarSubDestinTramite
+            config.Routes.MapHttpRoute(
+                name: "RecibirAsignarSubDestinTramite",
+                routeTemplate: "api/destinoTramite/RecibirAsignarSubDestinTramite",
+                defaults: new { controller = "DestinoTramite", action = "RecibirAsignarSubDestinTramite" }
+            );
+
+            // Ruta específica para EnviarTramiteAOtroDestino
+            config.Routes.MapHttpRoute(
+                name: "EnviarTramiteAOtroDestino",
+                routeTemplate: "api/destinoTramite/EnviarTramiteAOtroDestino",
+                defaults: new { controller = "DestinoTramite", action = "EnviarTramiteAOtroDestino" }
+            );
+
+            // Ruta específica para GetAgentesXSubdestino
+            config.Routes.MapHttpRoute(
+                name: "GetAgentesXSubdestino",
+                routeTemplate: "api/subdestino/GetAgentesXSubdestino",
+                defaults: new { controller = "Subdestino", action = "GetAgentesXSubdestino" }
+            );
+
+
+            // Ruta específica para GetAgentesXSubdestino
+            config.Routes.MapHttpRoute(
+                name: "GetDestinosUser",
+                routeTemplate: "api/user/GetDestinosUser",
+                defaults: new { controller = "User", action = "GetDestinosUser" }
+            );
 
             config.Routes.MapHttpRoute(
              name: "DefaultApi",

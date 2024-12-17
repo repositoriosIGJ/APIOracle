@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 using ArgaAPI.DTOs;
 using ArgaAPI.Models;
 
-namespace ArgaAPI.Repositorio.Contrato
+namespace ArgaAPI.Repositorio.Implementacion
 {
-    public interface ITramiteRepository
+    public interface IUserDestinoRepository
     {
-        ResponseDTO<List<Tramite>> GetTramites(Tramite tramite);
-        
-       
+        ResponseDTO<List<UserDestino>> GetDestinosUser(string username);
     }
 }

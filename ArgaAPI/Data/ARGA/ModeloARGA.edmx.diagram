@@ -17,6 +17,7 @@
         <EntityTypeShape EntityType="ModelARGA.TIMBRADOS" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ModelARGA.TRAMIT" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ModelARGA.VISTAREC" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelARGA.SUBDESTIN" Width="1.5" PointX="6.6901015707711231" PointY="18.605495848974911" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

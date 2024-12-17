@@ -8,10 +8,8 @@ using ArgaAPI.Models;
 
 namespace ArgaAPI.Repositorio.Contrato
 {
-    public interface ITramiteRepository
+    public interface ISubdestinoRepository
     {
-        ResponseDTO<List<Tramite>> GetTramites(Tramite tramite);
-        
-       
+        ResponseDTO<List<Subdestino>> GetAgentesXSubdestino(string subdestino);
     }
 }

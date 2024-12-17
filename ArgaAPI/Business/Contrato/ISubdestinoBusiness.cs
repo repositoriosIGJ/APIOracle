@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 using ArgaAPI.DTOs;
 using ArgaAPI.Models;
 
-namespace ArgaAPI.Repositorio.Contrato
+namespace ArgaAPI.Business.Contrato
 {
-    public interface ITramiteRepository
+    public interface ISubdestinoBusiness
     {
-        ResponseDTO<List<Tramite>> GetTramites(Tramite tramite);
-        
-       
+        ResponseDTO<List<Subdestino>> GetAgentesXSubdestino(string subdestino);
     }
 }

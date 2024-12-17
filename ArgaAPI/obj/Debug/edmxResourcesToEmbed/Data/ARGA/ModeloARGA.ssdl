@@ -75,6 +75,7 @@
       "MATRICULADOS"."MATMATREFE" AS "MATMATREFE"
       FROM "ARGA"."MATRICULADOS" "MATRICULADOS"</DefiningQuery>
     </EntitySet>
+    <EntitySet Name="SUBDESTIN" EntityType="ModelARGA.Store.SUBDESTIN" store:Type="Tables" Schema="ARGA" />
     <EntitySet Name="TABGEN" EntityType="ModelARGA.Store.TABGEN" store:Type="Tables" Schema="ARGA" />
     <EntitySet Name="TIMBRADOS" EntityType="ModelARGA.Store.TIMBRADOS" store:Type="Tables" store:Schema="ARGA" store:Name="TIMBRADOS">
       <DefiningQuery>SELECT 
@@ -324,6 +325,19 @@
     <Property Name="MATFECACTU" Type="date" Nullable="false" />
     <Property Name="MATMATREFE" Type="varchar2" MaxLength="16" />
   </EntityType>
+  <EntityType Name="SUBDESTIN">
+    <Key>
+      <PropertyRef Name="SUBDESTINO" />
+      <PropertyRef Name="SUBNROSUBD" />
+    </Key>
+    <Property Name="SUBDESTINO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="SUBNROSUBD" Type="number" Nullable="false" Precision="4" />
+    <Property Name="SUBNOMBRE" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="SUBPASSW" Type="varchar2" MaxLength="8" />
+    <Property Name="SUBVISTA" Type="varchar2" MaxLength="1" />
+    <Property Name="SUBFECBAJ" Type="date" />
+    <Property Name="SUBUSUARIO" Type="varchar2" MaxLength="4" />
+  </EntityType>
   <EntityType Name="TABGEN">
     <Key>
       <PropertyRef Name="TABTIPOTAB" />
@@ -431,15 +445,4 @@
     <Property Name="VISDATREG" Type="varchar2" MaxLength="1" />
     <Property Name="VISIDBPM" Type="number" Precision="9" />
   </EntityType>
-  <!--Se encontraron errores durante la generación:
-      advertencia 6013: La tabla o vista 'ARGA.DESTIN' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-      
-      <EntityType Name="DESTIN">
-        <Property Name="DESCODDEST" Type="varchar2" MaxLength="4" />
-        <Property Name="DESDESCRIP1" Type="varchar2" MaxLength="60" />
-        <Property Name="DESDESCRIP2" Type="varchar2" MaxLength="60" />
-        <Property Name="DESRELACIO1" Type="varchar2" MaxLength="1" />
-        <Property Name="DESRELACIO2" Type="varchar2" MaxLength="1" />
-        <Property Name="DESMEENVIA" Type="varchar2" MaxLength="4" />
-      </EntityType>-->
 </Schema>

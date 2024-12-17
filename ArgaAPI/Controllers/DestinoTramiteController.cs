@@ -21,7 +21,7 @@ namespace ArgaAPI.Controllers
          // GET api/destino/GetDestinosTramite
         [HttpPost]
          [ActionName("GetDestinosTramite")]
-         public ResponseDTO<List<DestinoTramite>> GetDestinos(DestinoTramite destinoTramite)
+         public ResponseDTO<List<DestinoTramiteDTO>> GetDestinos(DestinoTramite destinoTramite)
          {
              var rst = _destinoTramitebusiness.GetDestinosTramite(destinoTramite);
              return rst;
@@ -30,9 +30,46 @@ namespace ArgaAPI.Controllers
         // GET api/destino/GetUltimoDestinoTramite
         [HttpPost]
         [ActionName("GetUltimoDestinoTramite")]
-        public ResponseDTO<List<DestinoTramite>> GetUltimoDestino( DestinoTramite destinoTramite)
+        public ResponseDTO<List<DestinoTramiteDTO>> GetUltimoDestino( DestinoTramite destinoTramite)
         {
             var rst = _destinoTramitebusiness.GetUltimoDestinoTramite(destinoTramite);
+            return rst;
+        }
+
+        [HttpGet]
+        [ActionName("GetTramiteSinAsignarXDestinoDpto")]
+        public ResponseDTO<List<DestinoTramiteDTO>> GetTramiteSinAsignarXDestinoDpto(string destino)
+        {
+            var rst = _destinoTramitebusiness.GetTramiteSinAsignarXDestinoDpto(destino);
+
+            return rst;
+        }
+
+        // GET api/destino/GetTramitesRecibidosXDestinoDepartamento
+        [HttpPost]
+        [ActionName("GetTramitesRecibidosXDestinoDepartamento")]
+        public ResponseDTO<List<DestinoTramiteDTO>> GetTramitesRecibidosXDestinoDepartamento(DestinoTramiteDTO destinoTramite)
+        {
+            var rst = _destinoTramitebusiness.GetTramitesRecibidosXDestinoDepto(destinoTramite);
+            return rst;
+        }
+
+        [HttpPut]
+        [ActionName("RecibirAsignarSubDestinTramite")]
+         public ResponseDTO<bool> RecibirAsignarSubDestinTramite(DestinoTramite destinoTramite)
+        {
+            var rst = _destinoTramitebusiness.RecibirAsignarSubDestinTramite(destinoTramite);
+
+            return rst;
+
+        }
+
+        [HttpPut]
+        [ActionName("EnviarTramiteAOtroDestino")]
+        public ResponseDTO<bool> EnviarTramiteAOtroDestino(DestinoTramiteDTO destinoTramite)
+        {
+            var rst = _destinoTramitebusiness.EnviarTramiteAOtroDestino(destinoTramite);
+
             return rst;
         }
     }

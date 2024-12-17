@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ArgaAPI.DTOs
 {
-    public class ResponseDTO<T> where T : class
+    public class ResponseDTO<T> //where T : class
     {
         public T Data { get; set; } // Nullable<T> es válido ahora que T es un tipo de valor
 

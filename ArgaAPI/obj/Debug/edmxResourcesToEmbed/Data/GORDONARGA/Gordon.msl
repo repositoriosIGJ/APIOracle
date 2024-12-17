@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GordonModelStoreContainer" CdmEntityContainer="GORDON">
+    <EntitySetMapping Name="BOLSACOM">
+      <EntityTypeMapping TypeName="GordonModel.BOLSACOM">
+        <MappingFragment StoreEntitySet="BOLSACOM">
+          <ScalarProperty Name="BOLNROCORR" ColumnName="BOLNROCORR" />
+          <ScalarProperty Name="BOLCODTRAM" ColumnName="BOLCODTRAM" />
+          <ScalarProperty Name="BOLFECHACT" ColumnName="BOLFECHACT" />
+          <ScalarProperty Name="BOLNROTRAM" ColumnName="BOLNROTRAM" />
+          <ScalarProperty Name="BOLFECFVIG" ColumnName="BOLFECFVIG" />
+          <ScalarProperty Name="BOLUSUACTU" ColumnName="BOLUSUACTU" />
+          <ScalarProperty Name="BOLFECACTU" ColumnName="BOLFECACTU" />
+          <ScalarProperty Name="BOLFECVIGE" ColumnName="BOLFECVIGE" />
+          <ScalarProperty Name="BOLNRORESOL" ColumnName="BOLNRORESOL" />
+          <ScalarProperty Name="BOLNROFVIG" ColumnName="BOLNROFVIG" />
+          <ScalarProperty Name="BOLFECDESDE" ColumnName="BOLFECDESDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESTRA">
+      <EntityTypeMapping TypeName="GordonModel.DESTRA">
+        <MappingFragment StoreEntitySet="DESTRA">
+          <ScalarProperty Name="DTRNROCORR" ColumnName="DTRNROCORR" />
+          <ScalarProperty Name="DTRCODTRAM" ColumnName="DTRCODTRAM" />
+          <ScalarProperty Name="DTRFECHACT" ColumnName="DTRFECHACT" />
+          <ScalarProperty Name="DTRNROTRAM" ColumnName="DTRNROTRAM" />
+          <ScalarProperty Name="DTRCODDEST" ColumnName="DTRCODDEST" />
+          <ScalarProperty Name="DTRUSUDEST" ColumnName="DTRUSUDEST" />
+          <ScalarProperty Name="DTRFECHART" ColumnName="DTRFECHART" />
+          <ScalarProperty Name="DTRDESTANT" ColumnName="DTRDESTANT" />
+          <ScalarProperty Name="DTRFECHAST" ColumnName="DTRFECHAST" />
+          <ScalarProperty Name="DTRNROSUBD" ColumnName="DTRNROSUBD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPTES">
+      <EntityTypeMapping TypeName="GordonModel.EXPTES">
+        <MappingFragment StoreEntitySet="EXPTES">
+          <ScalarProperty Name="EXPNROCORR" ColumnName="EXPNROCORR" />
+          <ScalarProperty Name="EXPCODHABI" ColumnName="EXPCODHABI" />
+          <ScalarProperty Name="EXPEXPREFE" ColumnName="EXPEXPREFE" />
+          <ScalarProperty Name="EXPFECHACC" ColumnName="EXPFECHACC" />
+          <ScalarProperty Name="EXPTIPOSOC" ColumnName="EXPTIPOSOC" />
+          <ScalarProperty Name="EXPRAZONSO" ColumnName="EXPRAZONSO" />
+          <ScalarProperty Name="EXPADITAME" ColumnName="EXPADITAME" />
+          <ScalarProperty Name="EXPSALIO" ColumnName="EXPSALIO" />
+          <ScalarProperty Name="EXPFOJAS" ColumnName="EXPFOJAS" />
+          <ScalarProperty Name="EXPNROCUIT" ColumnName="EXPNROCUIT" />
+          <ScalarProperty Name="EXPFECVTO" ColumnName="EXPFECVTO" />
+          <ScalarProperty Name="EXPREGULAR" ColumnName="EXPREGULAR" />
+          <ScalarProperty Name="EXPAHORRO" ColumnName="EXPAHORRO" />
+          <ScalarProperty Name="EXPCODBAJA" ColumnName="EXPCODBAJA" />
+          <ScalarProperty Name="EXPFECBAJA" ColumnName="EXPFECBAJA" />
+          <ScalarProperty Name="EXPART118" ColumnName="EXPART118" />
+          <ScalarProperty Name="EXPART123" ColumnName="EXPART123" />
+          <ScalarProperty Name="EXPTIPOCON" ColumnName="EXPTIPOCON" />
+          <ScalarProperty Name="EXPDIGITAL" ColumnName="EXPDIGITAL" />
+          <ScalarProperty Name="EXPBALANCES" ColumnName="EXPBALANCES" />
+          <ScalarProperty Name="EXPDDJJ" ColumnName="EXPDDJJ" />
+          <ScalarProperty Name="EXPRAZONSOINS" ColumnName="EXPRAZONSOINS" />
+          <ScalarProperty Name="EXPNRORESERVA" ColumnName="EXPNRORESERVA" />
+          <ScalarProperty Name="EXPUSUARIOSAE" ColumnName="EXPUSUARIOSAE" />
+          <ScalarProperty Name="EXPHOMONIMIAID" ColumnName="EXPHOMONIMIAID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBDESTIN">
+      <EntityTypeMapping TypeName="GordonModel.SUBDESTIN">
+        <MappingFragment StoreEntitySet="SUBDESTIN">
+          <ScalarProperty Name="SUBDESTINO" ColumnName="SUBDESTINO" />
+          <ScalarProperty Name="SUBNROSUBD" ColumnName="SUBNROSUBD" />
+          <ScalarProperty Name="SUBNOMBRE" ColumnName="SUBNOMBRE" />
+          <ScalarProperty Name="SUBPASSW" ColumnName="SUBPASSW" />
+          <ScalarProperty Name="SUBVISTA" ColumnName="SUBVISTA" />
+          <ScalarProperty Name="SUBFECBAJ" ColumnName="SUBFECBAJ" />
+          <ScalarProperty Name="SUBUSUARIO" ColumnName="SUBUSUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TABGEN">
+      <EntityTypeMapping TypeName="GordonModel.TABGEN">
+        <MappingFragment StoreEntitySet="TABGEN">
+          <ScalarProperty Name="TABTIPOTAB" ColumnName="TABTIPOTAB" />
+          <ScalarProperty Name="TABCLAVE" ColumnName="TABCLAVE" />
+          <ScalarProperty Name="TABCONTEN1" ColumnName="TABCONTEN1" />
+          <ScalarProperty Name="TABCONTEN2" ColumnName="TABCONTEN2" />
+          <ScalarProperty Name="TABCONTEN3" ColumnName="TABCONTEN3" />
+          <ScalarProperty Name="TABCONTEN4" ColumnName="TABCONTEN4" />
+          <ScalarProperty Name="TABCONTEN5" ColumnName="TABCONTEN5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAMITE_DESISTIDO">
+      <EntityTypeMapping TypeName="GordonModel.TRAMITE_DESISTIDO">
+        <MappingFragment StoreEntitySet="TRAMITE_DESISTIDO">
+          <ScalarProperty Name="TRDNROCORR" ColumnName="TRDNROCORR" />
+          <ScalarProperty Name="TRDNROTRAM_ORIG" ColumnName="TRDNROTRAM_ORIG" />
+          <ScalarProperty Name="TRDFECHACT_ORIG" ColumnName="TRDFECHACT_ORIG" />
+          <ScalarProperty Name="TRDCODTRAM_ORIG" ColumnName="TRDCODTRAM_ORIG" />
+          <ScalarProperty Name="TRDNROTRAM_DES" ColumnName="TRDNROTRAM_DES" />
+          <ScalarProperty Name="TRDFECHACT_DES" ColumnName="TRDFECHACT_DES" />
+          <ScalarProperty Name="TRDCODTRAM_DES" ColumnName="TRDCODTRAM_DES" />
+          <ScalarProperty Name="TRDNCAJA" ColumnName="TRDNCAJA" />
+          <ScalarProperty Name="TRDNROPE" ColumnName="TRDNROPE" />
+          <ScalarProperty Name="TRDUSUACTU" ColumnName="TRDUSUACTU" />
+          <ScalarProperty Name="TRDFECACTU" ColumnName="TRDFECACTU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISTAREC">
+      <EntityTypeMapping TypeName="GordonModel.VISTAREC">
+        <MappingFragment StoreEntitySet="VISTAREC">
+          <ScalarProperty Name="VISNROCORR" ColumnName="VISNROCORR" />
+          <ScalarProperty Name="VISCODTRAM" ColumnName="VISCODTRAM" />
+          <ScalarProperty Name="VISFECHACT" ColumnName="VISFECHACT" />
+          <ScalarProperty Name="VISNROTRAM" ColumnName="VISNROTRAM" />
+          <ScalarProperty Name="VISCODDEST" ColumnName="VISCODDEST" />
+          <ScalarProperty Name="VISFECHART" ColumnName="VISFECHART" />
+          <ScalarProperty Name="VISNROSUBD" ColumnName="VISNROSUBD" />
+          <ScalarProperty Name="VISTIPO" ColumnName="VISTIPO" />
+          <ScalarProperty Name="VISDETALLE" ColumnName="VISDETALLE" />
+          <ScalarProperty Name="VISFECACTU" ColumnName="VISFECACTU" />
+          <ScalarProperty Name="VISUSUACTU" ColumnName="VISUSUACTU" />
+          <ScalarProperty Name="VISFECBAJA" ColumnName="VISFECBAJA" />
+          <ScalarProperty Name="VISCODBAJA" ColumnName="VISCODBAJA" />
+          <ScalarProperty Name="VISREVISOR" ColumnName="VISREVISOR" />
+          <ScalarProperty Name="VISREVOK" ColumnName="VISREVOK" />
+          <ScalarProperty Name="VISNHOJA" ColumnName="VISNHOJA" />
+          <ScalarProperty Name="VISFIN" ColumnName="VISFIN" />
+          <ScalarProperty Name="VISPZONOTIF" ColumnName="VISPZONOTIF" />
+          <ScalarProperty Name="VISDIGITAL" ColumnName="VISDIGITAL" />
+          <ScalarProperty Name="VISDATREG" ColumnName="VISDATREG" />
+          <ScalarProperty Name="VISIDBPM" ColumnName="VISIDBPM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISTAS">
+      <EntityTypeMapping TypeName="GordonModel.VISTAS">
+        <MappingFragment StoreEntitySet="VISTAS">
+          <ScalarProperty Name="VISVISTAID" ColumnName="VISVISTAID" />
+          <ScalarProperty Name="VISNROCORR" ColumnName="VISNROCORR" />
+          <ScalarProperty Name="VISNROTRAM" ColumnName="VISNROTRAM" />
+          <ScalarProperty Name="VISCODTRAM" ColumnName="VISCODTRAM" />
+          <ScalarProperty Name="VISFECHACT" ColumnName="VISFECHACT" />
+          <ScalarProperty Name="VISNROVERSION" ColumnName="VISNROVERSION" />
+          <ScalarProperty Name="VISTIPOVISTAID" ColumnName="VISTIPOVISTAID" />
+          <ScalarProperty Name="VISTEXT" ColumnName="VISTEXT" />
+          <ScalarProperty Name="VISINSPECTORID" ColumnName="VISINSPECTORID" />
+          <ScalarProperty Name="VISFECACTU" ColumnName="VISFECACTU" />
+          <ScalarProperty Name="VISREVISORID" ColumnName="VISREVISORID" />
+          <ScalarProperty Name="VISFECREVISION" ColumnName="VISFECREVISION" />
+          <ScalarProperty Name="VISTEXTREVISOR" ColumnName="VISTEXTREVISOR" />
+          <ScalarProperty Name="VISESTADOID" ColumnName="VISESTADOID" />
+          <ScalarProperty Name="VISTIPOPROFINTERVINIENTE" ColumnName="VISTIPOPROFINTERVINIENTE" />
+          <ScalarProperty Name="VISACEPTREVISOR" ColumnName="VISACEPTREVISOR" />
+          <ScalarProperty Name="VISAYUDAMEMORIA" ColumnName="VISAYUDAMEMORIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
